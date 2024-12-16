@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane  minWidth="1038.0" prefHeight="694.0" prefWidth="1038.0" style="-fx-background-color: rgb(230,230,230);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <TextField fx:id="ContentTitle" layoutX="442.0" layoutY="111.0" onKeyTyped="#GoToNext" prefHeight="29.0" prefWidth="274.0" promptText="Content Title" style="-fx-text-fill: black !important;" />
+        <TextField fx:id="Language" layoutX="443.0" layoutY="161.0" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="274.0" promptText="Language" style="-fx-text-fill: black !important;" />
+        <TextField fx:id="Country" layoutX="442.0" layoutY="212.0" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="274.0" promptText="Country" style="-fx-text-fill: black !important;" />
+        <TextField fx:id="Budget" layoutX="441.0" layoutY="269.0" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="274.0" promptText="budget" style="-fx-text-fill: black !important;" />
+        <TextField fx:id="Revenue" layoutX="439.0" layoutY="326.0" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="274.0" promptText="revenue" style="-fx-text-fill: black !important;" />
+        <DatePicker fx:id="dateOfProduction" layoutX="441.0" layoutY="506.0" onKeyTyped="#GoToNext" prefHeight="29.0" prefWidth="274.0" promptText="Date of production" style="-fx-text-fill: black !important;" />
+        <Button fx:id="Add" layoutX="442.0" layoutY="564.0" mnemonicParsing="false" onMouseClicked="#Done" prefHeight="31.0" prefWidth="263.0" text="Add" />
+        <Text layoutX="458.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 30; -fx-font-weight: 700;" text="Add Movie Form" />
+      <ChoiceBox fx:id="Genres" layoutX="425.0" layoutY="420.0" prefHeight="26.0" prefWidth="144.0" />
+      <Button fx:id="AddGenre" layoutX="580.0" layoutY="417.0" mnemonicParsing="false" onMouseClicked="#Add" prefHeight="31.0" prefWidth="176.0" text="Add Genre" />
+      <ChoiceBox fx:id="CastMembers" layoutX="425.0" layoutY="458.0" prefHeight="26.0" prefWidth="144.0" />
+      <Button fx:id="AddCastMember" layoutX="579.0" layoutY="455.0" mnemonicParsing="false" onMouseClicked="#Add" prefHeight="31.0" prefWidth="176.0" text="Add CastMember" />
+      <TextField fx:id="Duration" layoutX="439.0" layoutY="374.0" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="274.0" promptText="Duration" style="-fx-text-fill: black !important;" />
+    </children>
+    <stylesheets>
+        <URL value="@../../../../Styling/Styler.css" />
+        <URL value="@../../../../Styling/Account.css" />
+    </stylesheets>
+</AnchorPane>

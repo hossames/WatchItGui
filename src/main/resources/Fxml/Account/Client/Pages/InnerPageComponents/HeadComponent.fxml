@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="332.0" prefWidth="1034.0" style="-fx-background-color: #252525;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="Image" fitHeight="260.0" fitWidth="216.0" layoutX="26.0" layoutY="10.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../../Images/film.jpg" />
+         </image>
+      </ImageView>
+      <Text fx:id="Name" fill="#ffa600" layoutX="408.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Content Name " wrappingWidth="192.0718994140625">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="Language" fill="#ffa600" layoutX="409.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Language ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="Duration" fill="#ffa600" layoutX="409.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="Country" fill="#ffa600" layoutX="410.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Country ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="ReleaseDate" fill="#ffa600" layoutX="409.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Release Date ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="Views" fill="#ffa600" layoutX="408.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Views ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <FontAwesomeIcon fx:id="s2" fill="#fff600" glyphName="STAR_ALT" layoutX="68.0" layoutY="312.0" onMouseClicked="#Rate" size="3em" />
+      <FontAwesomeIcon fx:id="s3" fill="#fff600" glyphName="STAR_ALT" layoutX="114.0" layoutY="312.0" onMouseClicked="#Rate" size="3em" />
+      <FontAwesomeIcon fx:id="s4" fill="#fff600" glyphName="STAR_ALT" layoutX="162.0" layoutY="312.0" onMouseClicked="#Rate" size="3em" />
+      <FontAwesomeIcon fx:id="s5" fill="#fff600" glyphName="STAR_ALT" layoutX="208.0" layoutY="312.0" onMouseClicked="#Rate" size="3em" />
+      <FontAwesomeIcon fx:id="s1" fill="#fff600" glyphName="STAR_ALT" layoutX="26.0" layoutY="311.0" onMouseClicked="#Rate" size="3em" />
+      <HBox fx:id="Genre" alignment="CENTER_LEFT" layoutX="408.0" layoutY="177.0" prefHeight="30.0" prefWidth="657.0" spacing="15.0" />
+      <Text fx:id="Rate" fill="#ffa600" layoutX="409.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rate">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Label layoutX="250.0" layoutY="242.0" text="Rate " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="250.0" layoutY="209.0" text="Views " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="249.0" layoutY="177.0" text="Genres " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="249.0" layoutY="145.0" text="Release Date " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="247.0" layoutY="113.0" text="Country" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="247.0" layoutY="79.0" text="Duration" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="247.0" layoutY="46.0" text="Language" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="247.0" layoutY="13.0" text="Content Name" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

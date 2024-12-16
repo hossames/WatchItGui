@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="262.0" minWidth="183.0" prefHeight="262.0" prefWidth="183.0" style="-fx-background-color: rgb(240,240,240);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="ContentImage" fitHeight="196.0" fitWidth="183.0" layoutY="-1.0" pickOnBounds="true" />
+      <Text fx:id="ContentName" fill="#1b5cdf" layoutX="10.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center; -fx-font-size: 17; -fx-font-weight: 100;" text="Name" wrappingWidth="159.73669397830963" />
+      <FontAwesomeIconView fx:id="s1" fill="#fff600" glyphName="STAR_ALT" layoutX="1.0" layoutY="212.0" size="1.5em" strokeWidth="0.0" />
+      <FontAwesomeIconView fx:id="s2" fill="#fff600" glyphName="STAR_ALT" layoutX="19.0" layoutY="212.0" size="1.5em" strokeWidth="0.0" />
+      <FontAwesomeIconView fx:id="s3" fill="#fff600" glyphName="STAR_ALT" layoutX="35.0" layoutY="212.0" size="1.5em" strokeWidth="0.0" />
+      <FontAwesomeIconView fx:id="s4" fill="#fff600" glyphName="STAR_ALT" layoutX="53.0" layoutY="212.0" size="1.5em" strokeWidth="0.0" />
+      <FontAwesomeIconView fx:id="s5" fill="#fff600" glyphName="STAR_ALT" layoutX="72.0" layoutY="212.0" size="1.5em" strokeWidth="0.0" />
+      <FontAwesomeIconView fill="RED" glyphName="CIRCLE" layoutX="154.0" layoutY="27.0" onMouseClicked="#DeleteContent" size="2.5em" />
+      <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" layoutX="160.0" layoutY="22.0" onMouseClicked="#DeleteContent" size="1.5em" />
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>

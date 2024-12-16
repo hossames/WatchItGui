@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="GenreChoose" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="466.0" prefWidth="652.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <center>
+        <VBox alignment="CENTER" fillWidth="false" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #252525;" BorderPane.alignment="CENTER">
+            <children>
+                <AnchorPane prefHeight="200.0" prefWidth="626.0">
+                    <children>
+                        <ImageView fx:id="Background" fitHeight="373.0" fitWidth="599.0" pickOnBounds="true">
+                            <image>
+                                <Image url="@../../Images/background.jpg" />
+                            </image>
+                        </ImageView>
+                        <VBox fx:id="Container" alignment="CENTER" fillWidth="false" layoutY="-2.0" minWidth="-Infinity" prefHeight="414.0" prefWidth="626.0">
+                            <children>
+                                <AnchorPane opacity="0.81" prefHeight="200.0" prefWidth="627.0" style="-fx-background-color: black;" styleClass="Genre" stylesheets="@../../Styling/Styler.css" BorderPane.alignment="CENTER">
+                                    <children>
+                                        <ImageView fitHeight="99.0" fitWidth="197.0" layoutX="40.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../../Images/logo.png" />
+                                            </image>
+                                        </ImageView>
+                                        <Button fx:id="SubmitButton" layoutX="320.0" layoutY="373.0" mnemonicParsing="false" onMouseClicked="#Submit" prefHeight="26.0" prefWidth="226.0" style="-fx-background-color: #f4a005; -fx-text-fill: white; -fx-font-size: 18; -fx-font-weight: 700;" text="Submit" />
+                                        <Text id="HeadLine" layoutX="29.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WATCH IT" />
+                                        <HBox layoutX="273.0" layoutY="29.0" onMouseClicked="#Choose" prefHeight="2.0" prefWidth="22.0">
+                                            <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Advanture" />
+                                            </children>
+                                        </HBox>
+                                        <HBox layoutX="396.0" layoutY="29.0" onMouseClicked="#Choose" prefHeight="2.0" prefWidth="22.0">
+                                            <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Action" />
+                                            </children>
+                                        </HBox>
+                                        <HBox layoutX="483.0" layoutY="29.0" onMouseClicked="#Choose" prefHeight="2.0" prefWidth="22.0">
+                                            <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Comedy" />
+                                            </children>
+                                        </HBox>
+                                        <HBox layoutX="250.0" layoutY="74.0" onMouseClicked="#Choose" prefHeight="2.0" prefWidth="22.0">
+                                            <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Drama" />
+                                            </children>
+                                        </HBox>
+                                        <HBox layoutX="536.0" layoutY="73.0" onMouseClicked="#Choose" prefHeight="2.0" prefWidth="22.0">
+                                            <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Horror" />
+                                            </children>
+                                        </HBox>
+                                        <HBox layoutX="253.0" layoutY="134.0" onMouseClicked="#Choose" prefHeight="2.0" prefWidth="22.0">
+                                            <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mystery" />
+                                            </children>
+                                        </HBox>
+                                        <HBox layoutX="369.0" layoutY="128.0" onMouseClicked="#Choose" prefHeight="2.0" prefWidth="22.0">
+                                            <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Fantasy" />
+                                            </children>
+                                        </HBox>
+                                        <HBox layoutX="486.0" layoutY="134.0" onMouseClicked="#Choose" prefHeight="2.0" prefWidth="22.0">
+                                            <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Science Fiction" />
+                                            </children>
+                                        </HBox>
+                                        <HBox layoutX="443.0" layoutY="175.0" onMouseClicked="#Choose" prefHeight="2.0" prefWidth="22.0">
+                                            <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Western" />
+                                            </children>
+                                        </HBox>
+                                        <HBox layoutX="347.0" layoutY="183.0" onMouseClicked="#Choose" prefHeight="2.0" prefWidth="22.0">
+                                            <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Romance" />
+                                            </children>
+                                        </HBox>
+                                        <HBox layoutX="449.0" layoutY="84.0" onMouseClicked="#Choose" prefHeight="2.0" prefWidth="22.0">
+                                            <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Family" />
+                                            </children>
+                                        </HBox>
+                                        <HBox layoutX="344.0" layoutY="73.0" onMouseClicked="#Choose" prefHeight="2.0" prefWidth="22.0">
+                                            <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Musical" />
+                                            </children>
+                                        </HBox>
+                                        <HBox layoutX="287.0" layoutY="219.0" onMouseClicked="#Choose" prefHeight="2.0" prefWidth="22.0">
+                                            <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Crime" />
+                                            </children>
+                                        </HBox>
+                                        <HBox layoutX="517.0" layoutY="209.0" onMouseClicked="#Choose" prefHeight="2.0" prefWidth="22.0">
+                                            <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Historical" />
+                                            </children>
+                                        </HBox>
+                                        <HBox layoutX="427.0" layoutY="302.0" onMouseClicked="#Choose" prefHeight="2.0" prefWidth="22.0">
+                                            <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="War" />
+                                            </children>
+                                        </HBox>
+                                        <HBox layoutX="382.0" layoutY="237.0" onMouseClicked="#Choose" prefHeight="2.0" prefWidth="22.0">
+                                            <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Animation" />
+                                            </children>
+                                        </HBox>
+                                        <HBox layoutX="273.0" layoutY="284.0" onMouseClicked="#Choose" prefHeight="2.0" prefWidth="22.0">
+                                            <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Documentary" />
+                                            </children>
+                                        </HBox>
+                                        <HBox layoutX="513.0" layoutY="284.0" onMouseClicked="#Choose" prefHeight="2.0" prefWidth="22.0">
+                                            <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Thriller" />
+                                            </children>
+                                        </HBox>
+                                        <Hyperlink fx:id="Register" layoutX="75.0" layoutY="336.0" onMouseClicked="#Register" text="Back to Register ?" />
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </VBox>
+                    </children>
+                </AnchorPane>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

@@ -1,0 +1,22 @@
+.SideBarItems:hover{
+    -fx-fill: white;
+}
+
+.CurrentPage{
+    -fx-fill: white;
+}
+
+.scroll-bar:vertical .thumb{
+    -fx-background-color:  #6640d9;
+}
+
+.scroll-bar:vertical .track{
+    -fx-background-color: white;
+}
+.scroll-bar:vertical{
+    -fx-pref-width: 10px;
+}
+
+.scroll-pane > .scroll-bar .increment-button,.scroll-pane > .scroll-bar .decrement-button{
+    -fx-opacity: 0;
+}

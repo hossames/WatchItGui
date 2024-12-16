@@ -1,0 +1,16 @@
+.text-field{
+    -fx-border-width: 0 0 3px 0;
+    -fx-border-color: #f4a805;
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+#HeadLine{
+    -fx-font-size: 40;
+    -fx-font-weight: 800;
+    -fx-fill: white;
+}
+.HeadLine{
+    -fx-font-size: 30;
+    -fx-font-weight: 700;
+    -fx-fill: white;
+}

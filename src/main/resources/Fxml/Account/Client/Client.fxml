@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="ClientBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="790.0" prefWidth="1280.0" style="-fx-border-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+        <AnchorPane prefHeight="767.0" prefWidth="206.0" style="-fx-background-color: #252525;" stylesheets="@../../../Styling/Client.css" BorderPane.alignment="CENTER">
+            <children>
+                <Text fx:id="HeadTitle" fill="WHITE" layoutX="66.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WATCHIT" wrappingWidth="116.26602172851562">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Text>
+
+                      <Text fx:id="Home" fill="#cfcfcf" layoutX="64.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="SideBarItems" text="Home" wrappingWidth="116.26602172851562">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Text>
+                <Text fx:id="Favorites" fill="#cfcfcf" layoutX="64.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="SideBarItems" text="Favorites" wrappingWidth="116.26602172851562">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Text>
+                <Text fx:id="TrendText" fill="#cfcfcf" layoutX="63.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="SideBarItems" text="Trending" wrappingWidth="116.26602172851562">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Text>
+            <MaterialIconView fx:id="Trend" fill="#cfcfcf" glyphName="TRENDING_UP" layoutX="25.0" layoutY="188.0" size="1.8em" text="" />
+            <Text fx:id="watchLaterText" fill="#cfcfcf" layoutX="65.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="SideBarItems" text="Watch Later" wrappingWidth="116.26602172851562">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="HistoryText" fill="#cfcfcf" layoutX="65.0" layoutY="444.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="SideBarItems" text="History" wrappingWidth="116.26602172851562">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <MaterialIconView fx:id="History" fill="#cfcfcf" glyphName="REPLAY" layoutX="25.0" layoutY="449.0" size="1.8em" />
+            <Text fx:id="Logout" fill="#cfcfcf" layoutX="63.0" layoutY="663.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="SideBarItems" text="Logout" wrappingWidth="116.26602172851562">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <MaterialIconView fx:id="Exit" fill="#cfcfcf" glyphName="EXIT_TO_APP" layoutX="26.0" layoutY="668.0" size="1.8em" />
+            <Text fx:id="Settings" fill="#cfcfcf" layoutX="63.0" layoutY="618.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="SideBarItems" text="Settings" wrappingWidth="116.26602172851562">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <FontAwesomeIconView fx:id="Film" fill="#cfcfcf" glyphName="FILM" layoutX="25.0" layoutY="138.0" size="1.8em" />
+            <FontAwesomeIconView fill="#cfcfcf" glyphName="HEART_ALT" layoutX="26.0" layoutY="341.0" size="1.8em" text="" />
+            <FontAwesomeIconView fill="#cfcfcf" glyphName="CLOCK_ALT" layoutX="26.0" layoutY="390.0" size="1.8em" />
+            <FontAwesomeIconView fill="#cfcfcf" glyphName="GEAR" layoutX="26.0" layoutY="620.0" size="1.8em" text="" />
+            <FontAwesomeIconView fill="WHITE" glyphName="COFFEE" layoutX="19.0" layoutY="58.0" size="2.5em" />
+            </children>
+         <effect>
+            <DropShadow />
+         </effect>
+        </AnchorPane>
+   </left>
+   <effect>
+      <Glow level="0.15" />
+   </effect>
+   <center>
+      <ScrollPane fx:id="Container" hbarPolicy="NEVER" stylesheets="@../../../Styling/Client.css" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

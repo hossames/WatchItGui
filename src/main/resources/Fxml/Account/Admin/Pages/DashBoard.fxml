@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minWidth="1038.0" prefHeight="694.0" prefWidth="1038.0" style="-fx-background-color: rgb(230,230,230);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="WatchIt.Controllers.Account.Admin.Page.DashBoardController">
+   <children>
+      <AnchorPane layoutX="29.0" layoutY="51.0" prefHeight="130.0" prefWidth="284.0" style="-fx-background-color: black; -fx-border-color: #000cec; -fx-border-width: 0 0 4 0;">
+         <children>
+            <Text fill="WHITE" layoutX="14.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Users">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <VBox alignment="CENTER" layoutX="158.0" layoutY="10.0" prefHeight="106.0" prefWidth="111.0" style="-fx-border-color: blue; -fx-border-radius: 50%; -fx-border-width: 3;">
+               <children>
+                  <Text fx:id="AccountsNumber" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="200">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="329.0" layoutY="51.0" prefHeight="130.0" prefWidth="284.0" style="-fx-background-color: black; -fx-border-color: Red; -fx-border-width: 0 0 4 0;">
+         <children>
+            <Text fill="WHITE" layoutX="14.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admins">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <VBox alignment="CENTER" layoutX="158.0" layoutY="12.0" prefHeight="106.0" prefWidth="111.0" style="-fx-border-color: red; -fx-border-radius: 50%; -fx-border-width: 3;">
+               <children>
+                  <Text fx:id="Admins" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="200">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="622.0" layoutY="50.0" prefHeight="130.0" prefWidth="284.0" style="-fx-background-color: black; -fx-border-color: #00ff15; -fx-border-width: 0 0 4 0;">
+         <children>
+            <VBox alignment="CENTER" layoutX="158.0" layoutY="12.0" prefHeight="106.0" prefWidth="111.0" style="-fx-border-color: #00ff15; -fx-border-radius: 50%; -fx-border-width: 3;">
+               <children>
+                  <Text fx:id="Profits" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="200">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+            <Text fill="WHITE" layoutX="20.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profits">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <Text layoutX="28.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Statistics" wrappingWidth="216.79999084472655">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Text>
+      <BarChart fx:id="RevenueChart" layoutX="14.0" layoutY="227.0" prefHeight="400.0" prefWidth="446.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+         <effect>
+            <DropShadow />
+         </effect>
+      </BarChart>
+      <BarChart fx:id="plansAnalysis" layoutX="483.0" layoutY="227.0" prefHeight="400.0" prefWidth="446.0">
+         <xAxis>
+            <CategoryAxis side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis side="LEFT" />
+         </yAxis>
+         <effect>
+            <DropShadow />
+         </effect>
+      </BarChart>
+   </children>
+</AnchorPane>

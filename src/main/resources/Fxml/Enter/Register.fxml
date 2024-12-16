@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="RegisterPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="537.0" prefWidth="600.0" style="-fx-background-image: url('../resources/Images/MainPageBackground.png')" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="WatchIt.Controllers.Enter.RegisterController">
+    <center>
+        <VBox alignment="CENTER" fillWidth="false" maxHeight="-Infinity" prefHeight="540.0" prefWidth="600.0" style="-fx-background-color: #252525;" BorderPane.alignment="CENTER">
+            <children>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <ImageView fx:id="Background" fitHeight="528.0" fitWidth="599.0" pickOnBounds="true">
+                            <image>
+                                <Image url="@../../Images/background.jpg" />
+                            </image>
+                        </ImageView>
+                        <VBox fx:id="Container" alignment="CENTER" fillWidth="false" layoutY="-2.0" prefHeight="492.0" prefWidth="600.0">
+                            <children>
+                                <AnchorPane opacity="0.6" prefHeight="538.0" prefWidth="600.0" style="-fx-background-color: black;" stylesheets="@../../Styling/Styler.css" BorderPane.alignment="CENTER">
+                                    <children>
+                                        <ImageView fitHeight="99.0" fitWidth="197.0" layoutX="59.0" layoutY="188.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../../Images/logo.png" />
+                                            </image>
+                                        </ImageView>
+                                        <TextField fx:id="FirstName" layoutX="328.0" layoutY="123.0" onKeyTyped="#GoToNext" prefHeight="26.0" prefWidth="221.0" promptText="First Name" />
+                                        <TextField fx:id="LastName" layoutX="328.0" layoutY="172.0" onKeyTyped="#GoToNext" prefHeight="26.0" prefWidth="221.0" promptText="Last Name" />
+                                        <TextField fx:id="UserName" layoutX="328.0" layoutY="223.0" onKeyTyped="#GoToNext" prefHeight="26.0" prefWidth="221.0" promptText="User Name" />
+                                        <TextField fx:id="Email" layoutX="328.0" layoutY="273.0" onKeyTyped="#GoToNext" prefHeight="26.0" prefWidth="221.0" promptText="Email" />
+                                        <PasswordField fx:id="Password" layoutX="328.0" layoutY="324.0" onKeyTyped="#GoToNext" prefHeight="26.0" prefWidth="221.0" promptText="Password" />
+                                        <Text id="HeadLine" layoutX="59.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WATCH IT" />
+                                        <Text layoutX="212.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="HeadLine" text="REGISTER" />
+                                        <Button fx:id="RegisterButton" layoutX="325.0" layoutY="486.0" mnemonicParsing="false" onMouseClicked="#Register" prefHeight="26.0" prefWidth="226.0" style="-fx-background-color: #f4a005; -fx-text-fill: white; -fx-font-size: 18; -fx-font-weight: 700;" text="Register" />
+                                        <PasswordField fx:id="RePassword" layoutX="328.0" layoutY="377.0" onKeyTyped="#GoToNext" prefHeight="26.0" prefWidth="221.0" promptText="Re Enter Password" />
+                                        <TextField fx:id="FavName" layoutX="328.0" layoutY="427.0" onKeyTyped="#GoToNext" prefHeight="26.0" prefWidth="221.0" promptText="Enter Your Favorite Name" />
+                                        <Hyperlink fx:id="Login" layoutX="91.0" layoutY="494.0" onMouseClicked="#Login" text="Already have Account?" />
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </VBox>
+                    </children>
+                </AnchorPane>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

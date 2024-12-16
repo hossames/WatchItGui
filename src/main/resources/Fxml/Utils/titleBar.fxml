@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox fx:id="Container" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="600.0" style="-fx-background-color: #252525;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="WatchIt.Controllers.Utils.TitleBarController">
+   <children>
+      <FontAwesomeIconView fill="#7812d1" glyphName="CLOSE" onMouseClicked="#Close" size="2em" text="" wrappingWidth="42.5714054107666">
+         <effect>
+            <Glow level="1.0" />
+         </effect></FontAwesomeIconView>
+   </children>
+</HBox>
