@@ -18,39 +18,6 @@ public class AdminView{
         fxmlLoader.setController(new AdminController(fxmlLoader1));
         return fxmlLoader;
     }
-    public static FXMLLoader Profile() {
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Admin/Profile.fxml"));
-        return fxmlLoader;
-    }
-    public static FXMLLoader AddCast() {
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Admin/Pages/AddCast.fxml"));
-        fxmlLoader.setController(new CreateCastController());
-        return fxmlLoader;
-    }
-    public static FXMLLoader AddMovie() {
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Admin/Pages/AddMovie.fxml"));
-        fxmlLoader.setController(new CreateMovieController());
-        return fxmlLoader;
-    }
-    public static FXMLLoader AccountCard(Account account) {
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Admin/Helps/UserCard.fxml"));
-        fxmlLoader.setController(new UserCardController(account));
-        return fxmlLoader;
-    }
-    public static FXMLLoader AddSeries() {
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Admin/Pages/AddSeries.fxml"));
-        return fxmlLoader;
-    }
-    public static FXMLLoader AddEpisode() {
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Admin/Pages/AddEpisode.fxml"));
-        return fxmlLoader;
-    }
     public static FXMLLoader DashBoard() {
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Admin/Pages/DashBoard.fxml"));
@@ -64,7 +31,7 @@ public class AdminView{
     }
     public static FXMLLoader ContentCard(DataObject content){
         FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Content/ContentCard.fxml"));
+        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Content/ContentCardAdmin.fxml"));
         fxmlLoader.setController(new ContentCardControllerAdmin(content));
         return fxmlLoader;
     }

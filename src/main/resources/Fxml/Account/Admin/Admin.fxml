@@ -20,33 +20,16 @@
                     </font>
                 </Text>
 
-                <Text fx:id="Home" fill="#cfcfcf" layoutX="64.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="SideBarItems" text="Home" wrappingWidth="116.26602172851562">
+                <Text fx:id="DashBoard" fill="#cfcfcf" layoutX="64.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="SideBarItems" text="DashBoard" wrappingWidth="116.26602172851562">
                     <font>
                         <Font name="System Bold" size="16.0" />
                     </font>
                 </Text>
-                <Text fx:id="Favorites" fill="#cfcfcf" layoutX="64.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="SideBarItems" text="Favorites" wrappingWidth="116.26602172851562">
+                <Text fx:id="Movies" fill="#cfcfcf" layoutX="65.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="SideBarItems" text="Movies" wrappingWidth="116.26602172851562">
                     <font>
                         <Font name="System Bold" size="16.0" />
                     </font>
                 </Text>
-                <Text fx:id="TrendText" fill="#cfcfcf" layoutX="63.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="SideBarItems" text="Trending" wrappingWidth="116.26602172851562">
-                    <font>
-                        <Font name="System Bold" size="16.0" />
-                    </font>
-                </Text>
-                <MaterialIconView fx:id="Trend" fill="#cfcfcf" glyphName="TRENDING_UP" layoutX="25.0" layoutY="188.0" size="1.8em" text="" />
-                <Text fx:id="watchLaterText" fill="#cfcfcf" layoutX="65.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="SideBarItems" text="Watch Later" wrappingWidth="116.26602172851562">
-                    <font>
-                        <Font name="System Bold" size="16.0" />
-                    </font>
-                </Text>
-                <Text fx:id="HistoryText" fill="#cfcfcf" layoutX="65.0" layoutY="444.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="SideBarItems" text="History" wrappingWidth="116.26602172851562">
-                    <font>
-                        <Font name="System Bold" size="16.0" />
-                    </font>
-                </Text>
-                <MaterialIconView fx:id="History" fill="#cfcfcf" glyphName="REPLAY" layoutX="25.0" layoutY="449.0" size="1.8em" />
                 <Text fx:id="Logout" fill="#cfcfcf" layoutX="63.0" layoutY="663.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="SideBarItems" text="Logout" wrappingWidth="116.26602172851562">
                     <font>
                         <Font name="System Bold" size="16.0" />
@@ -58,11 +41,34 @@
                         <Font name="System Bold" size="16.0" />
                     </font>
                 </Text>
-                <FontAwesomeIconView fx:id="Film" fill="#cfcfcf" glyphName="FILM" layoutX="25.0" layoutY="138.0" size="1.8em" />
-                <FontAwesomeIconView fill="#cfcfcf" glyphName="HEART_ALT" layoutX="26.0" layoutY="341.0" size="1.8em" text="" />
-                <FontAwesomeIconView fill="#cfcfcf" glyphName="CLOCK_ALT" layoutX="26.0" layoutY="390.0" size="1.8em" />
                 <FontAwesomeIconView fill="#cfcfcf" glyphName="GEAR" layoutX="26.0" layoutY="620.0" size="1.8em" text="" />
                 <FontAwesomeIconView fill="WHITE" glyphName="COFFEE" layoutX="19.0" layoutY="58.0" size="2.5em" />
+            <MaterialIconView fill="#cfcfcf" glyphName="DASHBOARD" layoutX="25.0" layoutY="111.0" size="1.8em" />
+            <FontAwesomeIconView fill="#cfcfcf" glyphName="FILM" layoutX="25.0" layoutY="213.0" size="1.8em" />
+            <Text fx:id="Series" fill="#cfcfcf" layoutX="65.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="SideBarItems" text="Series" wrappingWidth="116.26602172851562">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <FontAwesomeIconView fill="#cfcfcf" glyphName="FILM" layoutX="25.0" layoutY="252.0" size="1.8em" />
+            <Text fx:id="Cast" fill="#cfcfcf" layoutX="64.0" layoutY="419.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="SideBarItems" text="Cast" wrappingWidth="116.26602172851562">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <MaterialIconView fill="#cfcfcf" glyphName="PERSON_PIN" layoutX="25.0" layoutY="423.0" size="1.8em" />
+            <Text fx:id="Episode" fill="#cfcfcf" layoutX="65.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="SideBarItems" text="Episode" wrappingWidth="116.26602172851562">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <FontAwesomeIconView fill="#cfcfcf" glyphName="FILM" layoutX="25.0" layoutY="289.0" size="1.8em" />
+            <Text fx:id="Users" fill="#cfcfcf" layoutX="64.0" layoutY="466.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="SideBarItems" text="Users" wrappingWidth="116.26602172851562">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <MaterialIconView fill="#cfcfcf" glyphName="PERSON" layoutX="25.0" layoutY="470.0" size="1.8em" />
             </children>
             <effect>
                 <DropShadow />

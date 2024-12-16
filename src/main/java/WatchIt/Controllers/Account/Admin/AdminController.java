@@ -1,26 +1,52 @@
 package WatchIt.Controllers.Account.Admin;
-import WatchIt.Models.Model;
-import WatchIt.Views.AdminView;
+
 import WatchIt.Views.MainView;
+import de.jensd.fx.glyphs.materialicons.MaterialIconView;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Button;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
-import src.AccountControl.Account;
-import src.Cast.CastMember;
-import src.ContentControl.*;
-import src.DataBase.DataBase;
-
+import javafx.scene.text.Text;
 import java.io.IOException;
 
 public class AdminController {
-    public BorderPane AdminBorderPane;
-    public Button DashBoard;
-    public Button Episodes;
-    public Button Movies;
-    public Button Seriess;
-    public Button Users;
-    public Button CastMembers;
+    @FXML
+    private BorderPane AdminBorderPane;
+
+    @FXML
+    private Text Cast;
+
+    @FXML
+    private ScrollPane Container;
+
+    @FXML
+    private Text DashBoard;
+
+    @FXML
+    private Text Episode;
+
+    @FXML
+    private MaterialIconView Exit;
+
+    @FXML
+    private Text HeadTitle;
+
+    @FXML
+    private Text Logout;
+
+    @FXML
+    private Text Movies;
+
+    @FXML
+    private Text Series;
+
+    @FXML
+    private Text Settings;
+
+    @FXML
+    private Text Users;
+
     FXMLLoader fxmlLoader;
     public AdminController(FXMLLoader fxmlLoader) {
         this.fxmlLoader = fxmlLoader;
@@ -35,8 +61,5 @@ public class AdminController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-    public void Profile(MouseEvent e){
-        Model.getInstance().getViewFactory().Show(AdminView.AdminScene(AdminView.Profile()));
     }
 }
