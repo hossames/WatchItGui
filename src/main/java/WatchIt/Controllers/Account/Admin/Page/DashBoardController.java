@@ -42,7 +42,7 @@ public class DashBoardController {
         XYChart.Series<String, Long> series = new XYChart.Series<>();
         series.setName("Revenue");
         series.getData().add(new XYChart.Data<>("Dec",Admin.CalculateRevenue(2024,11)));
-        RevenueChart.getData().add(series);;
+        RevenueChart.getData().add(series);
         series = new XYChart.Series<>();
         series.setName("Basic");
         series.getData().add(new XYChart.Data<>("Basic",Admin.plansAnalysis().get(0)));
@@ -54,5 +54,6 @@ public class DashBoardController {
         Premium.setName("Premium");
         Premium.getData().add(new XYChart.Data<>("Premium",Admin.plansAnalysis().get(2)));
         plansAnalysis.getData().addAll(series,Standard,Premium);
+        plansAnalysis.setTitle("Plans");
     }
 }

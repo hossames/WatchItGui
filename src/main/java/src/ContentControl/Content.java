@@ -76,14 +76,6 @@ public class Content extends DataObject implements Rateable {
             }
             Viewers++;
         }
-        InitRate();
-    }
-
-    public void InitRate(){
-        for(WatchRecord Record: DataBase.watchRecordData.getDataByString(contentTitle,0)){
-            Rate_Sum += Record.Rating;
-            RateCounter++;
-        }
     }
 
     public void AddRate(int UserID, float rate) {

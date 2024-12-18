@@ -164,7 +164,7 @@ public class ClientView {
     public static FXMLLoader HeadComponent(DataObject content){
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Client/Pages/InnerPageComponents/HeadComponent.fxml"));
-        fxmlLoader.setController(new HeadComponentController(content));
+        //fxmlLoader.setController(new HeadComponentController(content));
         return fxmlLoader;
     }
     public static FXMLLoader MediaComponent(String media){
