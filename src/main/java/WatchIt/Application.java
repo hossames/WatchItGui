@@ -1,5 +1,6 @@
 package WatchIt;
 import WatchIt.Models.Model;
+import WatchIt.Views.ClientView;
 import WatchIt.Views.MainView;
 import javafx.stage.Stage;
 import src.DataBase.DataBase;

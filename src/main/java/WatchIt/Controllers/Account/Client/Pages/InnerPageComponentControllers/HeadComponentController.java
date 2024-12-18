@@ -11,6 +11,7 @@ import javafx.scene.text.Text;
 import src.AccountControl.User;
 import src.ContentControl.Content;
 import src.ContentControl.Movie;
+import src.ContentControl.WatchRecord;
 import src.DataBase.DataBase;
 import src.DataBase.DataObject;
 
@@ -50,13 +51,15 @@ public class HeadComponentController {
     private Text Views;
 
     DataObject dataObject;
-
+    Content content;
     public HeadComponentController(DataObject dataObject) {
         this.dataObject = dataObject;
     }
-
     public void initialize(){
-        Content content = (Content) dataObject;
+       content = (Content) dataObject;
+        if(DataBase.watchRecordData.getDataByObject(new WatchRecord(-1F, content.contentTitle))==null){
+            content.AddRate(-1);
+        }
         Country.setText(content.country);
         Language.setText(content.language);
         Name.setText(content.contentTitle);
@@ -67,7 +70,7 @@ public class HeadComponentController {
         }
         Image.setImage(content.getImage());
         Rate.setText(String.valueOf(content.TotalRate()));
-        ReleaseDate.setText(DateFormatSymbols.getInstance().getMonths()[content.datePublished.getMonth()]+"/"+String.valueOf(content.datePublished.getYear()));
+        ReleaseDate.setText(DateFormatSymbols.getInstance().getMonths()[content.datePublished.getMonth()]+"/"+String.valueOf(1900+content.datePublished.getYear()));
         content.genres.stream().forEach(gen -> {
             try {
                 Genre.getChildren().add(ClientView.GenreComponent(gen).load());
@@ -80,10 +83,13 @@ public class HeadComponentController {
 
     @FXML
     void Click(MouseEvent event) {
+        float rate=0;
         for (var star : Stars.getChildren()) {
             FontAwesomeIconView fontAwesomeIconView = (FontAwesomeIconView) star;
             fontAwesomeIconView.setIcon(FontAwesomeIcon.STAR);
+            rate++;
             if (event.getSource().equals(star)) {
+                content.EditRate(rate);
                 return;
             }
         }
@@ -99,7 +105,6 @@ public class HeadComponentController {
         }
         user.getWatchLater().add(dataObject.getName(2));
     }
-
     @FXML
     void setFavorite(MouseEvent event) {
 

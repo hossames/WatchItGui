@@ -73,8 +73,8 @@ public class Episode extends DataObject implements Rateable{
     }
   }
 
-  public void AddRate(int UserID, float rate) {
-    DataBase.watchRecordData.addData(new WatchRecord((long) UserID,rate, getName(2), new Date()));
+  public void AddRate(float rate) {
+    DataBase.watchRecordData.addData(new WatchRecord(DataBase.getInstance().CurrentUser.getId(0),rate, getName(2), new Date()));
     RateCounter++;
     Rate_Sum += rate;
   }

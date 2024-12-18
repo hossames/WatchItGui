@@ -2,7 +2,6 @@ package WatchIt.Controllers.Account.Client;
 import WatchIt.Models.Model;
 import WatchIt.Views.ClientView;
 import WatchIt.Views.MainView;
-import com.sun.tools.javac.Main;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import de.jensd.fx.glyphs.materialicons.MaterialIconView;
 import javafx.fxml.FXML;

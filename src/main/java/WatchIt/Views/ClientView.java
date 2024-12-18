@@ -5,7 +5,6 @@ import WatchIt.Controllers.Account.Client.*;
 import WatchIt.Controllers.Account.Client.Pages.OtherPageController;
 import WatchIt.Controllers.Account.Client.Pages.Settings.ChangePassword;
 import WatchIt.Controllers.Account.Client.Pages.Settings.Renew;
-import WatchIt.Controllers.Cast.CastCardAdminController;
 import WatchIt.Controllers.Cast.CastCardClientController;
 import WatchIt.Controllers.Content.ContentCardControllerClient;
 import WatchIt.Controllers.Account.Client.Helps.HLineController;
@@ -164,7 +163,13 @@ public class ClientView {
     public static FXMLLoader HeadComponent(DataObject content){
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Client/Pages/InnerPageComponents/HeadComponent.fxml"));
-        //fxmlLoader.setController(new HeadComponentController(content));
+        fxmlLoader.setController(new HeadComponentController(content));
+        return fxmlLoader;
+    }
+    public static FXMLLoader DescriptionComponent(String story){
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Client/Pages/InnerPageComponents/DescriptionComponent.fxml"));
+        fxmlLoader.setController(new DescriptionController(story));
         return fxmlLoader;
     }
     public static FXMLLoader MediaComponent(String media){

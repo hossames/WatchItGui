@@ -3,7 +3,6 @@ module watchit {
     requires javafx.fxml;
     requires javafx.web;
     requires java.desktop;
-    requires jdk.compiler;
     requires com.fasterxml.jackson.annotation;
     requires javafx.media;
     requires java.sql;
