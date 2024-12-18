@@ -21,6 +21,7 @@ public class CreateMovieController {
     public ChoiceBox<String> CastMembers;
     public TextField ContentTitle,Duration;
     public TextField Country;
+    public TextArea Story;
     public ChoiceBox<String> Genres;
     public TextField Language;
     public TextField Budget;
@@ -52,11 +53,11 @@ public class CreateMovieController {
         }
     }
     public void Done(MouseEvent event) {
-//        Movie movie = new Movie(ContentTitle.getText(),Language.getText(),Country.getText(),
-//                Integer.parseInt(Budget.getText()),Integer.parseInt(Revenue.getText()),
-//                Integer.parseInt(Duration.getText()),genres,castmembers,
-//                Date.from(dateOfProduction.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant()));
-//        DataBase.getInstance().moviesData.addData(movie);
+        Movie movie = new Movie(ContentTitle.getText(),Language.getText(),Country.getText(),Story.getText(),
+                Integer.parseInt(Budget.getText()),Integer.parseInt(Revenue.getText()),
+                Integer.parseInt(Duration.getText()),genres,castmembers,
+                Date.from(dateOfProduction.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant()));
+        DataBase.getInstance().moviesData.addData(movie);
     }
     public void GoToNext(KeyEvent keyEvent) {
         if(keyEvent.getCharacter().charAt(0)==System.lineSeparator().charAt(0)) {
@@ -71,6 +72,8 @@ public class CreateMovieController {
                 Revenue.requestFocus();
             } else if (Revenue.isFocused()) {
                 Duration.requestFocus();
+            } else if (Duration.isFocused()) {
+                Story.requestFocus();
             } else {
                 dateOfProduction.requestFocus();
             }

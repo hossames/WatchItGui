@@ -37,3 +37,8 @@ HBox > Text{
     -fx-fill: black;
     -fx-background-color: white;
 }
+
+.Add_Button{
+    -fx-fill: white;
+    -fx-background-color: #4c0bff;
+}
