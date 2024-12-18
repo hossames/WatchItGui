@@ -201,7 +201,7 @@
             <MaterialIconView fill="#4c0bff" glyphName="REPLAY" layoutX="10.0" layoutY="28.0" onMouseClicked="#SetWatchLater" size="1.8em" />
          </children>
       </AnchorPane>
-      <HBox fx:id="Rate" alignment="CENTER" layoutX="18.0" layoutY="320.0" prefHeight="42.0" prefWidth="244.0" spacing="10.0">
+      <HBox fx:id="Stars" alignment="CENTER" layoutX="18.0" layoutY="320.0" prefHeight="42.0" prefWidth="244.0" spacing="10.0">
          <children>
             <FontAwesomeIconView fill="#faff00" glyphName="STAR_ALT" onMouseClicked="#Click" size="2.5em" />
             <FontAwesomeIconView fill="#faff00" glyphName="STAR_ALT" onMouseClicked="#Click" size="2.5em" />
