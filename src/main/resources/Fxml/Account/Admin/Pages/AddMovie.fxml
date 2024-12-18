@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.InnerShadow?>
@@ -13,28 +14,29 @@
 
 <AnchorPane minWidth="1038.0" prefHeight="694.0" prefWidth="1038.0" style="-fx-background-color: #252525;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <TextField fx:id="ContentTitle" layoutX="431.0" layoutY="115.0" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="328.0" promptText="Content Title" style="-fx-text-fill: black !important;" />
-        <TextField fx:id="Language" layoutX="431.0" layoutY="168.0" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="328.0" promptText="Language" style="-fx-text-fill: black !important;" />
-        <TextField fx:id="Country" layoutX="427.0" layoutY="223.0" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="328.0" promptText="Country" style="-fx-text-fill: black !important;" />
-        <TextField fx:id="Budget" layoutX="427.0" layoutY="273.0" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="328.0" promptText="budget" style="-fx-text-fill: black !important;" />
-        <TextField fx:id="Revenue" layoutX="427.0" layoutY="325.0" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="328.0" promptText="revenue" style="-fx-text-fill: black !important;" />
-        <DatePicker fx:id="dateOfProduction" layoutX="427.0" layoutY="524.0" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="328.0" promptText="Date of production" style="-fx-text-fill: black !important;" />
-        <Button fx:id="Add" layoutX="427.0" layoutY="578.0" mnemonicParsing="false" onMouseClicked="#Done" prefHeight="31.0" prefWidth="328.0" style="-fx-background-color: #6600ff;" text="Add">
+        <TextField fx:id="ContentTitle" layoutX="430.0" layoutY="83.0" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="328.0" promptText="Content Title" style="-fx-text-fill: black !important;" />
+        <TextField fx:id="Language" layoutX="430.0" layoutY="136.0" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="328.0" promptText="Language" style="-fx-text-fill: black !important;" />
+        <TextField fx:id="Country" layoutX="426.0" layoutY="191.0" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="328.0" promptText="Country" style="-fx-text-fill: black !important;" />
+        <TextField fx:id="Budget" layoutX="426.0" layoutY="241.0" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="328.0" promptText="budget" style="-fx-text-fill: black !important;" />
+        <TextField fx:id="Revenue" layoutX="426.0" layoutY="293.0" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="328.0" promptText="revenue" style="-fx-text-fill: black !important;" />
+        <DatePicker fx:id="dateOfProduction" layoutX="428.0" layoutY="594.0" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="328.0" promptText="Date of production" style="-fx-text-fill: black !important;" />
+        <Button fx:id="Add" layoutX="428.0" layoutY="648.0" mnemonicParsing="false" onMouseClicked="#Done" prefHeight="31.0" prefWidth="328.0" style="-fx-background-color: #6600ff;" text="Add">
          <effect>
             <DropShadow />
          </effect></Button>
-        <Text fill="WHITE" layoutX="458.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 30; -fx-font-weight: 700;" text="Add Movie Form" />
-      <ChoiceBox fx:id="Genres" layoutX="425.0" layoutY="422.0" prefHeight="26.0" prefWidth="144.0" />
-      <Button fx:id="AddGenre" layoutX="580.0" layoutY="419.0" mnemonicParsing="false" onMouseClicked="#Add" prefHeight="31.0" prefWidth="176.0" style="-fx-background-color: #6600ff;" text="Add Genre">
+        <Text fill="WHITE" layoutX="458.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 30; -fx-font-weight: 700;" text="Add Movie Form" />
+      <ChoiceBox fx:id="Genres" layoutX="426.0" layoutY="492.0" prefHeight="26.0" prefWidth="144.0" />
+      <Button fx:id="AddGenre" layoutX="581.0" layoutY="489.0" mnemonicParsing="false" onMouseClicked="#Add" prefHeight="31.0" prefWidth="176.0" style="-fx-background-color: #6600ff;" text="Add Genre">
          <effect>
             <DropShadow />
          </effect></Button>
-      <ChoiceBox fx:id="CastMembers" layoutX="425.0" layoutY="472.0" prefHeight="26.0" prefWidth="144.0" />
-      <Button fx:id="AddCastMember" layoutX="579.0" layoutY="469.0" mnemonicParsing="false" onMouseClicked="#Add" prefHeight="31.0" prefWidth="176.0" style="-fx-background-color: #6600ff;" text="Add CastMember">
+      <ChoiceBox fx:id="CastMembers" layoutX="426.0" layoutY="542.0" prefHeight="26.0" prefWidth="144.0" />
+      <Button fx:id="AddCastMember" layoutX="580.0" layoutY="539.0" mnemonicParsing="false" onMouseClicked="#Add" prefHeight="31.0" prefWidth="176.0" style="-fx-background-color: #6600ff;" text="Add CastMember">
          <effect>
             <DropShadow />
          </effect></Button>
-      <TextField fx:id="Duration" layoutX="427.0" layoutY="374.0" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="328.0" promptText="Duration" style="-fx-text-fill: black !important;" />
+      <TextField fx:id="Duration" layoutX="426.0" layoutY="342.0" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="328.0" promptText="Duration" style="-fx-text-fill: black !important;" />
+      <TextArea fx:id="Story" onKeyTyped="#GoToNext" layoutX="426.0" layoutY="385.0" prefHeight="90.0" prefWidth="328.0" />
     </children>
     <stylesheets>
         <URL value="@../../../../Styling/Styler.css" />

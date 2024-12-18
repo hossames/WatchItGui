@@ -52,9 +52,9 @@ public class CastMember extends DataObject {
         this.socialMediaLink = socialMediaLink;
         CastMemberId = Id;
         try {
-            portrait = new Image(Application.class.getResourceAsStream("/images/"+getName(2)+".jpg"));
+            portrait = new Image(Application.class.getResourceAsStream("/Images/"+getName(2)+".jpg"));
         }catch (Exception e) {
-            portrait = new Image(Application.class.getResourceAsStream("/images/portirait.jpg"));
+            portrait = new Image(Application.class.getResourceAsStream("/Images/portirait.jpg"));
         }
         cnt = Id+1;
     }

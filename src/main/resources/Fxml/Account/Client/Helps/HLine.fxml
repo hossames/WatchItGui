@@ -26,7 +26,7 @@
       </Text>
       <AnchorPane prefHeight="292.0" prefWidth="1182.0">
          <children>
-            <ScrollPane fx:id="Container" hbarPolicy="NEVER" layoutX="13.0" layoutY="-7.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="292.0" prefWidth="1057.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #202020 0.0%, #303030 100.0%);" vbarPolicy="NEVER">
+            <ScrollPane fx:id="Container" fitToWidth="true" hbarPolicy="NEVER" layoutX="13.0" layoutY="-7.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="292.0" prefWidth="1057.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #202020 0.0%, #303030 100.0%);" vbarPolicy="NEVER">
                <content>
                   <AnchorPane prefHeight="290.0" prefWidth="1056.0" style="-fx-background-color: #252525;">
                      <children>
