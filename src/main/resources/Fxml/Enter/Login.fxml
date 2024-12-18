@@ -24,7 +24,7 @@
                   </ImageView>
                   <VBox fx:id="Container" alignment="CENTER" fillWidth="false" layoutY="-2.0" prefHeight="376.0" prefWidth="600.0">
                      <children>
-                        <AnchorPane opacity="0.6" prefHeight="371.0" prefWidth="600.0" style="-fx-background-color: black;" stylesheets="@../../Styling/Styler.css">
+                        <AnchorPane opacity="0.9" prefHeight="371.0" prefWidth="600.0" style="-fx-background-color: black;" stylesheets="@../../Styling/Styler.css">
                            <children>
                               <ImageView fitHeight="99.0" fitWidth="197.0" layoutX="65.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
