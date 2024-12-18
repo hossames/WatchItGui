@@ -12,16 +12,16 @@ public class Series extends Content{
     private Date lastAireDate;
     private Integer onGoing;
     // Constructors
-    public Series(String contentTitle, String language, String country, int budget, int revenue,int numberOfEpisodes, int onGoing, List<String> genres, List<String> CastMembers, Date date, Date lastAireDate) {
-        super(contentTitle, language, country, budget, revenue, genres, CastMembers, date);
+    public Series(String contentTitle, String language, String country,String story, int budget, int revenue,int numberOfEpisodes, int onGoing, List<String> genres, List<String> CastMembers, Date date, Date lastAireDate) {
+        super(contentTitle, language, country,story, budget, revenue, genres, CastMembers, date);
         this.numberOfEpisodes = numberOfEpisodes;
         this.lastAireDate = lastAireDate;
         this.onGoing = onGoing;
         File f = new File("./src/main/resources/Videos/"+contentTitle);
         f.mkdirs();
     }
-    public Series(Long Id,String contentTitle, String language, String country, int budget, int revenue,int numberOfEpisodes, int onGoing, List<String> genres, List<String> CastMembers, Date date, Date lastAireDate) {
-        super(Id,contentTitle, language, country, budget, revenue, genres, CastMembers, date);
+    public Series(Long Id,String contentTitle, String language, String country,String story, int budget, int revenue,int numberOfEpisodes, int onGoing, List<String> genres, List<String> CastMembers, Date date, Date lastAireDate) {
+        super(Id,contentTitle, language, country,story, budget, revenue, genres, CastMembers, date);
         this.numberOfEpisodes = numberOfEpisodes;
         this.lastAireDate = lastAireDate;
         this.onGoing = onGoing;

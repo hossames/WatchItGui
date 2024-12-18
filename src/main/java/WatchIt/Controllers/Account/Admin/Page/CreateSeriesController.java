@@ -56,12 +56,12 @@ public class CreateSeriesController {
         }
     }
     public void Done(MouseEvent event) {
-        Series series = new Series(ContentTitle.getText(),Language.getText(),Country.getText(),
-                Integer.parseInt(Budget.getText()),Integer.parseInt(Revenue.getText()),
-                Integer.parseInt(numberOfEpisodes.getText()),((onGoing.isSelected())?1:0),genres,castmembers,
-                Date.from(dateOfProduction.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant()),
-                Date.from(LastAirDate.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant()));
-        DataBase.getInstance().seriesData.addData(series);
+//        Series series = new Series(ContentTitle.getText(),Language.getText(),Country.getText(),
+//                Integer.parseInt(Budget.getText()),Integer.parseInt(Revenue.getText()),
+//                Integer.parseInt(numberOfEpisodes.getText()),((onGoing.isSelected())?1:0),genres,castmembers,
+//                Date.from(dateOfProduction.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant()),
+//                Date.from(LastAirDate.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant()));
+        //DataBase.getInstance().seriesData.addData(series);
     }
     public void GoToNext(KeyEvent keyEvent) {
         if(keyEvent.getCharacter().charAt(0)==System.lineSeparator().charAt(0)) {

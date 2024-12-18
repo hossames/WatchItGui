@@ -1,101 +1,214 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="332.0" prefWidth="1034.0" style="-fx-background-color: #252525;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="381.0" prefWidth="1034.0" style="-fx-background-color: #252525;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fx:id="Image" fitHeight="260.0" fitWidth="216.0" layoutX="26.0" layoutY="10.0" pickOnBounds="true">
+      <ImageView fx:id="Image" fitHeight="303.0" fitWidth="244.0" layoutX="18.0" layoutY="10.0" pickOnBounds="true">
          <image>
             <Image url="@../../../../../Images/film.jpg" />
          </image>
       </ImageView>
-      <Text fx:id="Name" fill="#ffa600" layoutX="408.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Content Name " wrappingWidth="192.0718994140625">
+      <GridPane gridLinesVisible="true" layoutX="271.0" layoutY="49.0" prefHeight="257.0" prefWidth="570.0" styleClass="grid" stylesheets="@../../../../../Styling/Client.css">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="212.4000244140625" minWidth="10.0" prefWidth="162.3999755859375" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="450.40002441406244" minWidth="10.0" prefWidth="450.40002441406244" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Language" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+               <effect>
+                  <Glow level="0.54" />
+               </effect>
+            </Label>
+            <Label text="Duration" textFill="WHITE" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+               <effect>
+                  <Glow level="0.54" />
+               </effect>
+            </Label>
+            <Label text="Country" textFill="WHITE" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+               <effect>
+                  <Glow level="0.54" />
+               </effect>
+            </Label>
+            <Label text="Release Date " textFill="WHITE" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+               <effect>
+                  <Glow level="0.54" />
+               </effect>
+            </Label>
+            <Label text="Genres " textFill="WHITE" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+               <effect>
+                  <Glow level="0.54" />
+               </effect>
+            </Label>
+            <Label text="Views " textFill="WHITE" GridPane.rowIndex="5">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+               <effect>
+                  <Glow level="0.54" />
+               </effect>
+            </Label>
+            <Label text="Rate " textFill="WHITE" GridPane.rowIndex="6">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+               <effect>
+                  <Glow level="0.54" />
+               </effect>
+            </Label>
+            <Text fx:id="Language" fill="#3916ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Language " wrappingWidth="450.0" GridPane.columnIndex="1">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+               <effect>
+                  <Glow level="0.8" />
+               </effect>
+            </Text>
+            <Text fx:id="Duration" fill="#3916ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration" wrappingWidth="450.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+               <effect>
+                  <Glow level="0.8" />
+               </effect>
+            </Text>
+            <Text fx:id="Country" fill="#3916ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Country " wrappingWidth="450.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+               <effect>
+                  <Glow level="0.8" />
+               </effect>
+            </Text>
+            <Text fx:id="ReleaseDate" fill="#3916ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Release Date " wrappingWidth="450.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+               <effect>
+                  <Glow level="0.8" />
+               </effect>
+            </Text>
+            <Text fx:id="Views" fill="#3916ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Views " wrappingWidth="450.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+               <effect>
+                  <Glow level="0.8" />
+               </effect>
+            </Text>
+            <Text fx:id="Rate" fill="#3916ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Rate" wrappingWidth="450.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+               <effect>
+                  <Glow level="0.8" />
+               </effect>
+            </Text>
+           <HBox fx:id="Genre" alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="657.0" spacing="15.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+      <Text fx:id="Name" fill="#3916ab" layoutX="272.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Content Name " wrappingWidth="760.3999633789062">
          <font>
-            <Font name="System Bold" size="18.0" />
+            <Font name="System Bold" size="30.0" />
          </font>
+         <effect>
+            <Glow level="0.8" />
+         </effect>
       </Text>
-      <Text fx:id="Language" fill="#ffa600" layoutX="409.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Language ">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Text>
-      <Text fx:id="Duration" fill="#ffa600" layoutX="409.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Text>
-      <Text fx:id="Country" fill="#ffa600" layoutX="410.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Country ">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Text>
-      <Text fx:id="ReleaseDate" fill="#ffa600" layoutX="409.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Release Date ">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Text>
-      <Text fx:id="Views" fill="#ffa600" layoutX="408.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Views ">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Text>
-      <FontAwesomeIcon fx:id="s2" fill="#fff600" glyphName="STAR_ALT" layoutX="68.0" layoutY="312.0" onMouseClicked="#Rate" size="3em" />
-      <FontAwesomeIcon fx:id="s3" fill="#fff600" glyphName="STAR_ALT" layoutX="114.0" layoutY="312.0" onMouseClicked="#Rate" size="3em" />
-      <FontAwesomeIcon fx:id="s4" fill="#fff600" glyphName="STAR_ALT" layoutX="162.0" layoutY="312.0" onMouseClicked="#Rate" size="3em" />
-      <FontAwesomeIcon fx:id="s5" fill="#fff600" glyphName="STAR_ALT" layoutX="208.0" layoutY="312.0" onMouseClicked="#Rate" size="3em" />
-      <FontAwesomeIcon fx:id="s1" fill="#fff600" glyphName="STAR_ALT" layoutX="26.0" layoutY="311.0" onMouseClicked="#Rate" size="3em" />
-      <HBox fx:id="Genre" alignment="CENTER_LEFT" layoutX="408.0" layoutY="177.0" prefHeight="30.0" prefWidth="657.0" spacing="15.0" />
-      <Text fx:id="Rate" fill="#ffa600" layoutX="409.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rate">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Text>
-      <Label layoutX="250.0" layoutY="242.0" text="Rate " textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="250.0" layoutY="209.0" text="Views " textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="249.0" layoutY="177.0" text="Genres " textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="249.0" layoutY="145.0" text="Release Date " textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="247.0" layoutY="113.0" text="Country" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="247.0" layoutY="79.0" text="Duration" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="247.0" layoutY="46.0" text="Language" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="247.0" layoutY="13.0" text="Content Name" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
+      <AnchorPane layoutX="270.0" layoutY="323.0" onMouseClicked="#setFavorite" prefHeight="34.0" prefWidth="40.0" style="-fx-background-color: linear-gradient(from 0.0% 100.0% to 100.0% 0.0%, #a5a5a5 0.0%, #f2f2f2 100.0%); -fx-background-radius: 5;">
+         <children>
+            <FontAwesomeIconView fill="#4c0bff" glyphName="HEART_ALT" layoutX="9.0" layoutY="26.0" onMouseClicked="#setFavorite" size="1.8em" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="337.0" layoutY="324.0" onMouseClicked="#Click" prefHeight="34.0" prefWidth="40.0" style="-fx-background-color: linear-gradient(from 0.0% 100.0% to 100.0% 0.0%, #a5a5a5 0.0%, #f2f2f2 100.0%); -fx-background-radius: 5;">
+         <children>
+            <MaterialIconView fill="#4c0bff" glyphName="REPLAY" layoutX="10.0" layoutY="28.0" onMouseClicked="#SetWatchLater" size="1.8em" />
+         </children>
+      </AnchorPane>
+      <HBox fx:id="Rate" alignment="CENTER" layoutX="18.0" layoutY="320.0" prefHeight="42.0" prefWidth="244.0" spacing="10.0">
+         <children>
+            <FontAwesomeIconView fill="#faff00" glyphName="STAR_ALT" onMouseClicked="#Click" size="2.5em" />
+            <FontAwesomeIconView fill="#faff00" glyphName="STAR_ALT" onMouseClicked="#Click" size="2.5em" />
+            <FontAwesomeIconView fill="#faff00" glyphName="STAR_ALT" onMouseClicked="#Click" size="2.5em" />
+            <FontAwesomeIconView fill="#faff00" glyphName="STAR_ALT" onMouseClicked="#Click" size="2.5em" />
+            <FontAwesomeIconView fill="#faff00" glyphName="STAR_ALT" onMouseClicked="#Click" size="2.5em" />
+         </children>
+      </HBox>
    </children>
 </AnchorPane>

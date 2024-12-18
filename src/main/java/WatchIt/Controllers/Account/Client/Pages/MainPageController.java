@@ -6,6 +6,7 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
@@ -23,19 +24,23 @@ public class MainPageController {
     public Text Series;
     public Button WatchNow;
     public Text Year;
-    public VBox Container;
+    public ScrollPane Container;
+    public VBox InnerContainer;
     public ImageView Background;
     private List<Node>nodeList;
 
     public void initialize(){
         for (var node : nodeList)
-            Container.getChildren().add(node);
+            InnerContainer.getChildren().add(node);
         Container.widthProperty().addListener(new ChangeListener<Number>() {
             @Override
             public void changed(ObservableValue<? extends Number> observableValue, Number number, Number t1) {
                 Background.setFitWidth(t1.doubleValue());
+                InnerContainer.minWidth(t1.doubleValue());
+                InnerContainer.maxWidth(t1.doubleValue());
                  for (var node : nodeList) {
                      VBox vBox = (VBox) node;
+                     vBox.minWidth(t1.doubleValue());
                      vBox.setMaxWidth(t1.doubleValue());
                  }
             }
@@ -47,7 +52,7 @@ public class MainPageController {
     }
 
     public void OpenActorsPage(MouseEvent event) {
-
+        Model.getInstance().getViewFactory().Show(ClientView.setNode(ClientView.CastPage()));
     }
 
     public void OpenMoviesPage(MouseEvent event) {
@@ -55,7 +60,7 @@ public class MainPageController {
     }
 
     public void OpenSeriesPage(MouseEvent event) {
-
+        Model.getInstance().getViewFactory().Show(ClientView.setNode(ClientView.SeriesPage()));
     }
 
     public void Search(MouseEvent event) {

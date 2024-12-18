@@ -284,7 +284,7 @@ public class DataObjectController <T> {
         return new DataObjectController<>('\0',ConvertListDataObject());
     }
 
-    public static List<Node> MakeDataObjectController(List<DataObject>list){
+    public static List<Node> MakeNodeList(List<DataObject>list){
         List<Node>nodeList=new ArrayList<>();
         for(DataObject dobj : list){
             nodeList.add(dobj.getNode());

@@ -2,18 +2,16 @@ package WatchIt.Controllers.Account.Client;
 import WatchIt.Models.Model;
 import WatchIt.Views.ClientView;
 import WatchIt.Views.MainView;
+import com.sun.tools.javac.Main;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import de.jensd.fx.glyphs.materialicons.MaterialIconView;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
+import src.DataBase.DataBase;
 
 public class ClientController {
 
@@ -28,9 +26,6 @@ public class ClientController {
 
     @FXML
     private Text ContentName12;
-
-    @FXML
-    private MaterialIconView Exit;
 
     @FXML
     private Text Favorites;
@@ -58,9 +53,6 @@ public class ClientController {
 
     @FXML
     private Text Home;
-
-    @FXML
-    private Text Logout;
 
     @FXML
     private Text Settings;
@@ -96,33 +88,19 @@ public class ClientController {
     public void initialize(){
         try {
             ClientBorderPane.setTop(MainView.TitleBar().load());
-            Container.setContent(node);
-            ClientBorderPane.widthProperty().addListener(new ChangeListener<Number>() {
-                @Override
-                public void changed(ObservableValue<? extends Number> observableValue, Number number, Number t1) {
-                    Container.setMinWidth(t1.doubleValue()-((AnchorPane)ClientBorderPane.getLeft()).getWidth());
-                    Container.setMaxWidth(t1.doubleValue()-((AnchorPane)ClientBorderPane.getLeft()).getWidth());
-                    System.out.println("--------"+Container.widthProperty().get());
-                }
-            });
-            Container.widthProperty().addListener(new ChangeListener<Number>() {
-                @Override
-                public void changed(ObservableValue<? extends Number> observableValue, Number number, Number t1) {
-                    if(Container.getContent() instanceof  VBox vBox) {
-                        vBox.setMaxWidth(t1.doubleValue());
-                        vBox.setMinWidth(t1.doubleValue());
-                    } else if (Container.getContent() instanceof  AnchorPane anchorPane) {
-                        System.out.println("ok");
-                        anchorPane.setMaxWidth(t1.doubleValue());
-                        anchorPane.setMinWidth(t1.doubleValue());
-                    }
-                }
-            });
+            ClientBorderPane.setCenter(node);
             Home.addEventHandler(MouseEvent.MOUSE_CLICKED,(MouseEvent e)->{
                 Model.getInstance().getViewFactory().Show(ClientView.setNode(ClientView.MainPage()));
             });
+
         }catch (Exception e){
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    void LogOut(MouseEvent event) {
+        DataBase.getInstance().CurrentUser=null;
+        Model.getInstance().getViewFactory().Show(MainView.LoginScene());
     }
 }

@@ -3,6 +3,7 @@
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.InnerShadow?>
@@ -15,89 +16,93 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox fx:id="Container" focusTraversable="true" minWidth="-Infinity" prefHeight="375.0" prefWidth="1043.0" style="-fx-background-color: #252525;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <AnchorPane prefHeight="374.0" prefWidth="1166.0" style="-fx-background-color: #252525;">
+<ScrollPane fx:id="Container" hbarPolicy="NEVER" stylesheets="@../../../../Styling/Client.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <content>
+      <VBox fx:id="InnerContainer" focusTraversable="true" prefHeight="375.0" prefWidth="1043.0" style="-fx-background-color: #252525;">
          <children>
-            <ImageView fx:id="Background" fitHeight="392.0" fitWidth="1058.0" layoutX="-1.0" layoutY="-18.0" pickOnBounds="true">
-               <image>
-                  <Image url="@../../../../Images/MainPageBackground.png" />
-               </image>
-            </ImageView>
-            <Text fx:id="Movies" fill="WHITE" layoutX="777.0" layoutY="44.0" onMouseClicked="#OpenMoviesPage" strokeType="OUTSIDE" strokeWidth="0.0" text="Movies" AnchorPane.rightAnchor="227.0101562499999">
-               <font>
-                  <Font size="17.0" />
-               </font>
-            </Text>
-            <Text fx:id="Series" fill="WHITE" layoutX="881.0" layoutY="44.0" onMouseClicked="#OpenSeriesPage" strokeType="OUTSIDE" strokeWidth="0.0" text="Series" AnchorPane.rightAnchor="132.5477539062499">
-               <font>
-                  <Font size="17.0" />
-               </font>
-            </Text>
-            <Text fx:id="Actors" fill="WHITE" layoutX="972.0" layoutY="43.0" onMouseClicked="#OpenActorsPage" strokeType="OUTSIDE" strokeWidth="0.0" text="Actors" AnchorPane.rightAnchor="37.93691406249991">
-               <font>
-                  <Font size="17.0" />
-               </font>
-            </Text>
-            <Text fx:id="ContentName" fill="WHITE" layoutX="18.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="163.73663294315338">
-               <font>
-                  <Font name="System Bold" size="35.0" />
-               </font>
-            </Text>
-            <Text fx:id="Year" fill="#cccbcb" layoutX="18.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Year" wrappingWidth="46.93664515018463">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Text>
-            <Text fx:id="Genre" fill="WHITE" layoutX="82.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genre" wrappingWidth="94.93670618534088">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Text>
-            <Text fx:id="ContentName12" fill="#c9c9c9" layoutX="67.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="|" wrappingWidth="6.136657357215881">
-               <font>
-                  <Font size="21.0" />
-               </font>
-            </Text>
-            <Button fx:id="WatchNow" layoutX="14.0" layoutY="288.0" mnemonicParsing="false" onMouseClicked="#WatchThatContent" prefHeight="41.0" prefWidth="162.0" style="-fx-background-color: #6640d9; -fx-background-radius: 12;" text="Watch Now" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Button>
-            <AnchorPane layoutX="189.0" layoutY="291.0" onMouseClicked="#setFavorite" prefHeight="34.0" prefWidth="40.0" style="-fx-background-color: linear-gradient(from 0.0% 100.0% to 100.0% 0.0%, #a5a5a5 0.0%, #f2f2f2 100.0%); -fx-background-radius: 5;">
+            <AnchorPane prefHeight="374.0" prefWidth="1166.0" style="-fx-background-color: #252525;">
                <children>
-                  <FontAwesomeIconView fill="#9a0dc9" glyphName="HEART_ALT" layoutX="9.0" layoutY="26.0" onMouseClicked="#setFavorite" size="1.7em" />
+                  <ImageView fx:id="Background" fitHeight="392.0" fitWidth="1058.0" layoutX="-1.0" layoutY="-18.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../../../Images/MainPageBackground.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="Movies" fill="WHITE" layoutX="777.0" layoutY="44.0" onMouseClicked="#OpenMoviesPage" strokeType="OUTSIDE" strokeWidth="0.0" text="Movies" AnchorPane.rightAnchor="227.0101562499999">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="Series" fill="WHITE" layoutX="881.0" layoutY="44.0" onMouseClicked="#OpenSeriesPage" strokeType="OUTSIDE" strokeWidth="0.0" text="Series" AnchorPane.rightAnchor="132.5477539062499">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="Actors" fill="WHITE" layoutX="972.0" layoutY="43.0" onMouseClicked="#OpenActorsPage" strokeType="OUTSIDE" strokeWidth="0.0" text="Actors" AnchorPane.rightAnchor="37.93691406249991">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="ContentName" fill="WHITE" layoutX="18.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="163.73663294315338">
+                     <font>
+                        <Font name="System Bold" size="35.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="Year" fill="#cccbcb" layoutX="18.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Year" wrappingWidth="46.93664515018463">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="Genre" fill="WHITE" layoutX="82.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genre" wrappingWidth="94.93670618534088">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="ContentName12" fill="#c9c9c9" layoutX="67.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="|" wrappingWidth="6.136657357215881">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="WatchNow" layoutX="14.0" layoutY="288.0" mnemonicParsing="false" onMouseClicked="#WatchThatContent" prefHeight="41.0" prefWidth="162.0" style="-fx-background-color: #6640d9; -fx-background-radius: 12;" text="Watch Now" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <AnchorPane layoutX="189.0" layoutY="291.0" onMouseClicked="#setFavorite" prefHeight="34.0" prefWidth="40.0" style="-fx-background-color: linear-gradient(from 0.0% 100.0% to 100.0% 0.0%, #a5a5a5 0.0%, #f2f2f2 100.0%); -fx-background-radius: 5;">
+                     <children>
+                        <FontAwesomeIconView fill="#9a0dc9" glyphName="HEART_ALT" layoutX="9.0" layoutY="26.0" onMouseClicked="#setFavorite" size="1.7em" />
+                     </children>
+                  </AnchorPane>
+                  <HBox alignment="CENTER_LEFT" focusTraversable="true" layoutX="18.0" layoutY="13.0" prefHeight="47.0" prefWidth="502.0" spacing="39.0" style="-fx-background-color: #252525; -fx-background-radius: 22;">
+                     <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" onMouseClicked="#Search" size="1.8em" />
+                        <TextField alignment="CENTER" minWidth="-Infinity" prefHeight="26.0" prefWidth="287.0" promptText="Search" style="-fx-background-radius: 22;" />
+                        <FontAwesomeIconView fill="WHITE" glyphName="BELL" onMouseClicked="#Notifications" size="1.8em" />
+                        <FontAwesomeIconView fill="WHITE" glyphName="USER" onMouseClicked="#User" size="1.8em" text="" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                     <effect>
+                        <DropShadow radius="17.0175" spread="0.39" width="49.07">
+                           <color>
+                              <Color red="0.8833333253860474" blue="1.0" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </HBox>
                </children>
+               <VBox.margin>
+                  <Insets left="6.0" />
+               </VBox.margin>
             </AnchorPane>
-            <HBox alignment="CENTER_LEFT" focusTraversable="true" layoutX="18.0" layoutY="13.0" prefHeight="47.0" prefWidth="502.0" spacing="39.0" style="-fx-background-color: #252525; -fx-background-radius: 22;">
-               <children>
-                  <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" onMouseClicked="#Search" size="1.8em" />
-                  <TextField alignment="CENTER" minWidth="-Infinity" prefHeight="26.0" prefWidth="287.0" promptText="Search" style="-fx-background-radius: 22;" />
-                  <FontAwesomeIconView fill="WHITE" glyphName="BELL" onMouseClicked="#Notifications" size="1.8em" />
-                  <FontAwesomeIconView fill="WHITE" glyphName="USER" onMouseClicked="#User" size="1.8em" text="" />
-               </children>
-               <padding>
-                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-               </padding>
-               <effect>
-                  <DropShadow radius="17.0175" spread="0.39" width="49.07">
-                     <color>
-                        <Color red="0.8833333253860474" blue="1.0" />
-                     </color>
-                  </DropShadow>
-               </effect>
-            </HBox>
          </children>
-         <VBox.margin>
-            <Insets left="6.0" />
-         </VBox.margin>
-      </AnchorPane>
-   </children>
-   <effect>
-      <InnerShadow height="91.19" radius="46.8475" width="98.2">
-         <color>
-            <Color red="0.31721118092536926" green="0.21512670814990997" blue="0.6526315808296204" />
-         </color>
-      </InnerShadow>
-   </effect>
-</VBox>
+         <effect>
+            <InnerShadow height="91.19" radius="46.8475" width="98.2">
+               <color>
+                  <Color red="0.31721118092536926" green="0.21512670814990997" blue="0.6526315808296204" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </VBox>
+   </content>
+</ScrollPane>

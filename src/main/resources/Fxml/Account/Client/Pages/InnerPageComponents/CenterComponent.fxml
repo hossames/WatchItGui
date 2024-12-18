@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.effect.DropShadow?>
@@ -8,50 +8,24 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.media.MediaView?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="755.0" prefWidth="1080.0" style="-fx-background-color: #252525;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMouseMoved="#ShowingBar" prefHeight="400.0" prefWidth="1.0" style="-fx-border-color: black; -fx-border-width: 2;">
+      <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="1.0" style="-fx-border-color: black; -fx-border-width: 2;">
          <bottom>
-            <AnchorPane fx:id="ControlBar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="1080.0" style="-fx-background-color: #101010;" stylesheets="@../../../../../Styling/MediaPlayer.css" BorderPane.alignment="CENTER">
+            <AnchorPane fx:id="ControlBar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.9" prefHeight="49.0" prefWidth="1080.0" style="-fx-background-color: white;" stylesheets="@../../../../../Styling/MediaPlayer.css" BorderPane.alignment="CENTER">
                <children>
-                  <Slider fx:id="TimeSlider" layoutX="154.0" layoutY="8.0" onMousePressed="#GetTime" onMouseReleased="#SetTime" prefHeight="14.0" prefWidth="770.0" />
-                  <AnchorPane layoutX="261.0" layoutY="28.0" prefHeight="46.0" prefWidth="494.0" style="-fx-background-color: #f97d06; -fx-background-radius: 30;">
-                     <children>
-                        <Slider fx:id="Volume" layoutX="353.0" layoutY="16.0" prefHeight="14.0" prefWidth="134.0" />
-                        <FontAwesomeIcon fx:id="Forward" fill="WHITE" glyphName="FORWARD" layoutX="249.0" layoutY="33.0" onMouseClicked="#Up10Sec" size="2.5em" wrappingWidth="35.60009002685547" />
-                        <FontAwesomeIcon fx:id="Play" fill="WHITE" glyphName="PLAY" layoutX="180.0" layoutY="34.0" onMouseClicked="#PlayVideo" size="2.5em" text="" wrappingWidth="27.88569140434265">
-                           <selectionFill>
-                              <LinearGradient startX="1.0" startY="1.0">
-                                 <stops>
-                                    <Stop>
-                                       <color>
-                                          <Color />
-                                       </color>
-                                    </Stop>
-                                    <Stop offset="1.0">
-                                       <color>
-                                          <Color red="1.0" green="1.0" blue="1.0" />
-                                       </color>
-                                    </Stop>
-                                 </stops>
-                              </LinearGradient>
-                           </selectionFill>
-                        </FontAwesomeIcon>
-                        <FontAwesomeIcon fx:id="Sound" fill="WHITE" glyphName="VOLUME_UP" layoutX="313.0" layoutY="34.0" onMouseClicked="#Mute" size="2.5em" />
-                        <Text fx:id="time" fill="WHITE" layoutX="36.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </Text>
-                        <FontAwesomeIcon fx:id="Backward" fill="WHITE" glyphName="BACKWARD" layoutX="109.0" layoutY="33.0" onMouseClicked="#Down10Sec" size="2.5em" text="" />
-                     </children>
-                  </AnchorPane>
+                  <Slider fx:id="TimeSlider" layoutX="46.0" layoutY="17.0" onMousePressed="#GetTime" onMouseReleased="#SetTime" prefHeight="14.0" prefWidth="770.0" />
+                  <Slider fx:id="Volume" layoutX="955.0" layoutY="17.0" prefHeight="14.0" prefWidth="116.0" />
+                  <Text fx:id="time" layoutX="816.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <FontAwesomeIconView fx:id="Play" fill="#4c0bff" glyphName="PLAY" layoutX="14.0" layoutY="33.0" onMouseClicked="#Play" size="2em" />
+                  <FontAwesomeIconView fx:id="Sound" fill="#4c0bff" glyphName="VOLUME_UP" layoutX="926.0" layoutY="33.0" onMouseClicked="#Mute" size="2em" />
                </children>
             </AnchorPane>
          </bottom>

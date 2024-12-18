@@ -12,7 +12,7 @@ public class ViewFactory {
     public Scene CurrentScene;
     public ViewFactory() {
         PrimaryStage = new Stage();
-        //PrimaryStage.initStyle(StageStyle.UNDECORATED);
+        PrimaryStage.initStyle(StageStyle.UNDECORATED);
         PrimaryStage.setFullScreen(true);
     }
     public void Show(FXMLLoader ShowingScene){

@@ -1,10 +1,14 @@
 package src.Cast;
 import WatchIt.Application;
+import WatchIt.Views.AdminView;
+import WatchIt.Views.ClientView;
 import WatchIt.Views.MainView;
 import javafx.scene.Node;
 import javafx.scene.image.Image;
+import src.AccountControl.User;
 import src.DataBase.*;
 
+import javax.swing.plaf.IconUIResource;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.util.Date;
@@ -60,14 +64,6 @@ public class CastMember extends DataObject {
    public void joinContent(String Content){
         Contents.add(Content);
    }
-   public Node getNode(){
-        try {
-            return MainView.CastCard(this).load();
-        }catch (Exception e){
-            System.out.println("Error while making scene of CastCard");
-            return null;
-        }
-   }
    //--------------------------------------DataBase Methods-----------------------------------------//
     @Override
     public boolean equals(Object o) {
@@ -75,6 +71,20 @@ public class CastMember extends DataObject {
             return castMember.firstName.equals(firstName)&&castMember.lastName.equals(lastName)&&castMember.dateOfBirth.equals(dateOfBirth)&&castMember.gender.equals(gender)&&castMember.nationality.equals(nationality);
         }
         return false;
+    }
+    @Override
+    public Node getNode(){
+        try {
+            if(DataBase.getInstance().CurrentUser instanceof User)
+                return ClientView.CastCard(this).load();
+            else
+                return AdminView.CastCard(this).load();
+        }catch (Exception e){
+            System.out.println("-----------------------");
+            e.printStackTrace();
+            System.out.println("Error while making scene of CastCard");
+            return null;
+        }
     }
    @Override
    public String toString() {

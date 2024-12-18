@@ -24,11 +24,11 @@ public class InstanceCreator<T> {
             data.add((T)newAdmin);
             DataBase.accountsData.addData((Account)newAdmin);
         }else if (c=='M'){
-            Movie newMovie = new Movie(re.longs.get(0),re.strings.get(0),re.strings.get(1),re.strings.get(2),re.integers.get(0),re.integers.get(1),re.integers.get(2),re.stringLists.get(0),re.stringLists.get(1),re.dates.get(0));
+            Movie newMovie = new Movie(re.longs.get(0),re.strings.get(0),re.strings.get(1),re.strings.get(2),re.strings.get(3),re.integers.get(0),re.integers.get(1),re.integers.get(2),re.stringLists.get(0),re.stringLists.get(1),re.dates.get(0));
             data.add((T)newMovie);
             DataBase.contentsData.addData((Content) newMovie);
         }else if(c=='S'){
-            Series newSeries = new Series(re.longs.get(0),re.strings.get(0),re.strings.get(1),re.strings.get(2),re.integers.get(0),re.integers.get(1),re.integers.get(2),re.integers.get(3),re.stringLists.get(0),re.stringLists.get(1),re.dates.get(0),re.dates.get(1));
+            Series newSeries = new Series(re.longs.get(0),re.strings.get(0),re.strings.get(1),re.strings.get(2),re.strings.get(3),re.integers.get(0),re.integers.get(1),re.integers.get(2),re.integers.get(3),re.stringLists.get(0),re.stringLists.get(1),re.dates.get(0),re.dates.get(1));
             data.add((T)newSeries);
             DataBase.contentsData.addData((Content) newSeries);
         } else if (c =='E') {

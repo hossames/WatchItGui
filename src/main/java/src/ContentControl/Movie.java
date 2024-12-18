@@ -6,12 +6,12 @@ public class Movie extends Content{
   // Variables
   private final int duration;
   // Constructor
-  public Movie(String contentTitle, String language, String country, int budget, int revenue, int duration,List<String> genres, List<String> CastMembers,Date date) {
-    super(contentTitle, language, country, budget, revenue, genres, CastMembers, date);
+  public Movie(String contentTitle, String language, String country,String story, int budget, int revenue, int duration,List<String> genres, List<String> CastMembers,Date date) {
+    super(contentTitle, language, country,story, budget, revenue, genres, CastMembers, date);
     this.duration = duration;
   }
-  public Movie(Long Id,String contentTitle, String language, String country, int budget, int revenue, int duration,List<String> genres, List<String> CastMembers,Date date) {
-    super(Id,contentTitle, language, country, budget, revenue, genres, CastMembers, date);
+  public Movie(Long Id,String contentTitle, String language, String country,String story, int budget, int revenue, int duration,List<String> genres, List<String> CastMembers,Date date) {
+    super(Id,contentTitle, language, country,story, budget, revenue, genres, CastMembers, date);
     this.duration = duration;
   }
   // Getters & Setters

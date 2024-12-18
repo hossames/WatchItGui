@@ -1,23 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="262.0" minWidth="183.0" prefHeight="262.0" prefWidth="183.0" style="-fx-background-color: rgb(240,240,240);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#OpenInnerPage" prefHeight="284.0" prefWidth="239.0" style="-fx-background-radius: 0 0 22 22; -fx-background-color: transparent; -fx-border-color: 2; -fx-border-color: #c5c5c5; -fx-border-radius: 0 0 22 22;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fx:id="ContentImage" fitHeight="196.0" fitWidth="183.0" layoutY="-1.0" pickOnBounds="true" />
-      <Text fx:id="ContentName" fill="#1b5cdf" layoutX="10.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center; -fx-font-size: 17; -fx-font-weight: 100;" text="Name" wrappingWidth="159.73669397830963" />
-      <FontAwesomeIconView fx:id="s1" fill="#fff600" glyphName="STAR_ALT" layoutX="1.0" layoutY="212.0" size="1.5em" strokeWidth="0.0" />
-      <FontAwesomeIconView fx:id="s2" fill="#fff600" glyphName="STAR_ALT" layoutX="19.0" layoutY="212.0" size="1.5em" strokeWidth="0.0" />
-      <FontAwesomeIconView fx:id="s3" fill="#fff600" glyphName="STAR_ALT" layoutX="35.0" layoutY="212.0" size="1.5em" strokeWidth="0.0" />
-      <FontAwesomeIconView fx:id="s4" fill="#fff600" glyphName="STAR_ALT" layoutX="53.0" layoutY="212.0" size="1.5em" strokeWidth="0.0" />
-      <FontAwesomeIconView fx:id="s5" fill="#fff600" glyphName="STAR_ALT" layoutX="72.0" layoutY="212.0" size="1.5em" strokeWidth="0.0" />
-      <FontAwesomeIconView fill="RED" glyphName="CIRCLE" layoutX="154.0" layoutY="27.0" onMouseClicked="#DeleteContent" size="2.5em" />
-      <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" layoutX="160.0" layoutY="22.0" onMouseClicked="#DeleteContent" size="1.5em" />
+      <ImageView fx:id="ContentImage" fitHeight="210.0" fitWidth="237.0" layoutX="1.0" layoutY="1.0" onMouseClicked="#OpenInnerPage" pickOnBounds="true" />
+      <AnchorPane layoutX="1.0" layoutY="210.0" opacity="0.95" prefHeight="74.0" prefWidth="238.0" style="-fx-background-radius: 0 0 22 22; -fx-background-color: linear-gradient(from 0.0% 100.0% to 100.0% 0.0%, #a5a5a5 0.0%, #f2f2f2 100.0%);">
+         <children>
+            <Text fx:id="ContentName" layoutX="14.0" layoutY="33.0" onMouseClicked="#OpenInnerPage" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="163.73663294315338">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="Year" fill="#363535" layoutX="15.0" layoutY="58.0" onMouseClicked="#OpenInnerPage" strokeType="OUTSIDE" strokeWidth="0.0" text="Year" wrappingWidth="46.93664515018463">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="Genre" layoutX="53.0" layoutY="59.0" onMouseClicked="#OpenInnerPage" strokeType="OUTSIDE" strokeWidth="0.0" text="Genre" wrappingWidth="94.93670618534088">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="ContentName12" fill="#363535" layoutX="45.0" layoutY="58.0" onMouseClicked="#OpenInnerPage" strokeType="OUTSIDE" strokeWidth="0.0" text="|" wrappingWidth="6.136657357215881">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="202.0" layoutY="8.0" prefHeight="24.0" prefWidth="27.0" style="-fx-background-color: linear-gradient(from 0.0% 100.0% to 100.0% 0.0%, #a5a5a5 0.0%, #f2f2f2 100.0%); -fx-background-radius: 5;">
+         <children>
+            <FontAwesomeIconView fill="#505050" glyphName="CLOSE" layoutX="5.0" layoutY="19.0" onMouseClicked="#DeleteContent" size="1.8em" />
+         </children>
+      </AnchorPane>
    </children>
    <effect>
-      <DropShadow />
+      <DropShadow height="30.0" radius="14.5" width="30.0" />
    </effect>
 </AnchorPane>

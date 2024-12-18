@@ -35,11 +35,8 @@ public class ContentCardControllerClient {
         }
     }
 
-    public void OpenInnerPage(){
-        try {
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+    public void OpenInnerPage(MouseEvent event){
+
     }
 
     public void SetFavorite(MouseEvent mouseEvent) {

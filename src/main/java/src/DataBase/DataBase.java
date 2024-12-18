@@ -55,8 +55,8 @@ public class DataBase {
         usersData = new DataObjectController<User>("./users.txt","nslw5SWw3oSWSiw2ndW",'U');
         adminsData = new DataObjectController<Admin>("./admins.txt","nslw6SW",'A');
         // Loading Contents
-        moviesData = new DataObjectController<Movie>("./movies.txt","nslw3SWiioSoSndni",'M');
-        seriesData = new DataObjectController<Series>("./series.txt","nslw3SWiioSoSndnsiind",'S');
+        moviesData = new DataObjectController<Movie>("./movies.txt","nslw4SWiioSoSndni",'M');
+        seriesData = new DataObjectController<Series>("./series.txt","nslw4SWiioSoSndnsiind",'S');
         episodesData = new DataObjectController<Episode>("./episodes.txt","nslSSiind",'E');
         // Loading Cast
         castMemberData = new DataObjectController<CastMember>("./CastMembers.txt","nslw6SWoSnd",'C');

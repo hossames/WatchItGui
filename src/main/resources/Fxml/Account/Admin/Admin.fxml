@@ -30,12 +30,12 @@
                         <Font name="System Bold" size="16.0" />
                     </font>
                 </Text>
-                <Text fx:id="Logout" fill="#cfcfcf" layoutX="63.0" layoutY="663.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="SideBarItems" text="Logout" wrappingWidth="116.26602172851562">
+                <Text fill="#cfcfcf" layoutX="63.0" layoutY="663.0" onMouseClicked="#LogOut" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="SideBarItems" text="Logout" wrappingWidth="116.26602172851562">
                     <font>
                         <Font name="System Bold" size="16.0" />
                     </font>
                 </Text>
-                <MaterialIconView fx:id="Exit" fill="#cfcfcf" glyphName="EXIT_TO_APP" layoutX="26.0" layoutY="668.0" size="1.8em" />
+                <MaterialIconView fill="#cfcfcf" glyphName="EXIT_TO_APP" layoutX="26.0" layoutY="668.0" onMouseClicked="#LogOut" size="1.8em" />
                 <Text fx:id="Settings" fill="#cfcfcf" layoutX="63.0" layoutY="618.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="SideBarItems" text="Settings" wrappingWidth="116.26602172851562">
                     <font>
                         <Font name="System Bold" size="16.0" />
@@ -79,6 +79,6 @@
         <Glow level="0.15" />
     </effect>
     <center>
-        <ScrollPane fx:id="Container" hbarPolicy="NEVER" stylesheets="@../../../Styling/Client.css" BorderPane.alignment="CENTER" />
+        <ScrollPane fx:id="Container" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" stylesheets="@../../../Styling/Client.css" BorderPane.alignment="CENTER" />
     </center>
 </BorderPane>

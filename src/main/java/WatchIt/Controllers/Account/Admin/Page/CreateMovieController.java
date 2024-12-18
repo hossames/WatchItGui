@@ -52,11 +52,11 @@ public class CreateMovieController {
         }
     }
     public void Done(MouseEvent event) {
-        Movie movie = new Movie(ContentTitle.getText(),Language.getText(),Country.getText(),
-                Integer.parseInt(Budget.getText()),Integer.parseInt(Revenue.getText()),
-                Integer.parseInt(Duration.getText()),genres,castmembers,
-                Date.from(dateOfProduction.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant()));
-        DataBase.getInstance().moviesData.addData(movie);
+//        Movie movie = new Movie(ContentTitle.getText(),Language.getText(),Country.getText(),
+//                Integer.parseInt(Budget.getText()),Integer.parseInt(Revenue.getText()),
+//                Integer.parseInt(Duration.getText()),genres,castmembers,
+//                Date.from(dateOfProduction.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant()));
+//        DataBase.getInstance().moviesData.addData(movie);
     }
     public void GoToNext(KeyEvent keyEvent) {
         if(keyEvent.getCharacter().charAt(0)==System.lineSeparator().charAt(0)) {

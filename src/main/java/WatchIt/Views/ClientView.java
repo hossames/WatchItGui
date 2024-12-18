@@ -2,18 +2,22 @@ package WatchIt.Views;
 
 import WatchIt.Application;
 import WatchIt.Controllers.Account.Client.*;
+import WatchIt.Controllers.Account.Client.Pages.OtherPageController;
 import WatchIt.Controllers.Account.Client.Pages.Settings.ChangePassword;
 import WatchIt.Controllers.Account.Client.Pages.Settings.Renew;
+import WatchIt.Controllers.Cast.CastCardAdminController;
+import WatchIt.Controllers.Cast.CastCardClientController;
 import WatchIt.Controllers.Content.ContentCardControllerClient;
 import WatchIt.Controllers.Account.Client.Helps.HLineController;
 import WatchIt.Controllers.Account.Client.Pages.InnerPageComponentControllers.*;
 import WatchIt.Controllers.Account.Client.Pages.MainPageController;
-import WatchIt.Controllers.Account.Client.Pages.MoviesPageController;
+import WatchIt.Controllers.Account.Client.Pages.ContentsPageController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import src.AccountControl.*;
+import src.Cast.CastMember;
 import src.ContentControl.Content;
 import src.DataBase.*;
 import src.Engines.RecommendationEngine;
@@ -92,8 +96,29 @@ public class ClientView {
 
     public static FXMLLoader MoviesPage(){
         FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Client/Pages/MoviesPage.fxml"));
-        fxmlLoader.setController(new MoviesPageController());
+        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Client/Pages/ContentsPage.fxml"));
+        fxmlLoader.setController(new ContentsPageController(DataBase.getInstance().moviesData));
+        return fxmlLoader;
+    }
+
+    public static FXMLLoader SeriesPage(){
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Client/Pages/ContentsPage.fxml"));
+        fxmlLoader.setController(new ContentsPageController(DataBase.getInstance().seriesData));
+        return fxmlLoader;
+    }
+
+    public static FXMLLoader CastPage(){
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Client/Pages/OtherPages.fxml"));
+        fxmlLoader.setController(new OtherPageController(DataBase.getInstance().castMemberData));
+        return fxmlLoader;
+    }
+
+    public static FXMLLoader CastCard(CastMember castMember){
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Cast/CastCardClient.fxml"));
+        fxmlLoader.setController(new CastCardClientController(castMember));
         return fxmlLoader;
     }
 

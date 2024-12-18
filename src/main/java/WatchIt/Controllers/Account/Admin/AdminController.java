@@ -1,5 +1,7 @@
 package WatchIt.Controllers.Account.Admin;
 
+import WatchIt.Models.Model;
+import WatchIt.Views.AdminView;
 import WatchIt.Views.MainView;
 import de.jensd.fx.glyphs.materialicons.MaterialIconView;
 import javafx.fxml.FXML;
@@ -8,6 +10,8 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.text.Text;
+import src.DataBase.DataBase;
+
 import java.io.IOException;
 
 public class AdminController {
@@ -27,13 +31,7 @@ public class AdminController {
     private Text Episode;
 
     @FXML
-    private MaterialIconView Exit;
-
-    @FXML
     private Text HeadTitle;
-
-    @FXML
-    private Text Logout;
 
     @FXML
     private Text Movies;
@@ -51,15 +49,20 @@ public class AdminController {
     public AdminController(FXMLLoader fxmlLoader) {
         this.fxmlLoader = fxmlLoader;
     }
-    public void routing(MouseEvent mouseEvent){
-
-    }
     public void initialize() {
         try {
             AdminBorderPane.setTop(MainView.TitleBar().load());
             AdminBorderPane.setCenter(fxmlLoader.load());
+            Movies.addEventHandler(MouseEvent.MOUSE_CLICKED,(MouseEvent e)->{
+                Model.getInstance().getViewFactory().Show(AdminView.AdminScene(AdminView.MoviesPage()));
+            });
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    @FXML
+    void LogOut(MouseEvent event) {
+        DataBase.getInstance().CurrentUser=null;
+        Model.getInstance().getViewFactory().Show(MainView.LoginScene());
     }
 }

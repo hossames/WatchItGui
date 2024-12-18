@@ -14,33 +14,20 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import src.DataBase.DataBase;
+import src.DataBase.DataObject;
 import src.DataBase.DataObjectController;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MoviesPageController {
+public class OtherPageController {
     List<Node> nodeList = new ArrayList<>();
+    DataObjectController<? extends DataObject> dataObjectController;
     @FXML
     private ScrollPane Container;
 
     @FXML
-    private ChoiceBox<?> Country;
-
-    @FXML
-    private ChoiceBox<?> Genre;
-
-    @FXML
-    private ChoiceBox<?> Language;
-
-    @FXML
     private AnchorPane FullContainer;
-
-    @FXML
-    private HBox Popular;
-
-    @FXML
-    private HBox Recent;
 
     @FXML
     private VBox SearchResultContainer;
@@ -49,13 +36,7 @@ public class MoviesPageController {
     private ScrollPane SearchResultScroll;
 
     @FXML
-    private HBox TopRated;
-
-    @FXML
     private GridPane View;
-
-    @FXML
-    private ChoiceBox<?> Year;
 
     @FXML
     private TextField SearchField;
@@ -76,19 +57,19 @@ public class MoviesPageController {
 
     public void SetToGrid(){
         View.getChildren().clear();
-        System.out.println(Container.getWidth()+" "+((AnchorPane)(nodeList.get(0))).getWidth());
         for(var node : nodeList)
             HandleGrid.setToGrid(View,(int)Container.getWidth(),node);
     }
 
     public void initialize() {
-        Container.widthProperty().addListener(new ChangeListener<Number>() {
-            @Override
-            public void changed(ObservableValue<? extends Number> observableValue, Number number, Number t1) {
-                SetToGrid();
-            }
+        Container.widthProperty().addListener((observable, oldValue, newValue) -> {
+            SetToGrid();
         });
-        nodeList = DataObjectController.MakeDataObjectController(DataBase.getInstance().moviesData.ConvertListDataObject());
+        nodeList = DataObjectController.MakeNodeList(dataObjectController.ConvertListDataObject());
         SearchResultScroll.visibleProperty().bind(SearchField.focusedProperty().or(SearchResultScroll.focusedProperty()));
+    }
+
+    public OtherPageController(DataObjectController<? extends  DataObject> dataObjectController) {
+        this.dataObjectController = dataObjectController;
     }
 }

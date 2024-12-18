@@ -1,7 +1,7 @@
 package WatchIt.Views;
 
 import WatchIt.Application;
-import WatchIt.Controllers.Cast.CastCardController;
+import WatchIt.Controllers.Cast.CastCardAdminController;
 import WatchIt.Controllers.Enter.*;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -20,7 +20,7 @@ public class MainView<T> {
     public static FXMLLoader CastCard(CastMember castMember) {
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(Application.class.getResource("/Fxml/Cast/CastCard.fxml"));
-        fxmlLoader.setController(new CastCardController(castMember));
+        fxmlLoader.setController(new CastCardAdminController(castMember));
         return fxmlLoader;
     }
     public static Scene getScene(FXMLLoader fxmlLoader){
