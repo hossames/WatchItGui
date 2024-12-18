@@ -8,6 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
@@ -68,8 +69,10 @@ public class ContentsPageController {
     }
 
     @FXML
-    void Search(MouseEvent event) {
-
+    void Search() {
+        nodeList =  DataObjectController.MakeNodeList(
+                dataObjectController.ConvertToDataObject().getDataThatContains(SearchField.getText(),2)
+        );
     }
 
     @FXML
@@ -87,7 +90,15 @@ public class ContentsPageController {
                 SetToGrid();
         });
         nodeList = DataObjectController.MakeNodeList(dataObjectController.ConvertListDataObject());
-        SearchResultScroll.visibleProperty().bind(SearchField.focusedProperty().or(SearchResultScroll.focusedProperty()));
+        SearchField.addEventHandler(KeyEvent.KEY_TYPED,(KeyEvent event)->{
+            if(event.getCharacter().charAt(0)==System.lineSeparator().charAt(0)){
+                SetToGrid();
+            }
+            Search();
+        });
+        SearchField.focusedProperty().addListener((observable, oldValue, newValue) -> {
+            if(newValue && nodeList.size()>0){}
+        });
     }
 
     public ContentsPageController(DataObjectController<? extends  DataObject> dataObjectController) {

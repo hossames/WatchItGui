@@ -1,9 +1,7 @@
 package src.DataBase;
-
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
 public class ReturnedData{
     public List<Float> floats;
     public List<String> strings;

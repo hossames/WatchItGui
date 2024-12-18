@@ -3,9 +3,11 @@ package WatchIt.Views;
 import WatchIt.Application;
 import WatchIt.Controllers.Cast.CastCardAdminController;
 import WatchIt.Controllers.Enter.*;
+import WatchIt.Controllers.Utils.SearchedRowController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import src.Cast.CastMember;
+import src.DataBase.DataObject;
 
 import java.io.IOException;
 import java.util.List;
@@ -33,6 +35,14 @@ public class MainView<T> {
         }
         return null;
     }
+
+    public static FXMLLoader SearchedRow(DataObject object){
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Utils/SearchedRow.fxml"));
+        fxmlLoader.setController(new SearchedRowController(object));
+        return fxmlLoader;
+    }
+
     public static FXMLLoader RegisterScene(){
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(Application.class.getResource("/Fxml/Enter/Register.fxml"));
