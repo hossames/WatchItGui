@@ -21,8 +21,7 @@ public class WatchRecord extends DataObject {
         this.Rating = (Float) Rating;
         this.DateOfWatching = new Date();
         this.ContentTitle = Content;
-        //this.UserId = DataBase.getInstance().CurrentUser.getId(0);
-        this.UserId = Long.valueOf(0);
+        this.UserId = DataBase.getInstance().CurrentUser.getId(0);
     }
     //--------------------------------------DataBase Methods-----------------------------------------//
     @Override

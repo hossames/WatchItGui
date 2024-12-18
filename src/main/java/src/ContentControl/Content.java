@@ -79,7 +79,7 @@ public class Content extends DataObject implements Rateable {
     }
 
     public void AddRate(float rate) {
-        //DataBase.watchRecordData.addData(new WatchRecord(DataBase.getInstance().CurrentUser.getId(0),rate, contentTitle, new Date()));
+        DataBase.watchRecordData.addData(new WatchRecord(DataBase.getInstance().CurrentUser.getId(0),rate, contentTitle, new Date()));
         if(rate!=-1) {
             Rate_Sum += rate;
             RateCounter++;

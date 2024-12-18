@@ -8,7 +8,7 @@ import src.DataBase.DataBase;
 public class Application extends javafx.application.Application {
     @Override
     public void start(Stage stage)  {
-        Model.getInstance().getViewFactory().Show(ClientView.setNode(ClientView.InnerPage(DataBase.getInstance().moviesData.getData().get(0))));
+        Model.getInstance().getViewFactory().Show(MainView.LoginScene());
     }
 
     public static void main(String[] args) {
