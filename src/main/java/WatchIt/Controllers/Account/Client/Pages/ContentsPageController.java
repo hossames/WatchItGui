@@ -97,7 +97,10 @@ public class ContentsPageController {
             }
         });
         SearchField.focusedProperty().addListener((observable, oldValue, newValue) -> {
-            if(newValue && nodeList.size()>0){}
+            if(newValue && nodeList.size()>0){
+                SearchResultScroll.setVisible(true);
+
+            }
         });
     }
 
