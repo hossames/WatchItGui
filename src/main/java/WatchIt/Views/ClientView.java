@@ -2,6 +2,7 @@ package WatchIt.Views;
 
 import WatchIt.Application;
 import WatchIt.Controllers.Account.Client.*;
+import WatchIt.Controllers.Account.Client.Helps.GridController;
 import WatchIt.Controllers.Account.Client.Pages.OtherPageController;
 import WatchIt.Controllers.Account.Client.Pages.Settings.ChangePassword;
 import WatchIt.Controllers.Account.Client.Pages.Settings.Renew;
@@ -188,6 +189,12 @@ public class ClientView {
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Client/Pages/InnerPageComponents/GenreComponent.fxml"));
         fxmlLoader.setController(new GenreComponentController(genre));
+        return fxmlLoader;
+    }
+    public static FXMLLoader GridMake(List<Node> nodeList){
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Client/Helps/Grid.fxml"));
+        fxmlLoader.setController(new GridController(nodeList));
         return fxmlLoader;
     }
     public static FXMLLoader HLine(List<DataObject> content,String Title){
