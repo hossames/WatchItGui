@@ -91,10 +91,10 @@ public class ContentsPageController {
         });
         nodeList = DataObjectController.MakeNodeList(dataObjectController.ConvertListDataObject());
         SearchField.addEventHandler(KeyEvent.KEY_TYPED,(KeyEvent event)->{
+            Search();
             if(event.getCharacter().charAt(0)==System.lineSeparator().charAt(0)){
                 SetToGrid();
             }
-            Search();
         });
         SearchField.focusedProperty().addListener((observable, oldValue, newValue) -> {
             if(newValue && nodeList.size()>0){}
