@@ -173,6 +173,12 @@ public class ClientView {
         fxmlLoader.setController(new DescriptionController(story));
         return fxmlLoader;
     }
+    public static FXMLLoader InnerPage(DataObject content){
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Client/Pages/InnerPageComponents/InnerPage.fxml"));
+        fxmlLoader.setController(new InnerPageComponentController(content));
+        return fxmlLoader;
+    }
     public static FXMLLoader MediaComponent(String media){
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Client/Pages/InnerPageComponents/CenterComponent.fxml"));

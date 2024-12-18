@@ -36,8 +36,7 @@ public class ContentCardControllerClient {
     }
 
     public void OpenInnerPage(MouseEvent event){
-        Content con = (Content) content;
-        Model.getInstance().getViewFactory().Show(ClientView.setNode(ClientView.DescriptionComponent(con.story)));
+        Model.getInstance().getViewFactory().Show(ClientView.setNode(ClientView.InnerPage(content)));
     }
 
     public void SetFavorite(MouseEvent mouseEvent) {
