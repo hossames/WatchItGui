@@ -118,7 +118,7 @@ public class Episode extends DataObject implements Rateable{
   @Override
   public Node getNode(){
     try{
-      return ClientView.ContentCard(this).load();
+      return ClientView.(this).load();
     }catch (Exception e){
       System.out.println("Failed rendering Episode Card");
       return null;

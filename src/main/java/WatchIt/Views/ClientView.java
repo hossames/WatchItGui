@@ -13,6 +13,7 @@ import WatchIt.Controllers.Account.Client.Helps.HLineController;
 import WatchIt.Controllers.Account.Client.Pages.InnerPageComponentControllers.*;
 import WatchIt.Controllers.Account.Client.Pages.MainPageController;
 import WatchIt.Controllers.Account.Client.Pages.ContentsPageController;
+import WatchIt.Controllers.Content.EpisodeCardControllerAdmin;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
@@ -101,7 +102,12 @@ public class ClientView {
         fxmlLoader.setController(new ContentsPageController(DataBase.getInstance().moviesData));
         return fxmlLoader;
     }
-
+    public static FXMLLoader EpisodeCard(DataObject object){
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Content/EpisodeCardClient.fxml"));
+        fxmlLoader.setController(new EpisodeCardControllerAdmin(object));
+        return fxmlLoader;
+    }
     public static FXMLLoader SeriesPage(){
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Client/Pages/ContentsPage.fxml"));

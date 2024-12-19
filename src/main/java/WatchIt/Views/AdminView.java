@@ -6,6 +6,7 @@ import WatchIt.Controllers.Account.Admin.Helps.EmptyCardController;
 import WatchIt.Controllers.Account.Admin.Page.*;
 import WatchIt.Controllers.Cast.CastCardAdminController;
 import WatchIt.Controllers.Content.ContentCardControllerAdmin;
+import WatchIt.Controllers.Content.EpisodeCardControllerAdmin;
 import javafx.fxml.FXMLLoader;
 import src.Cast.CastMember;
 import src.DataBase.DataBase;
@@ -39,6 +40,12 @@ public class AdminView{
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Admin/Pages/ContentShow.fxml"));
         fxmlLoader.setController(new ContentShowController(DataBase.getInstance().seriesData,AddSeries()));
+        return fxmlLoader;
+    }
+    public static FXMLLoader EpisodeCard(DataObject object){
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Content/EpisodeCardAdmin.fxml"));
+        fxmlLoader.setController(new EpisodeCardControllerAdmin(object));
         return fxmlLoader;
     }
     public static FXMLLoader EpisodePage(){
