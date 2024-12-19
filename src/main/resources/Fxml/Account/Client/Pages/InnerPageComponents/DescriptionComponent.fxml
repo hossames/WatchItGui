@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.Glow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="50.0" prefWidth="1350.0" style="-fx-background-color: #252525;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="107.0" prefWidth="1350.0" style="-fx-background-color: #252525; -fx-border-color: #d4d4d4; -fx-border-width: 0 0 2 0;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Text fx:id="Description" fill="#4c0bff" layoutX="30.4" layoutY="28.3029296875" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="1287.629165649414" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="30.4" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="7.800000000000001">
+      <Text fx:id="Description" fill="#e7e1e1" layoutX="24.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="1287.629165649414" AnchorPane.bottomAnchor="28.2314453125" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="38.40000000000009" AnchorPane.topAnchor="53.4970703125">
          <font>
             <Font name="System Italic" size="19.0" />
          </font>
+      </Text>
+      <Text fill="WHITE" layoutX="24.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Story">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+         <effect>
+            <Glow level="0.5" />
+         </effect>
       </Text>
    </children>
 </AnchorPane>

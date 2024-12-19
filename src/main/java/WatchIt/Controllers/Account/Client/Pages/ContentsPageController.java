@@ -1,6 +1,7 @@
 package WatchIt.Controllers.Account.Client.Pages;
 
 import WatchIt.Controllers.Account.Client.Helps.HandleGrid;
+import WatchIt.Views.MainView;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
@@ -18,11 +19,12 @@ import src.DataBase.DataBase;
 import src.DataBase.DataObject;
 import src.DataBase.DataObjectController;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ContentsPageController {
-    List<Node> nodeList = new ArrayList<>();
+    List<DataObject> nodeList = new ArrayList<>();
     DataObjectController<? extends DataObject> dataObjectController;
     @FXML
     private ScrollPane Container;
@@ -70,9 +72,14 @@ public class ContentsPageController {
 
     @FXML
     void Search() {
-        nodeList =  DataObjectController.MakeNodeList(
-                dataObjectController.ConvertToDataObject().getDataThatContains(SearchField.getText(),2)
-        );
+        nodeList = dataObjectController.ConvertToDataObject().getDataThatContains(SearchField.getText(),2);
+        for(var node : nodeList) {
+            try {
+                SearchResultContainer.getChildren().add(MainView.SearchedRow(node).load());
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        }
     }
 
     @FXML
@@ -82,14 +89,14 @@ public class ContentsPageController {
     public void SetToGrid(){
         View.getChildren().clear();
         for(var node : nodeList)
-            HandleGrid.setToGrid(View,(int)Container.getWidth(),node);
+            HandleGrid.setToGrid(View,(int)Container.getWidth(),node.getNode());
     }
 
     public void initialize() {
         Container.widthProperty().addListener((observable, oldValue, newValue) -> {
                 SetToGrid();
         });
-        nodeList = DataObjectController.MakeNodeList(dataObjectController.ConvertListDataObject());
+        nodeList = dataObjectController.ConvertListDataObject();
         SearchField.addEventHandler(KeyEvent.KEY_TYPED,(KeyEvent event)->{
             Search();
             if(event.getCharacter().charAt(0)==System.lineSeparator().charAt(0)){
@@ -99,7 +106,6 @@ public class ContentsPageController {
         SearchField.focusedProperty().addListener((observable, oldValue, newValue) -> {
             if(newValue && nodeList.size()>0){
                 SearchResultScroll.setVisible(true);
-
             }
         });
     }
