@@ -1,8 +1,10 @@
 package src.ContentControl;
 import WatchIt.Application;
+import WatchIt.Views.AdminView;
 import WatchIt.Views.ClientView;
 import javafx.scene.Node;
 import javafx.scene.image.Image;
+import src.AccountControl.User;
 import src.DataBase.DataBase;
 import src.DataBase.DataObject;
 
@@ -118,7 +120,11 @@ public class Episode extends DataObject implements Rateable{
   @Override
   public Node getNode(){
     try{
-      return ClientView.(this).load();
+      if(DataBase.getInstance().CurrentUser instanceof User) {
+        return ClientView.EpisodeCard(this).load();
+      }else {
+        return AdminView.EpisodeCard(this).load();
+      }
     }catch (Exception e){
       System.out.println("Failed rendering Episode Card");
       return null;
