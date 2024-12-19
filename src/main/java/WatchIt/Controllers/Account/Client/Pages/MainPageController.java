@@ -61,10 +61,10 @@ public class MainPageController extends Searchable {
                     genres.append(content1.genres.get(i)).append(" ");
                 Genre.setText(genres.toString());
             }
-        }
-        FavoritesModel favoritesModel = new FavoritesModel(mostPopular.getName(2), DataBase.getInstance().CurrentUser.getId(0).intValue(),0);
-        if(DataBase.getInstance().Favorites.getDataByObject(favoritesModel)!=null) {
-            Heart.setIcon(FontAwesomeIcon.HEART);
+            FavoritesModel favoritesModel = new FavoritesModel(mostPopular.getName(2), DataBase.getInstance().CurrentUser.getId(0).intValue(),0);
+            if(DataBase.getInstance().Favorites.getDataByObject(favoritesModel)!=null) {
+                Heart.setIcon(FontAwesomeIcon.HEART);
+            }
         }
     }
 

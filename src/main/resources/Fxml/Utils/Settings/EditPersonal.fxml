@@ -17,7 +17,7 @@
                 <Glow level="0.63" />
             </effect>
         </FontAwesomeIconView>
-        <TextField fx:id="FirstName" layoutX="325.0" layoutY="132.0" onMouseClicked="#GoToNext" prefHeight="30.0" prefWidth="225.0" promptText="First Name" />
-        <TextField fx:id="LastName" layoutX="325.0" layoutY="196.0" onMouseClicked="#GoToNext" prefHeight="30.0" prefWidth="225.0" promptText="Last Name" />
+        <TextField fx:id="FirstName" layoutX="325.0" layoutY="132.0" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="225.0" promptText="First Name" />
+        <TextField fx:id="LastName" layoutX="325.0" layoutY="196.0" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="225.0" promptText="Last Name" />
     </children>
 </AnchorPane>
