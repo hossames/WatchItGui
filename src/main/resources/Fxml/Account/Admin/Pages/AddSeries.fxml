@@ -22,7 +22,7 @@
         <TextField fx:id="Revenue" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="274.0" promptText="revenue" style="-fx-text-fill: white !important;" />
         <TextField fx:id="numberOfEpisodes" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="274.0" promptText="Number of Episodes" style="-fx-text-fill: white !important;" />
         <DatePicker fx:id="dateOfProduction" onKeyTyped="#GoToNext" prefHeight="29.0" prefWidth="274.0" promptText="Date of production" style="-fx-text-fill: black !important;" />
-      <TextArea fx:id="Story" onKeyTyped="#GoToNext" prefHeight="94.0" prefWidth="274.0" />
+      <TextArea fx:id="Story" onKeyTyped="#GoToNext" prefHeight="94.0" prefWidth="274.0" promptText="Story" />
       <HBox spacing="10.0">
          <children>
               <ChoiceBox fx:id="Genres" prefHeight="26.0" prefWidth="144.0" />

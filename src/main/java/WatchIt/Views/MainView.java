@@ -1,12 +1,19 @@
 package WatchIt.Views;
 
 import WatchIt.Application;
+import WatchIt.Controllers.Account.Client.Pages.Settings.ChangePassword;
+import WatchIt.Controllers.Account.Client.Pages.Settings.EditPersonalData;
+import WatchIt.Controllers.Account.Client.Pages.Settings.Renew;
+import WatchIt.Controllers.Account.Client.Pages.Settings.SettingsController;
 import WatchIt.Controllers.Cast.CastCardAdminController;
 import WatchIt.Controllers.Enter.*;
 import WatchIt.Controllers.Utils.SearchedRowController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.stage.Stage;
+import src.AccountControl.User;
 import src.Cast.CastMember;
+import src.DataBase.DataBase;
 import src.DataBase.DataObject;
 
 import java.io.IOException;
@@ -75,6 +82,50 @@ public class MainView<T> {
     public static FXMLLoader TitleBar() {
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(Application.class.getResource("/Fxml/Utils/titleBar.fxml"));
+        return fxmlLoader;
+    }
+    public static  void ChangePassword(){
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Utils/Settings/ChangePassword.fxml"));
+        Stage stage = new Stage();
+        fxmlLoader.setController(new ChangePassword(DataBase.getInstance().CurrentUser,stage));
+        try {
+            stage.setScene(new Scene(fxmlLoader.load()));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+    public static  void Upgrade(){
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Utils/Settings/Upgrade.fxml"));
+        Stage stage = new Stage();
+        fxmlLoader.setController(new Renew((User)(DataBase.getInstance().CurrentUser),stage));
+        try {
+            stage.setScene(new Scene(fxmlLoader.load()));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+    public static  void EditPersonalData(){
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Utils/Settings/EditPersonal.fxml"));
+        Stage stage = new Stage();
+        fxmlLoader.setController(new EditPersonalData(DataBase.getInstance().CurrentUser,stage));
+        try {
+            stage.setScene(new Scene(fxmlLoader.load()));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    public static  FXMLLoader SettingsPage(){
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Utils/Settings/SettingsPage.fxml"));
+        fxmlLoader.setController(new SettingsController(DataBase.getInstance().CurrentUser));
         return fxmlLoader;
     }
 }

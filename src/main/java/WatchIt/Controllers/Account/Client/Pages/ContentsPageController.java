@@ -26,13 +26,13 @@ import java.util.List;
 
 public class ContentsPageController extends Searchable {
     @FXML
-    private ChoiceBox<?> Country;
+    private ChoiceBox<String> Country;
 
     @FXML
-    private ChoiceBox<?> Genre;
+    private ChoiceBox<String> Genre;
 
     @FXML
-    private ChoiceBox<?> Language;
+    private ChoiceBox<String> Language;
 
     @FXML
     private AnchorPane FullContainer;
@@ -47,16 +47,8 @@ public class ContentsPageController extends Searchable {
     private HBox TopRated;
 
     @FXML
-    private ChoiceBox<?> Year;
+    private ChoiceBox<Integer> Year;
 
-    @FXML
-    void Notifications(MouseEvent event) {
-
-    }
-
-    @FXML
-    void User(MouseEvent event) {
-    }
 
     public void initialize() {
         Container.widthProperty().addListener((observable, oldValue, newValue) -> {

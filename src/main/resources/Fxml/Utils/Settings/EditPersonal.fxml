@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="394.0" prefWidth="612.0" style="-fx-background-color: #252525;" stylesheets="@../../../Styling/Styler.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Text id="HeadLine" layoutX="57.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WATCH IT" />
+        <Text layoutX="155.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="HeadLine" text="Change Personal Data" />
+        <Button fx:id="SubmitButton" layoutX="325.0" layoutY="252.0" mnemonicParsing="false" onMouseClicked="#Submit" prefHeight="26.0" prefWidth="226.0" style="-fx-text-fill: white; -fx-font-size: 18; -fx-font-weight: 700;" styleClass="Add_Button" text="Submit" />
+        <FontAwesomeIconView fill="WHITE" glyphName="COFFEE" layoutX="90.0" layoutY="229.0" size="10em" text="">
+            <effect>
+                <Glow level="0.63" />
+            </effect>
+        </FontAwesomeIconView>
+        <TextField fx:id="FirstName" layoutX="325.0" layoutY="132.0" onMouseClicked="#GoToNext" prefHeight="30.0" prefWidth="225.0" promptText="First Name" />
+        <TextField fx:id="LastName" layoutX="325.0" layoutY="196.0" onMouseClicked="#GoToNext" prefHeight="30.0" prefWidth="225.0" promptText="Last Name" />
+    </children>
+</AnchorPane>

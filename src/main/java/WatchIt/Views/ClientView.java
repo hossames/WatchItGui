@@ -13,7 +13,6 @@ import WatchIt.Controllers.Account.Client.Helps.HLineController;
 import WatchIt.Controllers.Account.Client.Pages.InnerPageComponentControllers.*;
 import WatchIt.Controllers.Account.Client.Pages.MainPageController;
 import WatchIt.Controllers.Account.Client.Pages.ContentsPageController;
-import WatchIt.Controllers.Content.EpisodeCardControllerAdmin;
 import WatchIt.Controllers.Content.EpisodeCardControllerClient;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -154,13 +153,13 @@ public class ClientView {
     }
     public static  FXMLLoader Renew(User user, Stage stage){
         FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Client/Pages/Settings/Renew.fxml"));
+        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Utils/Settings/Renew.fxml"));
         fxmlLoader.setController(new Renew(user,stage));
         return fxmlLoader;
     }
     public static  FXMLLoader ChangePassword(Account user, Stage stage){
         FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Client/Pages/Settings/ChangePassword.fxml"));
+        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Utils/Settings/ChangePassword.fxml"));
         fxmlLoader.setController(new ChangePassword(user,stage));
         return fxmlLoader;
     }

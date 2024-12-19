@@ -68,6 +68,9 @@ public class AdminController {
             Users.addEventHandler(MouseEvent.MOUSE_CLICKED,(MouseEvent e)->{
                 Model.getInstance().getViewFactory().Show(AdminView.AdminScene(AdminView.UsersPage()));
             });
+            Settings.addEventHandler(MouseEvent.MOUSE_CLICKED,(MouseEvent e)->{
+                Model.getInstance().getViewFactory().Show(AdminView.AdminScene(MainView.SettingsPage()));
+            });
         } catch (IOException e) {
             e.printStackTrace();
         }

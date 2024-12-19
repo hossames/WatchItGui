@@ -11,7 +11,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-
 <VBox alignment="CENTER" fillWidth="false" prefHeight="730.0" prefWidth="454.0" spacing="20.0" style="-fx-background-color: #252525;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
         <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 30; -fx-font-weight: 700;" text="Add Movie Form" />
@@ -21,7 +20,7 @@
         <TextField fx:id="Budget" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="328.0" promptText="budget" style="-fx-text-fill: black !important;" />
         <TextField fx:id="Revenue" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="328.0" promptText="revenue" style="-fx-text-fill: black !important;" />
       <TextField fx:id="Duration" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="328.0" promptText="Duration" style="-fx-text-fill: black !important;" />
-      <TextArea fx:id="Story" onKeyTyped="#GoToNext" prefHeight="90.0" prefWidth="328.0" />
+      <TextArea fx:id="Story" onKeyTyped="#GoToNext" prefHeight="90.0" prefWidth="328.0" promptText="Story" />
       <HBox alignment="CENTER" prefHeight="31.0" prefWidth="378.0" spacing="10.0">
          <children>
             <ChoiceBox fx:id="Genres" prefHeight="26.0" prefWidth="144.0" />

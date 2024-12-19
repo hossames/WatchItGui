@@ -3,7 +3,7 @@ import WatchIt.Views.AdminView;
 import javafx.scene.Node;
 import src.DataBase.DataObject;
 public class Account extends DataObject {
-    protected final String userName,firstName,lastName,email,FavoriteName;
+    protected String userName,firstName,lastName,email,FavoriteName;
     protected String password;
     protected Long ID;
     public static long cnt= 1;
@@ -54,6 +54,12 @@ public class Account extends DataObject {
     }
     public void setPassword(String password) {
         this.password = password;
+    }
+    public void setFirstName(String firstName) {
+        this.firstName=firstName;
+    }
+    public void setLastName(String lastName){
+        this.lastName=lastName;
     }
     //--------------------------------------DataBase Methods-----------------------------------------//
     @Override

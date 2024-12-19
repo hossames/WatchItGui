@@ -91,13 +91,15 @@ public class ClientController {
         HistoryText.addEventHandler(MouseEvent.MOUSE_CLICKED,(MouseEvent e)->{
             Model.getInstance().getViewFactory().Show(ClientView.setNode(ClientView.History()));
         });
+        Home.addEventHandler(MouseEvent.MOUSE_CLICKED,(MouseEvent e)->{
+            Model.getInstance().getViewFactory().Show(ClientView.setNode(ClientView.MainPage()));
+        });
+        Settings.addEventHandler(MouseEvent.MOUSE_CLICKED,(MouseEvent e)->{
+            Model.getInstance().getViewFactory().Show(ClientView.setNode(MainView.SettingsPage()));
+        });
         try {
             ClientBorderPane.setTop(MainView.TitleBar().load());
             ClientBorderPane.setCenter(node);
-            Home.addEventHandler(MouseEvent.MOUSE_CLICKED,(MouseEvent e)->{
-                Model.getInstance().getViewFactory().Show(ClientView.setNode(ClientView.MainPage()));
-            });
-
         }catch (Exception e){
             e.printStackTrace();
         }
