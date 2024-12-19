@@ -204,12 +204,6 @@ public class ClientView {
         fxmlLoader.setController(new CenterComponentController(content));
         return fxmlLoader;
     }
-    public static FXMLLoader EpisodeComponent(DataObject content){
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Client/Pages/InnerPageComponents/EpisodeComponent.fxml"));
-        fxmlLoader.setController(new EpisodeComponentController(content));
-        return fxmlLoader;
-    }
     public static FXMLLoader GenreComponent(String genre){
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Client/Pages/InnerPageComponents/GenreComponent.fxml"));
