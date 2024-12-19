@@ -3,10 +3,10 @@ module watchit {
     requires javafx.fxml;
     requires javafx.web;
     requires java.desktop;
-    requires com.fasterxml.jackson.annotation;
+    //requires com.fasterxml.jackson.annotation;
     requires javafx.media;
     requires java.sql;
-    requires com.almasb.fxgl.io;
+    //requires com.almasb.fxgl.io;
     requires de.jensd.fx.glyphs.fontawesome;
     requires de.jensd.fx.glyphs.materialicons;
     requires de.jensd.fx.glyphs.commons;
