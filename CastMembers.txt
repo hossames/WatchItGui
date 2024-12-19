@@ -1,16 +1,16 @@
-4,Luffy,Mogiwara,Male,Japanese,Mogi@Wara.insta,Actor,2,One Piece Red,One Piece
+4,Luffy,Mogiwara,Male,Japanese,Mogi@Wara.insta,Actor,3,One Piece Red,One Piece,One Piece Red
 11/24/04, 12:00 AM
-5,Nami,Neko,Female,Japanese,Neko@insta,Actor,2,One Piece Red,One Piece
+5,Nami,Neko,Female,Japanese,Neko@insta,Actor,3,One Piece Red,One Piece,One Piece Red
 11/20/03, 12:00 AM
-6,Zoro,Roronoa,Male,Japanese,Zoro@insta,Actor,2,One Piece Red,One Piece
+6,Zoro,Roronoa,Male,Japanese,Zoro@insta,Actor,3,One Piece Red,One Piece,One Piece Red
 8/11/04, 12:00 AM
-7,Sanji,Cook,Male,Japanese,Sanji@insta,Actor,2,One Piece Red,One Piece
+7,Sanji,Cook,Male,Japanese,Sanji@insta,Actor,3,One Piece Red,One Piece,One Piece Red
 5/8/02, 12:00 AM
 8,Chopper,Tony Tony,Deer,Japanese,Tony@insta,Actor,2,One Piece Red,One Piece
 5/19/11, 12:00 AM
 9,Brook,Soul,Male,Japanese,Brook@insta,Actor,1,One Piece
 5/9/19, 12:00 AM
-10,Oda,Ichiro,Male,Japanese,oda@insta,Director,1,One Piece
+10,Oda,Ichiro,Male,Japanese,oda@insta,Director,2,One Piece,One Piece Red
 8/5/64, 12:00 AM
 11,Robin,Niko,Female,Japanese,Robb@insta,Actor,1,One Piece
 8/22/01, 12:00 AM
@@ -34,7 +34,7 @@
 5/15/05, 12:00 AM
 22,Hess,ELtiger,Male,Egyption,tiger@insta,Actor,2,OOP,FCIS
 10/20/05, 12:00 AM
-23,Mostafa,Mangao,Male,Egyption,Manga@insta,Actor,1,OOP
+23,Mostafa,Mangao,Male,Egyption,Manga@insta,Actor,2,OOP,It's Mango Time
 5/23/05, 12:00 AM
 24,Ibrahim,Y,Male,Egyption,Y@insta,Actor,2,Mentor Dreem,OOP
 5/23/05, 12:00 AM
