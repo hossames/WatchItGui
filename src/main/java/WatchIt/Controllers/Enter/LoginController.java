@@ -72,14 +72,7 @@ public class LoginController {
             {
                 try {
                     if(DataBase.getInstance().CurrentUser instanceof User user && user.getSubscriptionPlan().isExpired()) {
-                        Stage stage = new Stage();
-                        try {
-                            Scene scene = new Scene(ClientView.Renew(user, stage).load());
-                            stage.setScene(scene);
-                            stage.show();
-                        }catch (IOException e){
-                            e.printStackTrace();
-                        }
+                        MainView.Upgrade();
                     }else
                         Model.getInstance().getViewFactory().Show(ClientView.setNode(ClientView.MainPage()));
                 }catch (Exception e){
