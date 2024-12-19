@@ -4,3 +4,12 @@
 2,It's Mango Time,Arabic,Egypt,Mangao is a smart problem solver. Every time he wants to solve problems on Codeforces; he says the magic words "It's mango time!" and starts solving. But now he can't say the words anymore for unknown reasons. Join him on the journey to discover why he can't use the magic words anymore and help him become the best competitive programmer in the world!,100,200,1,Science Fiction,1,Mostafa Mangao
 12/6/24, 12:00 AM
 120
+3,Empty Soul,Arabic,Egypt,A lonely college student who always feels empty inside and isolated. struggling with a constant sense that something is missing. He finds himself falling in love with every girl he sees yet he is unable to form a lasting connection or marry anyone.,20,1000,2,Romance,Drama,2,Mostafa Mangao,Ali Abhady42
+12/9/24, 12:00 AM
+120
+5,Grandnewbie,Arabic,Egypt,He’s only 8 points away—just 8—from finally turning green. Will this be his moment of glory? Or is he about to watch the curve nosedive yet again? It’s the story of a guy who started as a wide-eyed newbie dreaming of moving up the ranks. And then came that one div... you know the one that ruined everything. Classic.,5,50,2,Thriller,Drama,1,Ali Abhady42
+12/8/24, 12:00 AM
+90
+6,The Walking Algorithms,Arabic,Egypt,You’ve heard of zombies and the walking dead haven’t you? But have you ever heard of The Walking Algorithms? Meet Mangao a young programmer terrified of algorithms like BFS DFS and dynamic programming. Join him on his journey to take an algorithms course conquer the ghosts of algorithms and achieve victory!,200,10000,2,Horror,Adventure,3,Mostafa Mangao,Kareem Wisdom,Mahmoud Khater
+11/29/21, 12:00 AM
+150
