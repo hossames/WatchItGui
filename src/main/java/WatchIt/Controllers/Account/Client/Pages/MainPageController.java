@@ -68,10 +68,6 @@ public class MainPageController extends Searchable {
         }
     }
 
-    public void Notifications(MouseEvent event) {
-
-    }
-
     public void OpenActorsPage(MouseEvent event) {
         Model.getInstance().getViewFactory().Show(ClientView.setNode(ClientView.CastPage()));
     }
@@ -89,7 +85,7 @@ public class MainPageController extends Searchable {
     }
 
     public void User(MouseEvent event) {
-        Model.getInstance().getViewFactory().Show(MainView.SettingsPage());
+        Model.getInstance().getViewFactory().Show(ClientView.setNode(MainView.SettingsPage()));
     }
 
     public void WatchThatContent(MouseEvent event) {

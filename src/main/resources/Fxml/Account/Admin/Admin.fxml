@@ -42,7 +42,7 @@
                     </font>
                 </Text>
                 <FontAwesomeIconView fill="#cfcfcf" glyphName="GEAR" layoutX="26.0" layoutY="620.0" size="1.8em" text="" />
-                <FontAwesomeIconView fill="WHITE" glyphName="COFFEE" layoutX="19.0" layoutY="58.0" size="2.5em" />
+                <FontAwesomeIconView fx:id="CoffeeIcon" fill="WHITE" glyphName="COFFEE" layoutX="19.0" layoutY="58.0" size="2.5em" />
             <MaterialIconView fill="#cfcfcf" glyphName="DASHBOARD" layoutX="25.0" layoutY="111.0" size="1.8em" />
             <FontAwesomeIconView fill="#cfcfcf" glyphName="FILM" layoutX="25.0" layoutY="213.0" size="1.8em" />
             <Text fx:id="Series" fill="#cfcfcf" layoutX="65.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="SideBarItems" text="Series" wrappingWidth="116.26602172851562">

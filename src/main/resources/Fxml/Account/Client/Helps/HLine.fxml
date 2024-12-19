@@ -41,12 +41,12 @@
             </ScrollPane>
             <AnchorPane layoutX="1019.0" layoutY="121.0" onMouseClicked="#Next" opacity="0.75" prefHeight="43.0" prefWidth="39.0" style="-fx-background-color: black; -fx-background-radius: 20;" AnchorPane.rightAnchor="23.399999999999906">
                <children>
-                  <FontAwesomeIconView fill="#fcfcfc" glyphName="ANGLE_RIGHT" layoutX="15.0" layoutY="30.0" onMouseClicked="#Next" size="2em" />
+                  <FontAwesomeIconView fill="#fcfcfc" glyphName="ANGLE_RIGHT" layoutX="15.0" layoutY="30.0" size="2em" />
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="24.0" layoutY="117.0" onMouseClicked="#Previous" opacity="0.66" prefHeight="43.0" prefWidth="39.0" style="-fx-background-color: #000000; -fx-background-radius: 20;">
+            <AnchorPane layoutX="24.0" layoutY="117.0" opacity="0.66" prefHeight="43.0" prefWidth="39.0" style="-fx-background-color: #000000; -fx-background-radius: 20;">
                <children>
-                  <FontAwesomeIconView fill="#fcfcfc" glyphName="ANGLE_LEFT" layoutX="15.0" layoutY="30.0" onMouseClicked="#Previous" size="2em" />
+                  <FontAwesomeIconView fill="#fcfcfc" glyphName="ANGLE_LEFT" layoutX="15.0" layoutY="30.0" size="2em" />
                </children>
             </AnchorPane>
          </children>

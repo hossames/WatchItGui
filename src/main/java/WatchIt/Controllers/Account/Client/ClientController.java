@@ -24,9 +24,6 @@ public class ClientController {
     private Text ContentName;
 
     @FXML
-    private Text ContentName12;
-
-    @FXML
     private Text Favorites;
 
     @FXML
@@ -79,12 +76,10 @@ public class ClientController {
         this.node = node;
     }
 
-    @FXML
-    void OpenInnerPage(MouseEvent event) {
-
-    }
-
     public void initialize(){
+        CoffeeIcon.addEventHandler(MouseEvent.MOUSE_CLICKED,(MouseEvent e)->{
+            Model.getInstance().getViewFactory().Show(ClientView.setNode(ClientView.MainPage()));
+        });
         watchLaterText.addEventHandler(MouseEvent.MOUSE_CLICKED,(MouseEvent e)->{
             Model.getInstance().getViewFactory().Show(ClientView.setNode(ClientView.WatchLater()));
         });

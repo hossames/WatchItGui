@@ -62,7 +62,7 @@
             <FontAwesomeIconView fill="#cfcfcf" glyphName="HEART_ALT" layoutX="26.0" layoutY="341.0" size="1.8em" text="" />
             <FontAwesomeIconView fill="#cfcfcf" glyphName="CLOCK_ALT" layoutX="26.0" layoutY="390.0" size="1.8em" />
             <FontAwesomeIconView fill="#cfcfcf" glyphName="GEAR" layoutX="26.0" layoutY="620.0" size="1.8em" text="" />
-            <FontAwesomeIconView fill="WHITE" glyphName="COFFEE" layoutX="19.0" layoutY="58.0" size="2.5em" />
+            <FontAwesomeIconView fx:id="CoffeeIcon" fill="WHITE" glyphName="COFFEE" layoutX="19.0" layoutY="58.0" size="2.5em" />
             </children>
          <effect>
             <DropShadow />

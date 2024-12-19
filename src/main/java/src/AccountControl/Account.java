@@ -31,13 +31,18 @@ public class Account extends DataObject {
         this.email = email;
         this.password = password;
         this.FavoriteName = FavoriteName;
-        this.ID = cnt++;
-
+        this.ID = cnt;
+        cnt++;
     }
     public Account(String userName,String firstName,String lastName,String email,String password,String FavoriteName,Long id) {
-        this(userName, firstName, lastName, email, password, FavoriteName);
+        this.userName = userName;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+        this.FavoriteName = FavoriteName;
         ID=id;
-        cnt = id+1;
+        cnt = Math.max(cnt,id+1);
     }
     public String getFavoriteName(){ return this.FavoriteName;}
     public String getUserName() {

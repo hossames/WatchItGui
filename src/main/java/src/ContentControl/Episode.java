@@ -49,7 +49,8 @@ public class Episode extends DataObject implements Rateable{
     }catch (Exception e){
       poster = new Image(Application.class.getResourceAsStream("/Images/film.jpg"));
     }
-    cnt = Id+1;
+    cnt = Math.max(cnt,Id+1);
+
   }
 
   // Getters & Setters

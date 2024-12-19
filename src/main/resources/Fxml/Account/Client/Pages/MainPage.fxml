@@ -26,51 +26,32 @@
                         <Image url="@../../../../Images/MainPageBackground.png" />
                      </image>
                   </ImageView>
-                  <Text fx:id="Movies" fill="WHITE" layoutX="777.0" layoutY="44.0" onMouseClicked="#OpenMoviesPage" strokeType="OUTSIDE" strokeWidth="0.0" text="Movies" AnchorPane.rightAnchor="227.0101562499999">
-                     <font>
-                        <Font size="17.0" />
-                     </font>
-                  </Text>
-                  <Text fx:id="Series" fill="WHITE" layoutX="881.0" layoutY="44.0" onMouseClicked="#OpenSeriesPage" strokeType="OUTSIDE" strokeWidth="0.0" text="Series" AnchorPane.rightAnchor="132.5477539062499">
-                     <font>
-                        <Font size="17.0" />
-                     </font>
-                  </Text>
-                  <Text fx:id="Actors" fill="WHITE" layoutX="972.0" layoutY="43.0" onMouseClicked="#OpenActorsPage" strokeType="OUTSIDE" strokeWidth="0.0" text="Actors" AnchorPane.rightAnchor="37.93691406249991">
-                     <font>
-                        <Font size="17.0" />
-                     </font>
-                  </Text>
-                  <Text fx:id="ContentName" fill="WHITE" layoutX="18.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="163.73663294315338">
-                     <font>
-                        <Font name="System Bold" size="35.0" />
-                     </font>
-                  </Text>
-                  <Text fx:id="Year" fill="#cccbcb" layoutX="18.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Year" wrappingWidth="46.93664515018463">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Text>
-                  <Text fx:id="Genre" fill="#737373" layoutX="82.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genre" wrappingWidth="94.93670618534088">
-                     <font>
-                        <Font name="System Bold Italic" size="24.0" />
-                     </font>
-                  </Text>
-                  <Text fx:id="ContentName12" fill="#c9c9c9" layoutX="67.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="|" wrappingWidth="6.136657357215881">
-                     <font>
-                        <Font size="21.0" />
-                     </font>
-                  </Text>
-                  <Button fx:id="WatchNow" layoutX="14.0" layoutY="288.0" mnemonicParsing="false" onMouseClicked="#WatchThatContent" prefHeight="41.0" prefWidth="162.0" style="-fx-background-color: #6640d9; -fx-background-radius: 12;" text="Watch Now" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="15.0" />
-                     </font>
-                  </Button>
-                  <AnchorPane layoutX="189.0" layoutY="291.0" prefHeight="34.0" prefWidth="40.0" style="-fx-background-color: linear-gradient(from 0.0% 100.0% to 100.0% 0.0%, #a5a5a5 0.0%, #f2f2f2 100.0%); -fx-background-radius: 5;">
+                  <HBox alignment="CENTER" fillHeight="false" layoutX="690.0" layoutY="15.0" prefHeight="44.0" prefWidth="326.0" spacing="30.0" style="-fx-background-color: linear-gradient(from 0.0% 100.0% to 100.0% 0.0%, #a5a5a5 0.0%, #f2f2f2 100.0%); -fx-background-radius: 14;" AnchorPane.leftAnchor="690.0" AnchorPane.rightAnchor="42.799999999999955">
                      <children>
-                        <FontAwesomeIconView fx:id="Heart" fill="#9a0dc9" glyphName="HEART_ALT" layoutX="9.0" layoutY="26.0" onMouseClicked="#setFavorite" size="1.7em" />
+                        <Text fx:id="Movies" onMouseClicked="#OpenMoviesPage" strokeType="OUTSIDE" strokeWidth="0.0" text="Movies">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="Series" onMouseClicked="#OpenSeriesPage" strokeType="OUTSIDE" strokeWidth="0.0" text="Series">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="Actors" onMouseClicked="#OpenActorsPage" strokeType="OUTSIDE" strokeWidth="0.0" text="Actors">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
                      </children>
-                  </AnchorPane>
+                     <effect>
+                        <DropShadow height="42.06" radius="22.8675" width="51.41">
+                           <color>
+                              <Color red="0.5143824219703674" blue="1.0" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </HBox>
                   <HBox alignment="CENTER_LEFT" focusTraversable="true" layoutX="18.0" layoutY="13.0" prefHeight="47.0" prefWidth="117.0" spacing="39.0" style="-fx-background-color: #252525; -fx-background-radius: 22;">
                      <children>
                         <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" onMouseClicked="#Search" size="1.8em" />
@@ -80,13 +61,54 @@
                         <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
                      </padding>
                      <effect>
-                        <DropShadow radius="17.0175" spread="0.39" width="49.07">
+                        <DropShadow height="35.03" radius="20.525" spread="0.39" width="49.07">
                            <color>
-                              <Color red="0.8833333253860474" blue="1.0" />
+                              <Color red="0.8823529481887817" blue="1.0" />
                            </color>
                         </DropShadow>
                      </effect>
                   </HBox>
+                  <AnchorPane layoutX="18.0" layoutY="146.0" prefHeight="200.0" prefWidth="327.0" style="-fx-background-color: linear-gradient(from 0.0% 100.0% to 100.0% 0.0%, #a5a5a5 0.0%, #f2f2f2 100.0%); -fx-background-radius: 14;">
+                     <children>
+                        <Text fx:id="ContentName" layoutX="11.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="305.33665430545807">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="Genre" layoutX="80.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genre" wrappingWidth="94.93670618534088">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="ContentName12" layoutX="66.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="|" wrappingWidth="6.136657357215881">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="Year" fill="#4b4b4b" layoutX="14.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Year" wrappingWidth="46.93664515018463">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="WatchNow" layoutX="11.0" layoutY="144.0" mnemonicParsing="false" onMouseClicked="#WatchThatContent" prefHeight="41.0" prefWidth="162.0" style="-fx-background-color: #6640d9; -fx-background-radius: 12;" text="Watch Now" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <AnchorPane layoutX="204.0" layoutY="147.0" prefHeight="34.0" prefWidth="40.0" style="-fx-background-color: linear-gradient(from 0.0% 100.0% to 100.0% 0.0%, #a5a5a5 0.0%, #f2f2f2 100.0%); -fx-background-radius: 5;">
+                           <children>
+                              <FontAwesomeIconView fx:id="Heart" fill="#9a0dc9" glyphName="HEART_ALT" layoutX="9.0" layoutY="26.0" onMouseClicked="#setFavorite" size="1.7em" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                     <effect>
+                        <DropShadow height="28.02" radius="17.02" width="42.06">
+                           <color>
+                              <Color red="0.48451781272888184" blue="1.0" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </AnchorPane>
                </children>
                <VBox.margin>
                   <Insets left="6.0" />

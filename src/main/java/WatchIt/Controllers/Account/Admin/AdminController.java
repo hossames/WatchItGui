@@ -2,7 +2,9 @@ package WatchIt.Controllers.Account.Admin;
 
 import WatchIt.Models.Model;
 import WatchIt.Views.AdminView;
+import WatchIt.Views.ClientView;
 import WatchIt.Views.MainView;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import de.jensd.fx.glyphs.materialicons.MaterialIconView;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,11 +12,14 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.text.Text;
+import src.AccountControl.Admin;
 import src.DataBase.DataBase;
 
 import java.io.IOException;
 
 public class AdminController {
+    @FXML
+    private FontAwesomeIconView CoffeeIcon;
     @FXML
     private BorderPane AdminBorderPane;
 
@@ -53,6 +58,9 @@ public class AdminController {
         try {
             AdminBorderPane.setTop(MainView.TitleBar().load());
             AdminBorderPane.setCenter(fxmlLoader.load());
+            CoffeeIcon.addEventHandler(MouseEvent.MOUSE_CLICKED,(MouseEvent e)->{
+                Model.getInstance().getViewFactory().Show(AdminView.AdminScene(AdminView.DashBoard()));
+            });
             DashBoard.addEventHandler(MouseEvent.MOUSE_CLICKED,(MouseEvent event) -> {
                 Model.getInstance().getViewFactory().Show(AdminView.AdminScene(AdminView.DashBoard()));
             });

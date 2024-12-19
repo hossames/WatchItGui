@@ -53,7 +53,7 @@ public class Content extends DataObject implements Rateable {
     }
     public Content(Long Id,String contentTitle,String language, String country,String Story,int budget, int revenue,List<String> genres,List<String>CastMembers,Date date){
         this.contentID = Id;
-        cnt = Id+1;
+        cnt = Math.max(cnt,Id+1);
         this.contentTitle = contentTitle;
         datePublished = date;
         this.story = Story;
