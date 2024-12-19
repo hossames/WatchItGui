@@ -4,7 +4,11 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import src.ContentControl.*;
+import src.DataBase.DataBase;
 import src.DataBase.DataObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ContentCardControllerAdmin {
     public ImageView ContentImage;
@@ -48,13 +52,19 @@ public class ContentCardControllerAdmin {
         alert.showAndWait();
         String ans = alert.getResult().getText();
         if(ans.equals("OK")) {
-            if(content instanceof Movie) {
-
+            if(content instanceof Movie movie) {
+                DataBase.getInstance().moviesData.removeData(movie);
             }
-            else if(content instanceof Series){
-
-            }
-            else{
+            else if(content instanceof Series series){
+                List<Episode>toRemove = new ArrayList<>();
+                for(var ep : DataBase.getInstance().episodesData.getData()){
+                    if(ep.getSeriesName().equals(series.contentTitle))
+                       toRemove.add(ep);
+                }
+                for(Episode ep : toRemove){
+                    DataBase.getInstance().episodesData.removeData(ep);
+                }
+                DataBase.getInstance().seriesData.removeData(series);
             }
         }
     }

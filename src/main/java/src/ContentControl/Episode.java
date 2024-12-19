@@ -154,4 +154,9 @@ public class Episode extends DataObject implements Rateable{
       return episodeTitle;
     return SeriesName+" "+Integer.valueOf(episodeNumber).toString();
   }
+
+  @Override
+  public Date getDate(){
+    return releaseDate;
+  }
 }

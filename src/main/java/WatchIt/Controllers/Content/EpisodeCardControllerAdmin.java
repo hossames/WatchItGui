@@ -1,9 +1,11 @@
 package WatchIt.Controllers.Content;
+import WatchIt.Models.Model;
+import WatchIt.Views.AdminView;
 import javafx.scene.control.Alert;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import src.ContentControl.*;
+import src.DataBase.DataBase;
 import src.DataBase.DataObject;
 
 public class EpisodeCardControllerAdmin {
@@ -22,19 +24,13 @@ public class EpisodeCardControllerAdmin {
     public void initialize() {
         ContentImage.setImage(content.getImage());
         ContentName.setText(content.getName(2));
-        if(true) {
-            Year.setText(String.valueOf(content.getDate().getYear() + 1900));
-        }
+        Year.setText(String.valueOf(content.getDate().getYear() + 1900));
     }
 
     public void OpenInnerPage(){
-        try {
-        }catch (Exception e){
-            e.printStackTrace();
-        }
     }
 
-    public void DeleteContent(MouseEvent event) {
+    public void DeleteContent() {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Delete Content");
         alert.setHeaderText(null);
@@ -42,14 +38,8 @@ public class EpisodeCardControllerAdmin {
         alert.showAndWait();
         String ans = alert.getResult().getText();
         if(ans.equals("OK")) {
-            if(content instanceof Movie) {
-
-            }
-            else if(content instanceof Series){
-
-            }
-            else{
-            }
+           DataBase.getInstance().episodesData.removeData((Episode)content);
+           Model.getInstance().getViewFactory().Show(AdminView.EpisodePage());
         }
     }
 }
