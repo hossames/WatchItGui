@@ -1,6 +1,7 @@
 package WatchIt.Controllers.Account.Client.Pages;
 
 import WatchIt.Controllers.Account.Client.Helps.HandleGrid;
+import WatchIt.Controllers.Account.Client.Searchable;
 import WatchIt.Views.MainView;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -23,12 +24,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ContentsPageController {
-    List<DataObject> nodeList = new ArrayList<>();
-    DataObjectController<? extends DataObject> dataObjectController;
-    @FXML
-    private ScrollPane Container;
-
+public class ContentsPageController extends Searchable {
     @FXML
     private ChoiceBox<?> Country;
 
@@ -48,75 +44,25 @@ public class ContentsPageController {
     private HBox Recent;
 
     @FXML
-    private VBox SearchResultContainer;
-
-    @FXML
-    private ScrollPane SearchResultScroll;
-
-    @FXML
     private HBox TopRated;
-
-    @FXML
-    private GridPane View;
 
     @FXML
     private ChoiceBox<?> Year;
 
     @FXML
-    private TextField SearchField;
-
-    @FXML
     void Notifications(MouseEvent event) {
 
-    }
-    @FXML
-    void Search() {
-        SearchResultContainer.getChildren().clear();
-        SearchResultScroll.setMinHeight(0);
-        SearchResultScroll.setMaxHeight(0);
-        nodeList = dataObjectController.ConvertToDataObject().getDataThatContains(SearchField.getText(),2);
-        for(var node : nodeList) {
-            try {
-                SearchResultScroll.setMinHeight(Math.min(SearchResultScroll.getMinHeight()+80,SearchResultContainer.getPrefHeight()));
-                SearchResultScroll.setMinHeight(Math.min(SearchResultScroll.getMinHeight()+80,SearchResultContainer.getPrefHeight()));
-                SearchResultContainer.getChildren().add(MainView.SearchedRow(node).load());
-            }catch (IOException e){
-                e.printStackTrace();
-            }
-        }
     }
 
     @FXML
     void User(MouseEvent event) {
     }
 
-    public void SetToGrid(){
-        View.getChildren().clear();
-        for(var node : nodeList) {
-            HandleGrid.setToGrid(View, (int) Container.getWidth(), node.getNode());
-        }
-    }
-
     public void initialize() {
         Container.widthProperty().addListener((observable, oldValue, newValue) -> {
                 SetToGrid();
         });
-        nodeList = dataObjectController.ConvertListDataObject();
-        SearchField.textProperty().addListener((observable, oldValue, newValue) -> {
-            Search();
-        });
-        SearchField.addEventHandler(KeyEvent.KEY_TYPED,(KeyEvent event)->{
-            if(event.getCharacter().charAt(0)==System.lineSeparator().charAt(0)){
-                SetToGrid();
-            }
-        });
-        SearchField.focusedProperty().addListener((observable, oldValue, newValue) -> {
-            if((newValue||SearchResultScroll.isFocused()) && nodeList.size()>0){
-                SearchResultScroll.setVisible(true);
-            }else{
-                SearchResultScroll.setVisible(false);
-            }
-        });
+        initSearchEngine();
     }
 
     public ContentsPageController(DataObjectController<? extends  DataObject> dataObjectController) {

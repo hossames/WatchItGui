@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Text?>
 
-<HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="66.0" prefWidth="962.0" style="-fx-background-color: #6600FFFF;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="66.0" prefWidth="962.0" style="-fx-background-color: #6600FFFF; -fx-border-color: white; -fx-border-width: 0 0 3 0;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Text fx:id="FirstName" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center; -fx-font-size: 16; -fx-font-weight: bold; -fx-fill: white;" text="First Name" wrappingWidth="141.33676528930664">
          <effect>
@@ -23,10 +24,12 @@
          <effect>
             <Glow level="0.53" />
          </effect></Text>
-      <Text fx:id="Rule" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center; -fx-font-size: 16; -fx-font-weight: bold; -fx-fill: white;" text="Rule" wrappingWidth="139.7367296218872">
+      <Text fx:id="Rule" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center; -fx-font-size: 16; -fx-font-weight: bold; -fx-fill: white;" text="Rule" wrappingWidth="158.1367540359497">
          <effect>
             <Glow level="0.53" />
          </effect></Text>
+      <FontAwesomeIconView fill="RED" glyphName="TRASH" onMouseClicked="#DeleteAccount" size="2em" wrappingWidth="66.85714149475098" />
+      <FontAwesomeIconView fill="#00ff11" glyphName="ARROW_UP" onMouseClicked="#Promote" size="2em" />
    </children>
    <padding>
       <Insets left="10.0" />

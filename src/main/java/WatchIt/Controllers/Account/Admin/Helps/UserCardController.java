@@ -43,7 +43,7 @@ public class UserCardController {
             Rule.setText("User");
         }
     }
-    public void DeleteUser(MouseEvent event) {
+    public void DeleteAccount(MouseEvent event) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Confirmation");
         alert.setHeaderText(null);
@@ -66,7 +66,7 @@ public class UserCardController {
         Admin admin = new Admin(account);
         DataBase.getInstance().adminsData.addData(admin);
     }
-    public void MakeAdmin(MouseEvent event) {
+    public void Promote(MouseEvent event) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Confirmation");
         alert.setHeaderText(null);
