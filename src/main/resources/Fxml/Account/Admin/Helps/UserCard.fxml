@@ -1,18 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.Glow?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Text?>
 
-
-<HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="66.0" prefWidth="962.0" style="-fx-background-color: f49405;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="66.0" prefWidth="962.0" style="-fx-background-color: #6600FFFF;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Text fx:id="FirstName" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center; -fx-font-size: 16; -fx-font-weight: bold; -fx-fill: white;" text="First Name" wrappingWidth="141.33676528930664" />
-      <Text fx:id="LastName" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center; -fx-font-size: 16; -fx-font-weight: bold; -fx-fill: white;" text="Last Name" wrappingWidth="144.53671646118164" />
-      <Text fx:id="Email" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center; -fx-font-size: 16; -fx-font-weight: bold; -fx-fill: white;" text="Email" wrappingWidth="253.33673477172852" />
-      <Text fx:id="Password" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center; -fx-font-size: 16; -fx-font-weight: bold; -fx-fill: white;" text="Password" wrappingWidth="127.73672866821289" />
-      <Text fx:id="Rule" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center; -fx-font-size: 16; -fx-font-weight: bold; -fx-fill: white;" text="Rule" wrappingWidth="139.7367296218872" />
+      <Text fx:id="FirstName" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center; -fx-font-size: 16; -fx-font-weight: bold; -fx-fill: white;" text="First Name" wrappingWidth="141.33676528930664">
+         <effect>
+            <Glow level="0.53" />
+         </effect></Text>
+      <Text fx:id="LastName" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center; -fx-font-size: 16; -fx-font-weight: bold; -fx-fill: white;" text="Last Name" wrappingWidth="144.53671646118164">
+         <effect>
+            <Glow level="0.53" />
+         </effect></Text>
+      <Text fx:id="Email" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center; -fx-font-size: 16; -fx-font-weight: bold; -fx-fill: white;" text="Email" wrappingWidth="253.33673477172852">
+         <effect>
+            <Glow level="0.53" />
+         </effect></Text>
+      <Text fx:id="Password" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center; -fx-font-size: 16; -fx-font-weight: bold; -fx-fill: white;" text="Password" wrappingWidth="127.73672866821289">
+         <effect>
+            <Glow level="0.53" />
+         </effect></Text>
+      <Text fx:id="Rule" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center; -fx-font-size: 16; -fx-font-weight: bold; -fx-fill: white;" text="Rule" wrappingWidth="139.7367296218872">
+         <effect>
+            <Glow level="0.53" />
+         </effect></Text>
    </children>
    <padding>
       <Insets left="10.0" />
