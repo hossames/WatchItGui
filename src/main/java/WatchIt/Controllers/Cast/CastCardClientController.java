@@ -1,4 +1,7 @@
 package WatchIt.Controllers.Cast;
+import WatchIt.Models.Model;
+import WatchIt.Views.ClientView;
+import javafx.scene.Node;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
@@ -7,6 +10,8 @@ import src.Cast.CastMember;
 import src.ContentControl.Content;
 import src.DataBase.DataBase;
 import src.DataBase.DataObjectController;
+
+import java.util.List;
 
 public class CastCardClientController {
     public ImageView CastImage;
@@ -23,14 +28,9 @@ public class CastCardClientController {
     public void setFavorite(MouseEvent mouseEvent) {
 
     }
-    public void OpenInnerPage(MouseEvent mouseEvent){
-        if(DataBase.getInstance().CurrentUser instanceof User) {
-            DataObjectController<Content> db = new DataObjectController<>('\0', DataBase.contentsData.getDataByString(castMember.Contents, 1));
-            try {
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
+    public void OpenInnerPage(MouseEvent mouseEvent) {
+        List<Node> nodeList = DataObjectController.MakeNodeList(DataBase.contentsData.getDataByString(castMember.Contents, 2));
+        Model.getInstance().getViewFactory().Show(ClientView.setNode(ClientView.CastPage(castMember, nodeList)));
     }
 
 }

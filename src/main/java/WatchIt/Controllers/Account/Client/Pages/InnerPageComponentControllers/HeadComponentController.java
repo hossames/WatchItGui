@@ -84,15 +84,22 @@ public class HeadComponentController {
     @FXML
     void Click(MouseEvent event) {
         float rate=0;
+        boolean ok = false;
         for (var star : Stars.getChildren()) {
             FontAwesomeIconView fontAwesomeIconView = (FontAwesomeIconView) star;
-            fontAwesomeIconView.setIcon(FontAwesomeIcon.STAR);
-            rate++;
+            if(ok==false) {
+                fontAwesomeIconView.setIcon(FontAwesomeIcon.STAR);
+                rate++;
+            }
+            else{
+                fontAwesomeIconView.setIcon(FontAwesomeIcon.STAR_ALT);
+                rate--;
+            }
             if (event.getSource().equals(star)) {
-                content.EditRate(rate);
-                return;
+                ok=true;
             }
         }
+        content.EditRate(rate);
     }
 
     @FXML
