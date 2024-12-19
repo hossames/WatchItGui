@@ -39,7 +39,7 @@ public class EpisodeCardControllerAdmin {
         String ans = alert.getResult().getText();
         if(ans.equals("OK")) {
            DataBase.getInstance().episodesData.removeData((Episode)content);
-           Model.getInstance().getViewFactory().Show(AdminView.EpisodePage());
+           Model.getInstance().getViewFactory().Show(AdminView.AdminScene(AdminView.EpisodePage()));
         }
     }
 }
