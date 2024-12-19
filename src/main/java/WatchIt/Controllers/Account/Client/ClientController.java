@@ -54,12 +54,6 @@ public class ClientController {
     private Text Settings;
 
     @FXML
-    private MaterialIconView Trend;
-
-    @FXML
-    private Text TrendText;
-
-    @FXML
     private Text Year;
 
     @FXML

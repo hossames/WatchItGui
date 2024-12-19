@@ -30,12 +30,6 @@
                         <Font name="System Bold" size="16.0" />
                     </font>
                 </Text>
-                <Text fx:id="TrendText" fill="#cfcfcf" layoutX="63.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="SideBarItems" text="Trending" wrappingWidth="116.26602172851562">
-                    <font>
-                        <Font name="System Bold" size="16.0" />
-                    </font>
-                </Text>
-            <MaterialIconView fx:id="Trend" fill="#cfcfcf" glyphName="TRENDING_UP" layoutX="25.0" layoutY="188.0" size="1.8em" text="" />
             <Text fx:id="watchLaterText" fill="#cfcfcf" layoutX="65.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="SideBarItems" text="Watch Later" wrappingWidth="116.26602172851562">
                <font>
                   <Font name="System Bold" size="16.0" />

@@ -4,23 +4,24 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="AddCast" minWidth="1038.0" prefHeight="694.0" prefWidth="1038.0" style="-fx-background-color: rgb(230,230,230);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+
+<VBox alignment="CENTER" fillWidth="false" prefHeight="594.0" prefWidth="478.0" spacing="30.0" style="-fx-background-color: #252525;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TextField fx:id="FirstName" layoutX="440.0" layoutY="150.0" onKeyTyped="#GoToNext" prefHeight="29.0" prefWidth="274.0" promptText="First Name" style="-fx-text-fill: black !important;" />
-      <TextField fx:id="LastName" layoutX="441.0" layoutY="200.0" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="274.0" promptText="LastName" style="-fx-text-fill: black !important;" />
-      <TextField fx:id="Gender" layoutX="440.0" layoutY="251.0" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="274.0" promptText="Gender" style="-fx-text-fill: black !important;" />
-      <TextField fx:id="Nationality" layoutX="439.0" layoutY="308.0" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="274.0" promptText="Nationality" style="-fx-text-fill: black !important;" />
-      <TextField fx:id="SocialMediaLink" layoutX="437.0" layoutY="365.0" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="274.0" promptText="Social Media Link" style="-fx-text-fill: black !important;" />
-      <DatePicker fx:id="dateOfBirth" layoutX="441.0" layoutY="468.0" onKeyTyped="#GoToNext" prefHeight="29.0" prefWidth="274.0" promptText="Date of Birth" style="-fx-text-fill: black !important;" />
-      <Button fx:id="Add" layoutX="442.0" layoutY="512.0" mnemonicParsing="false" onMouseClicked="#Add" prefHeight="31.0" prefWidth="263.0" text="Add" />
-      <Text layoutX="413.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 30; -fx-font-weight: 700;" text="Add CastMember Form" />
-      <TextField fx:id="WorkType" layoutX="437.0" layoutY="418.0" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="274.0" promptText="Work Type" style="-fx-text-fill: black !important;" />
+      <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 30; -fx-font-weight: 700;" text="Add CastMember Form" />
+      <TextField fx:id="FirstName" onKeyTyped="#GoToNext" prefHeight="29.0" prefWidth="274.0" promptText="First Name" style="-fx-text-fill: black !important;" />
+      <TextField fx:id="LastName" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="274.0" promptText="LastName" style="-fx-text-fill: black !important;" />
+      <TextField fx:id="Gender" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="274.0" promptText="Gender" style="-fx-text-fill: black !important;" />
+      <TextField fx:id="Nationality" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="274.0" promptText="Nationality" style="-fx-text-fill: black !important;" />
+      <TextField fx:id="SocialMediaLink" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="274.0" promptText="Social Media Link" style="-fx-text-fill: black !important;" />
+      <TextField fx:id="WorkType" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="274.0" promptText="Work Type" style="-fx-text-fill: black !important;" />
+      <DatePicker fx:id="dateOfBirth" onKeyTyped="#GoToNext" prefHeight="29.0" prefWidth="274.0" promptText="Date of Birth" style="-fx-text-fill: black !important;" />
+      <Button fx:id="Add" mnemonicParsing="false" onMouseClicked="#Add" prefHeight="31.0" prefWidth="263.0" styleClass="Add_Button" text="Add" />
    </children>
    <stylesheets>
-      <URL value="@../../../../Styling/Styler.css" />
       <URL value="@../../../../Styling/Account.css" />
+      <URL value="@../../../../Styling/Styler.css" />
    </stylesheets>
-</AnchorPane>
+</VBox>
