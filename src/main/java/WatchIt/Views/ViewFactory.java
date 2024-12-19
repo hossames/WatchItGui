@@ -14,6 +14,7 @@ public class ViewFactory {
         PrimaryStage = new Stage();
         PrimaryStage.initStyle(StageStyle.UNDECORATED);
         PrimaryStage.setFullScreen(true);
+        PrimaryStage.setFullScreenExitHint("");
     }
     public void Show(FXMLLoader ShowingScene){
         try {

@@ -2,6 +2,7 @@ package src.DataBase;
 
 import javafx.scene.Node;
 import src.AccountControl.Account;
+import src.AccountControl.User;
 import src.ContentControl.Content;
 
 import java.io.File;
@@ -234,8 +235,12 @@ public class DataObjectController <T> {
      */
     public void removeData(T obj){
         data.remove(obj);
-        if (type == 'U' || type == 'A')
+        if (type == 'U' || type == 'A') {
+            if(type == 'U'){
+                DataBase.getInstance().Favorites.removeData(((User)obj).getId(0),0);
+            }
             DataBase.accountsData.removeData((Account) obj);
+        }
         else if (type == 'S' || type == 'M')
             DataBase.contentsData.removeData((Content) obj);
     }
