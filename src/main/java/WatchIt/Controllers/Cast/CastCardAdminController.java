@@ -1,4 +1,6 @@
 package WatchIt.Controllers.Cast;
+import WatchIt.Models.Model;
+import WatchIt.Views.AdminView;
 import javafx.scene.control.Alert;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -35,6 +37,7 @@ public class CastCardAdminController {
         String ans = alert.getResult().getText();
         if(ans.equals("OK")) {
             DataBase.getInstance().castMemberData.removeData(castMember);
+            Model.getInstance().getViewFactory().Show(AdminView.AdminScene(AdminView.CastPage()));
         }
     }
 

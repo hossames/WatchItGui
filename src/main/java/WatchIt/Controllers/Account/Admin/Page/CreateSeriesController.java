@@ -55,6 +55,11 @@ public class CreateSeriesController {
                 castmembers.add(CastMembers.getSelectionModel().getSelectedItem());
             }
         }
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Create Cast");
+        alert.setHeaderText(null);
+        alert.setContentText("Create Cast Successful");
+        alert.showAndWait();
     }
     public void Done(MouseEvent event) {
         Series series = new Series(ContentTitle.getText(),Language.getText(),Country.getText(),Story.getText(),

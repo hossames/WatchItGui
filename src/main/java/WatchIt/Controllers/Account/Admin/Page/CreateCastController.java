@@ -3,6 +3,7 @@ package WatchIt.Controllers.Account.Admin.Page;
 import WatchIt.Models.Model;
 import WatchIt.Views.AdminView;
 import WatchIt.Views.MainView;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
@@ -40,6 +41,11 @@ public class CreateCastController {
         CastMember castMember = new CastMember(FirstName.getText(),LastName.getText(),Gender.getText(),Nationality.getText(),SocialMediaLink.getText(),WorkType.getText(), new ArrayList<>(),Date.from(dateOfBirth.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant()));
         DataBase.getInstance().castMemberData.addData(castMember);
         MainView<CastMember>  view = new MainView<>();
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Create Cast");
+        alert.setHeaderText(null);
+        alert.setContentText("Create Cast Successful");
+        alert.showAndWait();
     }
 
     public void GoToNext(KeyEvent keyEvent) {

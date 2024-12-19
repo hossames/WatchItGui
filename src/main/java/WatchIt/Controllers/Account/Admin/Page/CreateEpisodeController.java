@@ -39,6 +39,11 @@ public class CreateEpisodeController {
                 Integer.parseInt(EpisodeNumber.getText()),Integer.parseInt(Duration.getText()),
                 Date.from(dateOfProduction.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant()));
         DataBase.getInstance().episodesData.addData(episode);
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Create Cast");
+        alert.setHeaderText(null);
+        alert.setContentText("Create Cast Successful");
+        alert.showAndWait();
     }
     public void GoToNext(KeyEvent keyEvent) {
         if(keyEvent.getCharacter().charAt(0)==System.lineSeparator().charAt(0)) {

@@ -1,4 +1,6 @@
 package WatchIt.Controllers.Content;
+import WatchIt.Models.Model;
+import WatchIt.Views.AdminView;
 import javafx.scene.control.Alert;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -54,6 +56,7 @@ public class ContentCardControllerAdmin {
         if(ans.equals("OK")) {
             if(content instanceof Movie movie) {
                 DataBase.getInstance().moviesData.removeData(movie);
+                Model.getInstance().getViewFactory().Show(AdminView.AdminScene(AdminView.MoviesPage()));
             }
             else if(content instanceof Series series){
                 List<Episode>toRemove = new ArrayList<>();
@@ -65,6 +68,7 @@ public class ContentCardControllerAdmin {
                     DataBase.getInstance().episodesData.removeData(ep);
                 }
                 DataBase.getInstance().seriesData.removeData(series);
+                Model.getInstance().getViewFactory().Show(AdminView.AdminScene(AdminView.SeriesPage()));
             }
         }
     }

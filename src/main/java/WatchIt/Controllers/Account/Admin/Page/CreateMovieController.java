@@ -51,6 +51,11 @@ public class CreateMovieController {
                 castmembers.add(CastMembers.getSelectionModel().getSelectedItem());
             }
         }
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Create Cast");
+        alert.setHeaderText(null);
+        alert.setContentText("Create Cast Successful");
+        alert.showAndWait();
     }
     public void Done(MouseEvent event) {
         Movie movie = new Movie(ContentTitle.getText(),Language.getText(),Country.getText(),Story.getText(),
