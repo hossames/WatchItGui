@@ -2,7 +2,7 @@
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
@@ -26,54 +26,38 @@
             </GridPane>
             <AnchorPane prefHeight="130.0" prefWidth="1340.0">
                <children>
-                  <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="71.0" prefHeight="58.0" prefWidth="546.0" spacing="20.0">
+                  <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="71.0" prefHeight="58.0" prefWidth="713.0" spacing="20.0">
                      <children>
                         <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Filters  " wrappingWidth="84.02499389648438">
                            <font>
                               <Font name="System Bold" size="24.0" />
                            </font>
                         </Text>
-                        <ChoiceBox fx:id="Genre" prefHeight="26.0" prefWidth="93.0" style="-fx-background-color: #6600ff; -fx-background-radius: 15;">
-                           <effect>
-                              <DropShadow height="13.13" radius="6.8774999999999995" spread="0.27" width="16.38">
-                                 <color>
-                                    <Color red="0.44999998807907104" blue="1.0" />
-                                 </color>
-                              </DropShadow>
-                           </effect>
-                        </ChoiceBox>
-                        <ChoiceBox fx:id="Year" prefHeight="26.0" prefWidth="93.0" style="-fx-background-color: #6600ff; -fx-background-radius: 15;">
-                           <effect>
-                              <DropShadow height="13.13" radius="6.8774999999999995" spread="0.27" width="16.38">
-                                 <color>
-                                    <Color red="0.44999998807907104" blue="1.0" />
-                                 </color>
-                              </DropShadow>
-                           </effect>
-                        </ChoiceBox>
-                        <ChoiceBox fx:id="Language" prefHeight="26.0" prefWidth="93.0" style="-fx-background-color: #6600ff; -fx-background-radius: 15;">
-                           <effect>
-                              <DropShadow height="13.13" radius="6.8774999999999995" spread="0.27" width="16.38">
-                                 <color>
-                                    <Color red="0.44999998807907104" blue="1.0" />
-                                 </color>
-                              </DropShadow>
-                           </effect>
-                        </ChoiceBox>
-                        <ChoiceBox fx:id="Country" prefHeight="26.0" prefWidth="93.0" style="-fx-background-color: #6600ff; -fx-background-radius: 15;">
-                           <effect>
-                              <DropShadow height="13.13" radius="6.8774999999999995" spread="0.27" width="16.38">
-                                 <color>
-                                    <Color red="0.44999998807907104" blue="1.0" />
-                                 </color>
-                              </DropShadow>
-                           </effect>
-                        </ChoiceBox>
+                        <ComboBox fx:id="Genre" prefWidth="150.0" promptText="Select Genre" style="-fx-background-color: #d4d4d4; -fx-background-radius: 15;" />
+                        <ComboBox fx:id="Year" prefWidth="150.0" promptText="Select Year" style="-fx-background-color: #d4d4d4; -fx-background-radius: 15;" />
+                        <ComboBox fx:id="Country" prefWidth="150.0" promptText="Select Country" style="-fx-background-color: #d4d4d4; -fx-background-radius: 15;" />
+                        <ComboBox fx:id="Language" prefWidth="150.0" promptText="Select Language" style="-fx-background-color: #d4d4d4; -fx-background-radius: 15;" />
                      </children>
                   </HBox>
-                  <HBox layoutX="14.0" layoutY="16.0" prefHeight="44.0" prefWidth="378.0" spacing="20.0">
+                  <HBox layoutX="14.0" layoutY="16.0" prefHeight="44.0" prefWidth="378.0" spacing="20.0" stylesheets="@../../../../Styling/Client.css">
                      <children>
-                        <HBox fx:id="TopRated" alignment="CENTER" prefHeight="38.0" prefWidth="110.0" style="-fx-background-color: transparent; -fx-border-color: #d4d4d4; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-color: 10;">
+                        <HBox fx:id="Recent" alignment="CENTER" onMouseClicked="#SortBy" prefHeight="38.0" prefWidth="110.0" style="-fx-border-color: #d4d4d4; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10;" styleClass="selected">
+                           <children>
+                              <Text fill="WHITE" onMouseClicked="#SortBy" strokeType="OUTSIDE" strokeWidth="0.0" text="Recent">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <effect>
+                              <DropShadow>
+                                 <color>
+                                    <Color red="0.32156863808631897" green="0.03921568766236305" blue="0.7803921699523926" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </HBox>
+                        <HBox fx:id="TopRated" alignment="CENTER" onMouseClicked="#SortBy" prefHeight="38.0" prefWidth="110.0" style="-fx-border-color: #d4d4d4; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10;">
                            <children>
                               <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Top Rated">
                                  <font>
@@ -82,16 +66,7 @@
                               </Text>
                            </children>
                         </HBox>
-                        <HBox fx:id="Recent" alignment="CENTER" prefHeight="38.0" prefWidth="110.0" style="-fx-background-color: transparent; -fx-border-color: #d4d4d4; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-color: 10;">
-                           <children>
-                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Recent">
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </Text>
-                           </children>
-                        </HBox>
-                        <HBox fx:id="Popular" alignment="CENTER" prefHeight="38.0" prefWidth="110.0" style="-fx-background-color: transparent; -fx-border-color: #d4d4d4; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-color: 10;">
+                        <HBox fx:id="Popular" alignment="CENTER" onMouseClicked="#SortBy" prefHeight="38.0" prefWidth="110.0" style="-fx-border-color: #d4d4d4; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10;">
                            <children>
                               <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Popular">
                                  <font>
@@ -106,8 +81,6 @@
                      <children>
                         <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" onMouseClicked="#Search" size="1.8em" />
                         <TextField fx:id="SearchField" alignment="CENTER" minWidth="-Infinity" prefHeight="26.0" prefWidth="417.0" promptText="Search" style="-fx-background-radius: 22;" />
-                        <FontAwesomeIconView fill="WHITE" glyphName="BELL" onMouseClicked="#Notifications" size="1.8em" />
-                        <FontAwesomeIconView fill="WHITE" glyphName="USER" onMouseClicked="#User" size="1.8em" text="" />
                      </children>
                      <padding>
                         <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />

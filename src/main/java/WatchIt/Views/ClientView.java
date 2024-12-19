@@ -14,6 +14,9 @@ import WatchIt.Controllers.Account.Client.Pages.InnerPageComponentControllers.*;
 import WatchIt.Controllers.Account.Client.Pages.MainPageController;
 import WatchIt.Controllers.Account.Client.Pages.ContentsPageController;
 import WatchIt.Controllers.Content.EpisodeCardControllerClient;
+import WatchIt.Controllers.Utils.sortDate;
+import WatchIt.Controllers.Utils.sortRate;
+import WatchIt.Controllers.Utils.sortWatch;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
@@ -26,26 +29,7 @@ import src.Engines.RecommendationEngine;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
-
-class sortWatch implements Comparator<Content> {
-    public int compare(Content o1, Content o2) {
-        return (int)o1.Viewers-(int)o2.Viewers;
-    }
-}
-
-class sortRate implements Comparator<Content> {
-    public int compare(Content o1, Content o2) {
-        return (int)o1.TotalRate()-(int)o2.TotalRate();
-    }
-}
-
-class sortDate implements Comparator<Content> {
-    public int compare(Content o1, Content o2) {
-        return o1.datePublished.compareTo(o2.datePublished);
-    }
-}
 
 public class ClientView {
     public static  FXMLLoader Client(Node node){

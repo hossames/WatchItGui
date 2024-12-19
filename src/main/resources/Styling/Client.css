@@ -24,3 +24,7 @@
 .grid Line{
     -fx-stroke: gray;
 }
+
+.selected{
+    -fx-background-color: #520ac7;
+}
