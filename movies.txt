@@ -1,3 +1,6 @@
 1,One Piece Red,Japanese,Japan,Luffy 3ammak,10000,999999,4,Action,Adventure,Comedy,Animation,5,Luffy Mogiwara,Nami Neko,Zoro Roronoa,Sanji Cook,Oda Ichiro
 9/15/21, 12:00 AM
 148
+2,It's Mango Time,Arabic,Egypt,Mangao is a smart problem solver. Every time he wants to solve problems on Codeforces, he says the magic words, "It's mango time!", and starts solving. But now, he can't say the words anymore for unknown reasons. Join him on the journey to discover why he can't use the magic words anymore and help him become the best competitive programmer in the world!,100,200,1,Science Fiction,1,Mostafa Mangao
+12/6/24, 12:00 AM
+120
