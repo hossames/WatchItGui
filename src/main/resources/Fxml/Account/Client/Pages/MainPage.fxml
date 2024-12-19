@@ -75,7 +75,7 @@
                               <Font name="System Bold" size="35.0" />
                            </font>
                         </Text>
-                        <Text fx:id="Genre" layoutX="80.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genre" wrappingWidth="94.93670618534088">
+                        <Text fx:id="Genre" layoutX="72.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genre" wrappingWidth="235.73672449588776">
                            <font>
                               <Font name="System Bold" size="21.0" />
                            </font>
