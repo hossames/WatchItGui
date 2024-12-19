@@ -32,6 +32,7 @@ public class EditPersonalData {
     public void Submit(){
         account.setFirstName(FirstName.getText());
         account.setLastName(LastName.getText());
+        stage.close();
     }
 
 }

@@ -32,7 +32,7 @@ public class HLineController {
         MainContainer.widthProperty().addListener((observable, oldValue, newValue) -> {
             Container.setMinWidth(newValue.doubleValue()-10);
             Container.setMaxWidth(newValue.doubleValue()-10);
-            if((int)((AnchorPane)View.getChildren().getFirst()).getWidth()>0) {
+            if(!View.getChildren().isEmpty()&&(int)((AnchorPane)View.getChildren().getFirst()).getWidth()>0) {
                 Width = nodeList.size() - newValue.intValue() / ((int) ((AnchorPane) View.getChildren().getFirst()).getWidth()+20);
                 Width = 1 / Width;
                 System.out.println(Width);
