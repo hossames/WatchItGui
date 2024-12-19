@@ -1,6 +1,8 @@
 package WatchIt.Models;
 
-public class FavoritesModel {
+import src.DataBase.DataObject;
+
+public class FavoritesModel extends DataObject {
     public final String Name;
     public final Integer UserId;
     public final Integer Type;
@@ -21,5 +23,7 @@ public class FavoritesModel {
         }
         return false;
     }
-
+    public Long getId(int op){
+        return Long.valueOf(UserId);
+    }
 }

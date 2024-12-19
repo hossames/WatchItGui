@@ -44,29 +44,30 @@ public class ClientView {
         fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Client/Pages/MainPage.fxml"));
         List<DataObject>db = new ArrayList<>();
         List<Content>listContent = new ArrayList<>(DataBase.contentsData.getData().stream().sorted(new sortWatch()).toList());
-        for (int i = listContent.size()-1; i >= Math.max(listContent.size()-10,0); i--) {
+        for (int i =0; i < Math.min(listContent.size(),10); i++) {
             db.add(listContent.get(i));
         }
         HLine(db,"Popular");
 
         List<DataObject>db1 = new ArrayList<>();
         List<Content>listContent1 = new ArrayList<>(DataBase.contentsData.getData().stream().sorted(new sortRate()).toList());
-        for (int i = listContent1.size()-1; i >= Math.max(listContent1.size()-10,0); i--) {
+        for (int i = 0; i < Math.min(listContent1.size(),10); i++) {
             db1.add(listContent1.get(i));
         }
         HLine(db1,"Best");
 
         List<DataObject>db2 = new ArrayList<>();
         List<Content>listContent2 = new ArrayList<>(DataBase.contentsData.getData().stream().sorted(new sortDate()).toList());
-        for (int i = listContent2.size()-1; i >= Math.max(listContent2.size()-10,0); i--) {
-            db2.add(listContent1.get(i));
+        for (int i = 0; i < Math.min(listContent2.size(),10); i++) {
+            db2.add(listContent2.get(i));
         }
         HLine(db2,"Recent");
 
         List<DataObject>db3 = new ArrayList<>();
         RecommendationEngine recommendationEngine  = new RecommendationEngine();
-        db3.addAll(recommendationEngine.getContentBasedRecommendations());
-
+        for (int i = 0; i < Math.min(recommendationEngine.getContentBasedRecommendations().size(),15); i++) {
+                db3.add(recommendationEngine.getContentBasedRecommendations().get(i));
+        }
 
         List<Node>nodeList=new ArrayList<>();
         try {
