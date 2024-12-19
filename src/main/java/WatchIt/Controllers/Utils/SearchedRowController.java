@@ -6,6 +6,8 @@ import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
+import src.AccountControl.User;
+import src.DataBase.DataBase;
 import src.DataBase.DataObject;
 
 public class SearchedRowController {
@@ -23,6 +25,7 @@ public class SearchedRowController {
     }
     @FXML
     void click(MouseEvent event) {
-        Model.getInstance().getViewFactory().Show(ClientView.setNode(ClientView.InnerPage(object)));
+        if(DataBase.getInstance().CurrentUser instanceof User)
+            Model.getInstance().getViewFactory().Show(ClientView.setNode(ClientView.InnerPage(object)));
     }
 }

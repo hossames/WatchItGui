@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Main-Class: WatchIt.Application
+Class-Path: javafx-fxml-21.jar fxgl-io-17.3.jar validatorfx-0.4.0.jar ut
+ il-4.0.17.jar storage-4.0.17.jar jackson-annotations-2.14.2.jar javafx-
+ graphics-21.jar javafx-graphics-21-win.jar lifecycle-4.0.17.jar javafx-
+ base-21.jar fxgl-17.3.jar audio-4.0.17.jar annotations-13.0.jar tilesfx
+ -11.48.jar jackson-databind-2.14.2.jar kotlin-stdlib-1.8.10.jar javafx-
+ fxml-21-win.jar fontawesomefx-commons-9.1.2.jar bootstrapfx-core-0.4.0.
+ jar javafx-web-21-win.jar fontawesomefx-materialicons-2.2.0-9.1.2.jar j
+ avafx-controls-21-win.jar ikonli-javafx-12.3.1.jar controlsfx-11.1.2.ja
+ r ikonli-core-12.3.1.jar kotlin-stdlib-common-1.8.10.jar fontawesomefx-
+ fontawesome-4.7.0-9.1.2.jar fxgl-scene-17.3.jar javafx-media-21-win.jar
+  jackson-core-2.14.2.jar javafx-media-21.jar fxgl-core-17.3.jar fontawe
+ somefx-materialdesignfont-2.0.26-9.1.2.jar formsfx-core-11.6.0.jar java
+ fx-swing-21-win.jar javafx-web-21.jar fxgl-entity-17.3.jar javafx-contr
+ ols-21.jar javafx-swing-21.jar fxgl-gameplay-17.3.jar javafx-base-21-wi
+ n.jar
+
