@@ -8,6 +8,8 @@ import javafx.scene.text.Text;
 import src.ContentControl.*;
 import src.DataBase.DataObject;
 
+import java.util.Date;
+
 public class EpisodeCardControllerClient {
     public ImageView ContentImage;
 
@@ -24,7 +26,19 @@ public class EpisodeCardControllerClient {
     public void initialize() {
         ContentImage.setImage(content.getImage());
         ContentName.setText(content.getName(2));
-        Year.setText(String.valueOf(content.getDate().getYear()+1900));
+        Date date = new Date();
+        int days = date.getDay()+date.getMonth()*30+date.getYear()*365-content.getDate().getDay()-content.getDate().getMonth()*30-content.getDate().getYear()*365;
+        if(days<4){
+            Year.setText("New");
+        }else if(days<7){
+            Year.setText(String.valueOf(days)+" days ago");
+        }else if(days<30){
+            Year.setText(String.valueOf(days/7)+" weeks ago");
+        }else if(days<365){
+            Year.setText(String.valueOf(days/30)+" months ago");
+        }else{
+            Year.setText(String.valueOf(days/365)+" years ago");
+        }
     }
 
     public void OpenInnerPage(MouseEvent event){
