@@ -91,7 +91,7 @@ public class Content extends DataObject implements Rateable {
     }
 
     public void EditRate(float rate){
-        WatchRecord WatchRecordTemp = DataBase.watchRecordData.removeData(contentTitle+" "+Long.valueOf((long)DataBase.getInstance().CurrentUser.getId(0)).toString(),1).get(0);
+        WatchRecord WatchRecordTemp = DataBase.watchRecordData.removeData(contentTitle+" "+Long.valueOf((long)DataBase.getInstance().CurrentUser.getId(0)).toString(),2).get(0);
         if(WatchRecordTemp.Rating != -1){
             Rate_Sum -= WatchRecordTemp.Rating;
         }

@@ -111,7 +111,7 @@ public class ContentsPageController {
             }
         });
         SearchField.focusedProperty().addListener((observable, oldValue, newValue) -> {
-            if((newValue||SearchResultContainer.isFocused()) && nodeList.size()>0){
+            if((newValue||SearchResultScroll.isFocused()) && nodeList.size()>0){
                 SearchResultScroll.setVisible(true);
             }else{
                 SearchResultScroll.setVisible(false);

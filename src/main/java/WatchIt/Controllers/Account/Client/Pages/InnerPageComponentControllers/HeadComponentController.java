@@ -57,8 +57,19 @@ public class HeadComponentController {
     }
     public void initialize(){
        content = (Content) dataObject;
-        if(DataBase.watchRecordData.getDataByObject(new WatchRecord(-1F, content.contentTitle))==null){
+       WatchRecord watchRecord = DataBase.watchRecordData.getDataByObject(new WatchRecord(-1F, content.contentTitle));
+        if(watchRecord==null){
             content.AddRate(-1);
+        }else{
+            int cnt=0;
+            System.out.println(watchRecord.Rating);
+            for (var star : Stars.getChildren()) {
+                if(cnt==watchRecord.Rating)
+                    break;
+                FontAwesomeIconView fontAwesomeIconView = (FontAwesomeIconView) star;
+                fontAwesomeIconView.setIcon(FontAwesomeIcon.STAR);
+                cnt++;
+            }
         }
         Country.setText(content.country);
         Language.setText(content.language);
@@ -93,7 +104,6 @@ public class HeadComponentController {
             }
             else{
                 fontAwesomeIconView.setIcon(FontAwesomeIcon.STAR_ALT);
-                rate--;
             }
             if (event.getSource().equals(star)) {
                 ok=true;
