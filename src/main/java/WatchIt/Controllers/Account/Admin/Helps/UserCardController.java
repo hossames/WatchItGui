@@ -56,6 +56,7 @@ public class UserCardController {
             else{
                 DataBase.getInstance().usersData.removeData((User)account);
             }
+            Model.getInstance().getViewFactory().Show(AdminView.AdminScene(AdminView.UsersPage()));
         }
     }
     public void UserToAdmin() {

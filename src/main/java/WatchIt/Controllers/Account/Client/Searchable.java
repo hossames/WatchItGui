@@ -29,7 +29,7 @@ public class Searchable {
         SearchResultContainer.getChildren().clear();
         SearchResultScroll.setMinHeight(0);
         SearchResultScroll.setMaxHeight(0);
-        nodeList = dataObjectController.ConvertToDataObject().getDataThatContains(SearchField.getText(),2);
+        nodeList = dataObjectController.ConvertToDataObject().getDataThatContains(SearchField.getText(),3);
         for(var node : nodeList) {
             try {
                 SearchResultScroll.setMinHeight(Math.min(SearchResultScroll.getMinHeight()+80,SearchResultContainer.getPrefHeight()));

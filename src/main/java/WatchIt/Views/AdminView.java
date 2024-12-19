@@ -3,11 +3,15 @@ package WatchIt.Views;
 import WatchIt.Application;
 import WatchIt.Controllers.Account.Admin.AdminController;
 import WatchIt.Controllers.Account.Admin.Helps.EmptyCardController;
+import WatchIt.Controllers.Account.Admin.Helps.UserCardController;
 import WatchIt.Controllers.Account.Admin.Page.*;
+import WatchIt.Controllers.Account.Client.Pages.OtherPageController;
 import WatchIt.Controllers.Cast.CastCardAdminController;
 import WatchIt.Controllers.Content.ContentCardControllerAdmin;
 import WatchIt.Controllers.Content.EpisodeCardControllerAdmin;
 import javafx.fxml.FXMLLoader;
+import src.AccountControl.Account;
+import src.AccountControl.User;
 import src.Cast.CastMember;
 import src.DataBase.DataBase;
 import src.DataBase.DataObject;
@@ -54,10 +58,22 @@ public class AdminView{
         fxmlLoader.setController(new ContentShowController(DataBase.getInstance().episodesData,addEpisode()));
         return fxmlLoader;
     }
+    public static FXMLLoader UsersPage(){
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Client/Pages/OtherPages.fxml"));
+        fxmlLoader.setController(new OtherPageController(DataBase.accountsData));
+        return fxmlLoader;
+    }
     public static FXMLLoader CastCard(CastMember castMember){
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(Application.class.getResource("/Fxml/Cast/CastCardAdmin.fxml"));
         fxmlLoader.setController(new CastCardAdminController(castMember));
+        return fxmlLoader;
+    }
+    public static FXMLLoader UserCard(Account user){
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Admin/Helps/UserCard.fxml"));
+        fxmlLoader.setController(new UserCardController(user));
         return fxmlLoader;
     }
     public static FXMLLoader EmptyCard(FXMLLoader fxmlLoader1) {

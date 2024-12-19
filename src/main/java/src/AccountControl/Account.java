@@ -1,4 +1,6 @@
 package src.AccountControl;
+import WatchIt.Views.AdminView;
+import javafx.scene.Node;
 import src.DataBase.DataObject;
 public class Account extends DataObject {
     protected final String userName,firstName,lastName,email,FavoriteName;
@@ -85,5 +87,14 @@ public class Account extends DataObject {
     public String toString(){
         return  ID.toString() + "," + userName + "," + firstName + "," + lastName + "," + email
                 + "," + password + "," + FavoriteName + System.lineSeparator();
+    }
+    @Override
+    public Node getNode(){
+        try{
+            return AdminView.UserCard(this).load();
+        }catch(Exception e){
+            e.printStackTrace();
+            return null;
+        }
     }
 }
