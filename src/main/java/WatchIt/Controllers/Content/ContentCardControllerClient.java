@@ -1,11 +1,15 @@
 package WatchIt.Controllers.Content;
 
+import WatchIt.Models.FavoritesModel;
 import WatchIt.Models.Model;
 import WatchIt.Views.ClientView;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import src.ContentControl.*;
+import src.DataBase.DataBase;
 import src.DataBase.DataObject;
 
 public class ContentCardControllerClient {
@@ -16,6 +20,8 @@ public class ContentCardControllerClient {
     public Text Genre;
 
     public Text Year;
+
+    public FontAwesomeIconView Heart;
 
     DataObject content;
 
@@ -33,6 +39,10 @@ public class ContentCardControllerClient {
                 genres.append(genre).append(" ");
             Genre.setText(genres.toString());
         }
+        FavoritesModel favoritesModel = new FavoritesModel(content.getName(2), DataBase.getInstance().CurrentUser.getId(0).intValue(),0);
+        if(DataBase.getInstance().Favorites.getDataByObject(favoritesModel)!=null){
+            Heart.setIcon(FontAwesomeIcon.HEART);
+        }
     }
 
     public void OpenInnerPage(MouseEvent event){
@@ -40,5 +50,14 @@ public class ContentCardControllerClient {
     }
 
     public void SetFavorite(MouseEvent mouseEvent) {
+        FavoritesModel favoritesModel = new FavoritesModel(content.getName(2), DataBase.getInstance().CurrentUser.getId(0).intValue(),0);
+        if(DataBase.getInstance().Favorites.getDataByObject(favoritesModel)==null){
+           DataBase.getInstance().Favorites.addData(favoritesModel);
+            Heart.setIcon(FontAwesomeIcon.HEART);
+        }else{
+            DataBase.getInstance().Favorites.removeData(favoritesModel);
+            Heart.setIcon(FontAwesomeIcon.HEART_ALT);
+
+        }
     }
 }

@@ -53,6 +53,9 @@ public class AdminController {
         try {
             AdminBorderPane.setTop(MainView.TitleBar().load());
             AdminBorderPane.setCenter(fxmlLoader.load());
+            DashBoard.addEventHandler(MouseEvent.MOUSE_CLICKED,(MouseEvent event) -> {
+                Model.getInstance().getViewFactory().Show(AdminView.AdminScene(AdminView.DashBoard()));
+            });
             Movies.addEventHandler(MouseEvent.MOUSE_CLICKED,(MouseEvent e)->{
                 Model.getInstance().getViewFactory().Show(AdminView.AdminScene(AdminView.MoviesPage()));
             });

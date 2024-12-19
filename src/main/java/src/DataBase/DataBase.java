@@ -1,4 +1,5 @@
 package src.DataBase;
+import WatchIt.Models.FavoritesModel;
 import WatchIt.Models.Model;
 import src.ContentControl.*;
 import src.AccountControl.*;
@@ -47,6 +48,9 @@ public class DataBase {
     //Credit Card Data
     public DataObjectController<CreditCard> creditData;
 
+    //Fav
+    public DataObjectController<FavoritesModel>Favorites;
+
     /**
      * Non-Parameterized Constructor that init all Data Objects and Loading Data From Files
      */
@@ -62,6 +66,8 @@ public class DataBase {
         castMemberData = new DataObjectController<CastMember>("./CastMembers.txt","nslw6SWoSnd",'C');
         // Loading Credit Cards
         creditData = new DataObjectController<CreditCard>("./creditCard.txt","nsw4SWnd",'R');
+        //Fav
+        Favorites = new DataObjectController<>("./Favorites.txt","nsSii",'F');
     }
 
     /**
@@ -95,6 +101,7 @@ public class DataBase {
         watchRecordData.Write();
         // save valid credit cards
         creditData.Write();
+        Favorites.Write();
     }
 
     /**

@@ -20,11 +20,6 @@ public class GenreComponentController {
         Genre.setText(genre);
     }
     public void GoToGenrePage(){
-        List<DataObject>list = new ArrayList<>();
-        DataBase.contentsData.getData().stream().filter(item -> item.genres.contains(genre)).forEach(list::add);
-        try {
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+        Model.getInstance().getViewFactory().Show(ClientView.setNode(ClientView.GenreFilter(genre)));
     }
 }

@@ -10,10 +10,7 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.ScrollPane;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -54,6 +51,7 @@ public class ContentsPageController extends Searchable {
     @FXML
     private HBox TopRated;
 
+    String s;
 
     public void initialize() {
         String[] languages = new String[]{"Any","English","France","Spanish","Arabic","Russian","Japanese","German","Mandarin Chinese","Hindi","Portuguese"};
@@ -86,8 +84,14 @@ public class ContentsPageController extends Searchable {
                 SetToGrid();
         });
         initSearchEngine();
+        if(s!=null) {
+            genreFilterRequest(s);
+            ApplyFilters();
+        }
     }
-
+    public void genreFilterRequest(String s){
+        Genre.getSelectionModel().select(s);
+    }
     public void ApplyFilters() {
         String language = Language.getValue().toLowerCase();
         String country = Country.getValue().toLowerCase();
@@ -152,5 +156,9 @@ public class ContentsPageController extends Searchable {
     }
     public ContentsPageController(DataObjectController<? extends  DataObject> dataObjectController) {
         this.dataObjectController = dataObjectController;
+    }
+    public ContentsPageController(DataObjectController<? extends  DataObject> dataObjectController,String s) {
+        this.dataObjectController = dataObjectController;
+        this.s = s;
     }
 }

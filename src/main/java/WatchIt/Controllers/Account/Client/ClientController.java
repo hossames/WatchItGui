@@ -97,6 +97,9 @@ public class ClientController {
         Settings.addEventHandler(MouseEvent.MOUSE_CLICKED,(MouseEvent e)->{
             Model.getInstance().getViewFactory().Show(ClientView.setNode(MainView.SettingsPage()));
         });
+        Favorites.addEventHandler(MouseEvent.MOUSE_CLICKED,(MouseEvent e)->{
+            Model.getInstance().getViewFactory().Show(ClientView.setNode(ClientView.Favorite()));
+        });
         try {
             ClientBorderPane.setTop(MainView.TitleBar().load());
             ClientBorderPane.setCenter(node);

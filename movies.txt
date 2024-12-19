@@ -1,9 +1,6 @@
 0,wrath of man,En,America,hi,100,100,0,0
 1/1/27, 5:38 PM
 120
-0,wrath of man,En,America,hi,100,100,0,0
-1/1/27, 5:38 PM
-120
 1,test,english,egypt,hi,0,0,1,Action,2,jason statham,kdf dsfkl
 1/1/24, 12:00 AM
 0

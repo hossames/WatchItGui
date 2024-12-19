@@ -3,6 +3,7 @@ package WatchIt.Views;
 import WatchIt.Application;
 import WatchIt.Controllers.Account.Client.*;
 import WatchIt.Controllers.Account.Client.Helps.GridController;
+import WatchIt.Controllers.Account.Client.Pages.Favorite;
 import WatchIt.Controllers.Account.Client.Pages.OtherPageController;
 import WatchIt.Controllers.Account.Client.Pages.Settings.ChangePassword;
 import WatchIt.Controllers.Account.Client.Pages.Settings.Renew;
@@ -84,6 +85,12 @@ public class ClientView {
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Client/Pages/ContentsPage.fxml"));
         fxmlLoader.setController(new ContentsPageController(DataBase.getInstance().moviesData));
+        return fxmlLoader;
+    }
+    public static FXMLLoader GenreFilter(String s){
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Client/Pages/ContentsPage.fxml"));
+        fxmlLoader.setController(new ContentsPageController(DataBase.contentsData,s));
         return fxmlLoader;
     }
     public static FXMLLoader EpisodeCard(DataObject object){
@@ -192,6 +199,12 @@ public class ClientView {
         list.addAll(DataBase.getInstance().episodesData.ConvertListDataObject());
         DataObjectController<DataObject> watched = new DataObjectController<>('\0',list);
         fxmlLoader.setController(new OtherPageController(new DataObjectController<>('\0',watched.getDataByString(((User)DataBase.getInstance().CurrentUser).getHistory(), 2))));
+        return fxmlLoader;
+    }
+    public static FXMLLoader Favorite(){
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Client/Pages/Favorite.fxml"));
+        fxmlLoader.setController(new Favorite(DataBase.getInstance().moviesData));
         return fxmlLoader;
     }
     public static FXMLLoader MediaComponent(DataObject content){

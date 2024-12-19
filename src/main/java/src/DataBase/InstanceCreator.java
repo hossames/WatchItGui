@@ -1,5 +1,6 @@
 package src.DataBase;
 
+import WatchIt.Models.FavoritesModel;
 import src.AccountControl.*;
 import src.Cast.*;
 import src.ContentControl.*;
@@ -34,7 +35,11 @@ public class InstanceCreator<T> {
         } else if (c =='E') {
             Episode newEpisode = new Episode(re.longs.get(0),re.strings.get(0),re.strings.get(1),re.integers.get(0),re.integers.get(1),re.dates.get(0));
             data.add((T)newEpisode);
-        } else {
+        }
+        else if (c =='F') {
+            FavoritesModel favoritesModel = new FavoritesModel(re.strings.get(0),re.integers.get(0),re.integers.get(1));
+            data.add((T)favoritesModel);
+        }else {
             CreditCard newCreditCard = new CreditCard(re.strings.get(0),re.strings.get(1),re.strings.get(2),re.strings.get(3),re.dates.get(0));
             data.add((T)newCreditCard);
         }

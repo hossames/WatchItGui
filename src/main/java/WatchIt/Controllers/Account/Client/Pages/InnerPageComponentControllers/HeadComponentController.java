@@ -1,5 +1,6 @@
 package WatchIt.Controllers.Account.Client.Pages.InnerPageComponentControllers;
 
+import WatchIt.Models.FavoritesModel;
 import WatchIt.Views.ClientView;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
@@ -48,6 +49,8 @@ public class HeadComponentController {
     @FXML
     private Text Views;
 
+    @FXML
+    private  FontAwesomeIconView Heart;
     DataObject dataObject;
     public HeadComponentController(DataObject dataObject) {
         this.dataObject = dataObject;
@@ -111,6 +114,10 @@ public class HeadComponentController {
                 }
             }
         }
+        FavoritesModel favoritesModel = new FavoritesModel(dataObject.getName(2), DataBase.getInstance().CurrentUser.getId(0).intValue(),0);
+        if(DataBase.getInstance().Favorites.getDataByObject(favoritesModel)!=null){
+            Heart.setIcon(FontAwesomeIcon.HEART);
+        }
     }
 
     @FXML
@@ -131,6 +138,10 @@ public class HeadComponentController {
             }
         }
         ((Rateable)dataObject).EditRate(rate);
+        FavoritesModel favoritesModel = new FavoritesModel(dataObject.getName(2), DataBase.getInstance().CurrentUser.getId(0).intValue(),0);
+        if(DataBase.getInstance().Favorites.getDataByObject(favoritesModel)!=null){
+            Heart.setIcon(FontAwesomeIcon.HEART);
+        }
     }
 
     @FXML
@@ -143,9 +154,19 @@ public class HeadComponentController {
         }
         user.getWatchLater().add(dataObject.getName(2));
     }
-    @FXML
-    void setFavorite(MouseEvent event) {
+    public void setFavorite(MouseEvent event) throws InterruptedException {
+        FavoritesModel favoritesModel = new FavoritesModel(dataObject.getName(2), DataBase.getInstance().CurrentUser.getId(0).intValue(),0);
+        if(DataBase.getInstance().Favorites.getDataByObject(favoritesModel)==null){
+            DataBase.getInstance().Favorites.addData(favoritesModel);
+            Heart.setIcon(FontAwesomeIcon.HEART);
+            System.out.println("Maked Heart");
+        }else{
+            System.out.println("Maked Heart Alt");
 
+            Thread.sleep(100);
+            DataBase.getInstance().Favorites.removeData(favoritesModel);
+            Heart.setIcon(FontAwesomeIcon.HEART_ALT);
+        }
     }
 
 }
