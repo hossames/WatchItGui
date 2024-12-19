@@ -9,6 +9,7 @@ public class Application extends javafx.application.Application {
     @Override
     public void start(Stage stage)  {
         Model.getInstance().getViewFactory().Show(MainView.LoginScene());
+        //issues
     }
 
     public static void main(String[] args) {
