@@ -85,6 +85,12 @@ public class ClientController {
     }
 
     public void initialize(){
+        watchLaterText.addEventHandler(MouseEvent.MOUSE_CLICKED,(MouseEvent e)->{
+            Model.getInstance().getViewFactory().Show(ClientView.setNode(ClientView.WatchLater()));
+        });
+        HistoryText.addEventHandler(MouseEvent.MOUSE_CLICKED,(MouseEvent e)->{
+            Model.getInstance().getViewFactory().Show(ClientView.setNode(ClientView.History()));
+        });
         try {
             ClientBorderPane.setTop(MainView.TitleBar().load());
             ClientBorderPane.setCenter(node);

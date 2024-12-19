@@ -186,10 +186,22 @@ public class ClientView {
         fxmlLoader.setController(new CastPageController(castMember,nodeList));
         return fxmlLoader;
     }
-    public static FXMLLoader MediaComponent(String media){
+    public static FXMLLoader WatchLater(){
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Client/Pages/OtherPages.fxml"));
+        fxmlLoader.setController(new OtherPageController(new DataObjectController<>('\0',DataBase.contentsData.getDataByString(((User)DataBase.getInstance().CurrentUser).getWatchLater(), 2))));
+        return fxmlLoader;
+    }
+    public static FXMLLoader History(){
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Client/Pages/OtherPages.fxml"));
+        fxmlLoader.setController(new OtherPageController(new DataObjectController<>('\0',DataBase.contentsData.getDataByString(((User)DataBase.getInstance().CurrentUser).getHistory(), 2))));
+        return fxmlLoader;
+    }
+    public static FXMLLoader MediaComponent(Content content){
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Client/Pages/InnerPageComponents/CenterComponent.fxml"));
-        fxmlLoader.setController(new CenterComponentController(media));
+        fxmlLoader.setController(new CenterComponentController(content));
         return fxmlLoader;
     }
     public static FXMLLoader EpisodeComponent(DataObject content){
@@ -204,10 +216,10 @@ public class ClientView {
         fxmlLoader.setController(new GenreComponentController(genre));
         return fxmlLoader;
     }
-    public static FXMLLoader GridMake(List<Node> nodeList){
+    public static FXMLLoader GridMake(List<Node> nodeList,String Title){
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Client/Helps/Grid.fxml"));
-        fxmlLoader.setController(new GridController(nodeList));
+        fxmlLoader.setController(new GridController(nodeList,Title));
         return fxmlLoader;
     }
     public static FXMLLoader HLine(List<DataObject> content,String Title){

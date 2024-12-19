@@ -8,7 +8,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane fx:id="Container" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #252525;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <GridPane fx:id="View" layoutX="5.0" layoutY="65.0" prefHeight="0.0" prefWidth="0.0">
@@ -16,7 +15,7 @@
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
       </GridPane>
-      <Text fill="WHITE" layoutX="10.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cast Members" wrappingWidth="243.11480712890625">
+      <Text fx:id="title" fill="WHITE" layoutX="10.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="243.11480712890625">
          <font>
             <Font name="System Bold Italic" size="24.0" />
          </font>

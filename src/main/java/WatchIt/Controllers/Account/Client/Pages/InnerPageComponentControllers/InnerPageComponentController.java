@@ -25,10 +25,10 @@ public class InnerPageComponentController {
         try {
             vbox.getChildren().add(ClientView.HeadComponent(content).load());
             vbox.getChildren().add(ClientView.DescriptionComponent(content.story).load());
-            vbox.getChildren().add(ClientView.MediaComponent(content.getVideo()).load());
+            vbox.getChildren().add(ClientView.MediaComponent(content).load());
             List<Node> list;
             list=DataObjectController.MakeNodeList(DataBase.getInstance().castMemberData.getDataByString(content.cast,2));
-           vbox.getChildren().add(ClientView.GridMake(list).load());
+           vbox.getChildren().add(ClientView.GridMake(list,"Cast Members").load());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

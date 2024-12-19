@@ -113,7 +113,7 @@ public class HeadComponentController {
     }
 
     @FXML
-    void SetWatchLater(MouseEvent event) {
+    void setWatchLater(MouseEvent event) {
         User user = (User)(DataBase.getInstance().CurrentUser);
         for(var item : user.getWatchLater()) {
             if (item.equals(dataObject.getName(2))) {

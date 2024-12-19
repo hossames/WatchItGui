@@ -14,8 +14,13 @@ import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
+import src.AccountControl.User;
+import src.ContentControl.Content;
+import src.DataBase.DataBase;
+import src.DataBase.DataObject;
 
 import java.io.File;
+import java.util.List;
 
 public class CenterComponentController {
     public AnchorPane ControlBar;
@@ -26,9 +31,11 @@ public class CenterComponentController {
     public Slider Volume;
     public MediaPlayer mediaPlayer;
     StackPane vol,tim;
-    public CenterComponentController(String Path){
+    Content content;
+    public CenterComponentController(Content content){
+        this.content=content;
         try {
-            Media media = new Media(new File(Path).toURI().toString());
+            Media media = new Media(new File(content.getVideo()).toURI().toString());
             mediaPlayer = new MediaPlayer(media);
             mediaPlayer.pause();
         }catch (Exception e){
@@ -85,9 +92,25 @@ public class CenterComponentController {
         mediaPlayer.seek(mediaPlayer.getTotalDuration().multiply(TimeSlider.getValue()/100));
         mediaPlayer.play();
     }
-
+    boolean watched = false;
     public void Play(MouseEvent event) {
+        System.out.println(content.contentTitle);
         System.out.println(FontAwesomeIcon.PLAY.toString());
+        if(watched==false){
+            boolean valid = true;
+            List<String> history = ((User)DataBase.getInstance().CurrentUser).getHistory();
+            for(String his : history){
+                System.out.println(his);
+                if(content.contentTitle.equals(his)) {
+                    valid = false;
+                    break;
+                }
+            }
+            if(valid){
+                ((User) DataBase.getInstance().CurrentUser).getHistory().add(content.contentTitle);
+             }
+            watched=true;
+        }
         if(Play.getGlyphName().equals(FontAwesomeIcon.PLAY.toString())){
             mediaPlayer.play();
             Play.setIcon(FontAwesomeIcon.PAUSE);
