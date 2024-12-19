@@ -35,8 +35,8 @@ public class ContentCardControllerClient {
         Year.setText(String.valueOf(content.getDate().getYear()+1900));
         if(content instanceof Content content1){
             StringBuilder genres = new StringBuilder();
-            for (var genre : content1.genres)
-                genres.append(genre).append(" ");
+            for (int i = 0 ; i<Math.min(2,content1.genres.size());i++)
+                genres.append(content1.genres.get(i)).append(" ");
             Genre.setText(genres.toString());
         }
         FavoritesModel favoritesModel = new FavoritesModel(content.getName(2), DataBase.getInstance().CurrentUser.getId(0).intValue(),0);

@@ -39,6 +39,7 @@ public class CreateEpisodeController {
                 Integer.parseInt(EpisodeNumber.getText()),Integer.parseInt(Duration.getText()),
                 Date.from(dateOfProduction.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant()));
         DataBase.getInstance().episodesData.addData(episode);
+        Model.getInstance().getViewFactory().Show(AdminView.AdminScene(AdminView.EpisodePage()));
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Create Cast");
         alert.setHeaderText(null);

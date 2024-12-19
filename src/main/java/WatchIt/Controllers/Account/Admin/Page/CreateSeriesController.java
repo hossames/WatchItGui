@@ -55,11 +55,7 @@ public class CreateSeriesController {
                 castmembers.add(CastMembers.getSelectionModel().getSelectedItem());
             }
         }
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Create Cast");
-        alert.setHeaderText(null);
-        alert.setContentText("Create Cast Successful");
-        alert.showAndWait();
+
     }
     public void Done(MouseEvent event) {
         Series series = new Series(ContentTitle.getText(),Language.getText(),Country.getText(),Story.getText(),
@@ -68,6 +64,12 @@ public class CreateSeriesController {
                 Date.from(dateOfProduction.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant()),
                 Date.from(LastAirDate.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant()));
         DataBase.getInstance().seriesData.addData(series);
+        Model.getInstance().getViewFactory().Show(AdminView.AdminScene(AdminView.SeriesPage()));
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Create Cast");
+        alert.setHeaderText(null);
+        alert.setContentText("Create Cast Successful");
+        alert.showAndWait();
     }
     public void GoToNext(KeyEvent keyEvent) {
         if(keyEvent.getCharacter().charAt(0)==System.lineSeparator().charAt(0)) {

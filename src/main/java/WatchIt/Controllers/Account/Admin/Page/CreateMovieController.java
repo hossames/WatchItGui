@@ -51,11 +51,7 @@ public class CreateMovieController {
                 castmembers.add(CastMembers.getSelectionModel().getSelectedItem());
             }
         }
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Create Cast");
-        alert.setHeaderText(null);
-        alert.setContentText("Create Cast Successful");
-        alert.showAndWait();
+
     }
     public void Done(MouseEvent event) {
         Movie movie = new Movie(ContentTitle.getText(),Language.getText(),Country.getText(),Story.getText(),
@@ -63,6 +59,12 @@ public class CreateMovieController {
                 Integer.parseInt(Duration.getText()),genres,castmembers,
                 Date.from(dateOfProduction.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant()));
         DataBase.getInstance().moviesData.addData(movie);
+        Model.getInstance().getViewFactory().Show(AdminView.AdminScene(AdminView.MoviesPage()));
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Create Cast");
+        alert.setHeaderText(null);
+        alert.setContentText("Create Cast Successful");
+        alert.showAndWait();
     }
     public void GoToNext(KeyEvent keyEvent) {
         if(keyEvent.getCharacter().charAt(0)==System.lineSeparator().charAt(0)) {

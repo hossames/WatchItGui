@@ -40,7 +40,7 @@ public class CreateCastController {
     public void Add() {
         CastMember castMember = new CastMember(FirstName.getText(),LastName.getText(),Gender.getText(),Nationality.getText(),SocialMediaLink.getText(),WorkType.getText(), new ArrayList<>(),Date.from(dateOfBirth.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant()));
         DataBase.getInstance().castMemberData.addData(castMember);
-        MainView<CastMember>  view = new MainView<>();
+        Model.getInstance().getViewFactory().Show(AdminView.AdminScene(AdminView.CastPage()));
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Create Cast");
         alert.setHeaderText(null);

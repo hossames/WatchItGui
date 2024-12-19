@@ -22,7 +22,7 @@
                   <Font size="14.0" />
                </font>
             </Text>
-            <Text fx:id="Genre" layoutX="53.0" layoutY="59.0" onMouseClicked="#OpenInnerPage" strokeType="OUTSIDE" strokeWidth="0.0" text="Genre" wrappingWidth="94.93670618534088">
+            <Text fx:id="Genre" layoutX="53.0" layoutY="59.0" onMouseClicked="#OpenInnerPage" strokeType="OUTSIDE" strokeWidth="0.0" text="Genre" wrappingWidth="178.13671839237213">
                <font>
                   <Font size="16.0" />
                </font>
