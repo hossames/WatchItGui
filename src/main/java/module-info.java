@@ -12,6 +12,7 @@ module watchit {
     requires de.jensd.fx.glyphs.commons;
     requires de.jensd.fx.glyphs.materialdesignicons;
     requires java.naming;
+    requires jdk.compiler;
     exports WatchIt;
     opens WatchIt.Controllers.Enter to javafx.fxml;
     opens WatchIt.Controllers.Account.Admin to javafx.fxml;

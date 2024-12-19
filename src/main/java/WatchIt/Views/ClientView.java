@@ -78,7 +78,8 @@ public class ClientView {
         }catch (IOException e){
             e.printStackTrace();
         }
-        fxmlLoader.setController(new MainPageController(nodeList));
+
+        fxmlLoader.setController(new MainPageController(nodeList,(!db.isEmpty())?db.get(0):null));
         return fxmlLoader;
     }
 
