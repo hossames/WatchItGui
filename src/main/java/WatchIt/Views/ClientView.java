@@ -14,6 +14,7 @@ import WatchIt.Controllers.Account.Client.Pages.InnerPageComponentControllers.*;
 import WatchIt.Controllers.Account.Client.Pages.MainPageController;
 import WatchIt.Controllers.Account.Client.Pages.ContentsPageController;
 import WatchIt.Controllers.Content.EpisodeCardControllerAdmin;
+import WatchIt.Controllers.Content.EpisodeCardControllerClient;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
@@ -105,7 +106,7 @@ public class ClientView {
     public static FXMLLoader EpisodeCard(DataObject object){
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(Application.class.getResource("/Fxml/Content/EpisodeCardClient.fxml"));
-        fxmlLoader.setController(new EpisodeCardControllerAdmin(object));
+        fxmlLoader.setController(new EpisodeCardControllerClient(object));
         return fxmlLoader;
     }
     public static FXMLLoader SeriesPage(){
@@ -195,16 +196,22 @@ public class ClientView {
     public static FXMLLoader WatchLater(){
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Client/Pages/OtherPages.fxml"));
-        fxmlLoader.setController(new OtherPageController(new DataObjectController<>('\0',DataBase.contentsData.getDataByString(((User)DataBase.getInstance().CurrentUser).getWatchLater(), 2))));
+        List<DataObject> list= DataBase.contentsData.ConvertListDataObject();
+        list.addAll(DataBase.getInstance().episodesData.ConvertListDataObject());
+        DataObjectController<DataObject> watched = new DataObjectController<>('\0',list);
+        fxmlLoader.setController(new OtherPageController(new DataObjectController<>('\0',watched.getDataByString(((User)DataBase.getInstance().CurrentUser).getWatchLater(), 2))));
         return fxmlLoader;
     }
     public static FXMLLoader History(){
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Client/Pages/OtherPages.fxml"));
-        fxmlLoader.setController(new OtherPageController(new DataObjectController<>('\0',DataBase.contentsData.getDataByString(((User)DataBase.getInstance().CurrentUser).getHistory(), 2))));
+        List<DataObject> list= DataBase.contentsData.ConvertListDataObject();
+        list.addAll(DataBase.getInstance().episodesData.ConvertListDataObject());
+        DataObjectController<DataObject> watched = new DataObjectController<>('\0',list);
+        fxmlLoader.setController(new OtherPageController(new DataObjectController<>('\0',watched.getDataByString(((User)DataBase.getInstance().CurrentUser).getHistory(), 2))));
         return fxmlLoader;
     }
-    public static FXMLLoader MediaComponent(Content content){
+    public static FXMLLoader MediaComponent(DataObject content){
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Client/Pages/InnerPageComponents/CenterComponent.fxml"));
         fxmlLoader.setController(new CenterComponentController(content));

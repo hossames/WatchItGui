@@ -31,8 +31,8 @@ public class CenterComponentController {
     public Slider Volume;
     public MediaPlayer mediaPlayer;
     StackPane vol,tim;
-    Content content;
-    public CenterComponentController(Content content){
+    DataObject content;
+    public CenterComponentController(DataObject content){
         this.content=content;
         try {
             Media media = new Media(new File(content.getVideo()).toURI().toString());
@@ -93,21 +93,20 @@ public class CenterComponentController {
         mediaPlayer.play();
     }
     boolean watched = false;
-    public void Play(MouseEvent event) {
-        System.out.println(content.contentTitle);
+    public void Play(MouseEvent event) {;
         System.out.println(FontAwesomeIcon.PLAY.toString());
         if(watched==false){
             boolean valid = true;
             List<String> history = ((User)DataBase.getInstance().CurrentUser).getHistory();
             for(String his : history){
                 System.out.println(his);
-                if(content.contentTitle.equals(his)) {
+                if(content.getName(2).equals(his)) {
                     valid = false;
                     break;
                 }
             }
             if(valid){
-                ((User) DataBase.getInstance().CurrentUser).getHistory().add(content.contentTitle);
+                ((User) DataBase.getInstance().CurrentUser).getHistory().add(content.getName(2));
              }
             watched=true;
         }

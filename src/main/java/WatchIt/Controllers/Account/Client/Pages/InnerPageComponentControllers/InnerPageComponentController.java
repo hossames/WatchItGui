@@ -18,22 +18,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class InnerPageComponentController {
-    Content content;
+    DataObject content;
     public InnerPageComponentController(DataObject content){
-        this.content = (Content) content;
+        this.content = content;
     }
     @FXML
     private VBox vbox;
     public void initialize(){
         try {
-            if(content instanceof Movie) {
+            if(content instanceof Movie content) {
                 vbox.getChildren().add(ClientView.HeadComponent(content).load());
                 vbox.getChildren().add(ClientView.DescriptionComponent(content.story).load());
                 vbox.getChildren().add(ClientView.MediaComponent(content).load());
                 List<Node> list;
                 list = DataObjectController.MakeNodeList(DataBase.getInstance().castMemberData.getDataByString(content.cast, 2));
                 vbox.getChildren().add(ClientView.GridMake(list, "Cast Members").load());
-            } else if (content instanceof Series){
+            } else if (content instanceof Series content){
                 vbox.getChildren().add(ClientView.HeadComponent(content).load());
                 vbox.getChildren().add(ClientView.DescriptionComponent(content.story).load());
                 List<Node> list;

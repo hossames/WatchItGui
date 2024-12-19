@@ -5,7 +5,6 @@ import WatchIt.Views.ClientView;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
-import src.ContentControl.*;
 import src.DataBase.DataObject;
 
 import java.util.Date;
@@ -45,6 +44,6 @@ public class EpisodeCardControllerClient {
         Model.getInstance().getViewFactory().Show(ClientView.setNode(ClientView.InnerPage(content)));
     }
 
-    public void SetFavorite(MouseEvent mouseEvent) {
+    public void setFav(MouseEvent mouseEvent) {
     }
 }
