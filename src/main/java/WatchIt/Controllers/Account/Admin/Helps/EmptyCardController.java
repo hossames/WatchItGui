@@ -1,6 +1,7 @@
 package WatchIt.Controllers.Account.Admin.Helps;
 
 import WatchIt.Models.Model;
+import WatchIt.Views.AdminView;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.input.MouseEvent;
 
@@ -10,6 +11,6 @@ public class EmptyCardController {
         this.fxmlLoader = fxmlLoader;
     }
     public void Add(MouseEvent e){
-        Model.getInstance().getViewFactory().Show(fxmlLoader);
+        Model.getInstance().getViewFactory().Show(AdminView.AdminScene(fxmlLoader));
     }
 }

@@ -56,6 +56,15 @@ public class AdminController {
             Movies.addEventHandler(MouseEvent.MOUSE_CLICKED,(MouseEvent e)->{
                 Model.getInstance().getViewFactory().Show(AdminView.AdminScene(AdminView.MoviesPage()));
             });
+            Series.addEventHandler(MouseEvent.MOUSE_CLICKED,(MouseEvent e)->{
+                Model.getInstance().getViewFactory().Show(AdminView.AdminScene(AdminView.SeriesPage()));
+            });
+            Cast.addEventHandler(MouseEvent.MOUSE_CLICKED,(MouseEvent e)->{
+                Model.getInstance().getViewFactory().Show(AdminView.AdminScene(AdminView.CastPage()));
+            });
+            Episode.addEventHandler(MouseEvent.MOUSE_CLICKED,(MouseEvent e)->{
+                Model.getInstance().getViewFactory().Show(AdminView.AdminScene(AdminView.EpisodePage()));
+            });
         } catch (IOException e) {
             e.printStackTrace();
         }

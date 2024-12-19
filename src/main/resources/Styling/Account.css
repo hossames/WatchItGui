@@ -1,4 +1,4 @@
-AnchorPane > Button{
+VBox > Button,HBox>Button{
     -fx-background-color: #f49405;
     -fx-background-radius: 15;
     -fx-font-size: 15;

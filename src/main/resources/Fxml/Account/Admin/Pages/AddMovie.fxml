@@ -7,46 +7,50 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.effect.InnerShadow?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.paint.Color?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane minWidth="1038.0" prefHeight="694.0" prefWidth="1038.0" style="-fx-background-color: #252525;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
-    <children>
-        <TextField fx:id="ContentTitle" layoutX="430.0" layoutY="83.0" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="328.0" promptText="Content Title" style="-fx-text-fill: black !important;" />
-        <TextField fx:id="Language" layoutX="430.0" layoutY="136.0" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="328.0" promptText="Language" style="-fx-text-fill: black !important;" />
-        <TextField fx:id="Country" layoutX="426.0" layoutY="191.0" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="328.0" promptText="Country" style="-fx-text-fill: black !important;" />
-        <TextField fx:id="Budget" layoutX="426.0" layoutY="241.0" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="328.0" promptText="budget" style="-fx-text-fill: black !important;" />
-        <TextField fx:id="Revenue" layoutX="426.0" layoutY="293.0" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="328.0" promptText="revenue" style="-fx-text-fill: black !important;" />
-        <DatePicker fx:id="dateOfProduction" layoutX="428.0" layoutY="594.0" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="328.0" promptText="Date of production" style="-fx-text-fill: black !important;" />
-        <Button fx:id="Add" layoutX="428.0" layoutY="648.0" mnemonicParsing="false" onMouseClicked="#Done" prefHeight="31.0" prefWidth="328.0" style="-fx-background-color: #6600ff;" text="Add">
+
+<VBox alignment="CENTER" fillWidth="false" prefHeight="730.0" prefWidth="454.0" spacing="20.0" style="-fx-background-color: #252525;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 30; -fx-font-weight: 700;" text="Add Movie Form" />
+        <TextField fx:id="ContentTitle" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="328.0" promptText="Content Title" style="-fx-text-fill: black !important;" />
+        <TextField fx:id="Language" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="328.0" promptText="Language" style="-fx-text-fill: black !important;" />
+        <TextField fx:id="Country" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="328.0" promptText="Country" style="-fx-text-fill: black !important;" />
+        <TextField fx:id="Budget" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="328.0" promptText="budget" style="-fx-text-fill: black !important;" />
+        <TextField fx:id="Revenue" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="328.0" promptText="revenue" style="-fx-text-fill: black !important;" />
+      <TextField fx:id="Duration" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="328.0" promptText="Duration" style="-fx-text-fill: black !important;" />
+      <TextArea fx:id="Story" onKeyTyped="#GoToNext" prefHeight="90.0" prefWidth="328.0" />
+      <HBox alignment="CENTER" prefHeight="31.0" prefWidth="378.0" spacing="10.0">
+         <children>
+            <ChoiceBox fx:id="Genres" prefHeight="26.0" prefWidth="144.0" />
+            <Button fx:id="AddGenre" mnemonicParsing="false" onMouseClicked="#Add" prefHeight="31.0" prefWidth="176.0" style="-fx-background-color: #6600ff;" styleClass="Add_Button" text="Add Genre">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+         </children>
+      </HBox>
+      <HBox spacing="10.0">
+         <children>
+            <ChoiceBox fx:id="CastMembers" prefHeight="26.0" prefWidth="144.0" />
+            <Button fx:id="AddCastMember" mnemonicParsing="false" onMouseClicked="#Add" prefHeight="31.0" prefWidth="177.0" style="-fx-background-color: #6600ff;" text="Add CastMember">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+         </children>
+      </HBox>
+        <DatePicker fx:id="dateOfProduction" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="328.0" promptText="Date of production" style="-fx-text-fill: black !important;" />
+        <Button fx:id="Add" mnemonicParsing="false" onMouseClicked="#Done" prefHeight="31.0" prefWidth="328.0" style="-fx-background-color: #6600ff;" text="Add">
          <effect>
             <DropShadow />
-         </effect></Button>
-        <Text fill="WHITE" layoutX="458.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 30; -fx-font-weight: 700;" text="Add Movie Form" />
-      <ChoiceBox fx:id="Genres" layoutX="426.0" layoutY="492.0" prefHeight="26.0" prefWidth="144.0" />
-      <Button fx:id="AddGenre" layoutX="581.0" layoutY="489.0" mnemonicParsing="false" onMouseClicked="#Add" prefHeight="31.0" prefWidth="176.0" style="-fx-background-color: #6600ff;" text="Add Genre">
-         <effect>
-            <DropShadow />
-         </effect></Button>
-      <ChoiceBox fx:id="CastMembers" layoutX="426.0" layoutY="542.0" prefHeight="26.0" prefWidth="144.0" />
-      <Button fx:id="AddCastMember" layoutX="580.0" layoutY="539.0" mnemonicParsing="false" onMouseClicked="#Add" prefHeight="31.0" prefWidth="176.0" style="-fx-background-color: #6600ff;" text="Add CastMember">
-         <effect>
-            <DropShadow />
-         </effect></Button>
-      <TextField fx:id="Duration" layoutX="426.0" layoutY="342.0" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="328.0" promptText="Duration" style="-fx-text-fill: black !important;" />
-      <TextArea fx:id="Story" onKeyTyped="#GoToNext" layoutX="426.0" layoutY="385.0" prefHeight="90.0" prefWidth="328.0" />
-    </children>
-    <stylesheets>
-        <URL value="@../../../../Styling/Styler.css" />
-        <URL value="@../../../../Styling/Account.css" />
-    </stylesheets>
-   <effect>
-      <InnerShadow radius="19.942500000000003" width="60.77">
-         <color>
-            <Color red="0.27961090207099915" blue="1.0" />
-         </color>
-      </InnerShadow>
-   </effect>
-</AnchorPane>
+         </effect>
+      </Button>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../Styling/Styler.css" />
+      <URL value="@../../../../Styling/Account.css" />
+   </stylesheets>
+</VBox>

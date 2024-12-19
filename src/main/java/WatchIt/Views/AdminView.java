@@ -3,7 +3,7 @@ package WatchIt.Views;
 import WatchIt.Application;
 import WatchIt.Controllers.Account.Admin.AdminController;
 import WatchIt.Controllers.Account.Admin.Helps.EmptyCardController;
-import WatchIt.Controllers.Account.Admin.Page.ContentShowController;
+import WatchIt.Controllers.Account.Admin.Page.*;
 import WatchIt.Controllers.Cast.CastCardAdminController;
 import WatchIt.Controllers.Content.ContentCardControllerAdmin;
 import javafx.fxml.FXMLLoader;
@@ -26,7 +26,25 @@ public class AdminView{
     public static FXMLLoader MoviesPage(){
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Admin/Pages/ContentShow.fxml"));
-        fxmlLoader.setController(new ContentShowController(DataBase.getInstance().moviesData));
+        fxmlLoader.setController(new ContentShowController(DataBase.getInstance().moviesData,AddMovie()));
+        return fxmlLoader;
+    }
+    public static FXMLLoader CastPage(){
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Admin/Pages/ContentShow.fxml"));
+        fxmlLoader.setController(new ContentShowController(DataBase.getInstance().castMemberData,AddCastMember()));
+        return fxmlLoader;
+    }
+    public static FXMLLoader SeriesPage(){
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Admin/Pages/ContentShow.fxml"));
+        fxmlLoader.setController(new ContentShowController(DataBase.getInstance().seriesData,AddSeries()));
+        return fxmlLoader;
+    }
+    public static FXMLLoader EpisodePage(){
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Admin/Pages/ContentShow.fxml"));
+        fxmlLoader.setController(new ContentShowController(DataBase.getInstance().episodesData,addEpisode()));
         return fxmlLoader;
     }
     public static FXMLLoader CastCard(CastMember castMember){
@@ -45,6 +63,30 @@ public class AdminView{
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(Application.class.getResource("/Fxml/Content/ContentCardAdmin.fxml"));
         fxmlLoader.setController(new ContentCardControllerAdmin(content));
+        return fxmlLoader;
+    }
+    public static FXMLLoader AddMovie(){
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Admin/Pages/AddMovie.fxml"));
+        fxmlLoader.setController(new CreateMovieController());
+        return fxmlLoader;
+    }
+    public static FXMLLoader AddSeries(){
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Admin/Pages/AddSeries.fxml"));
+        fxmlLoader.setController(new CreateSeriesController());
+        return fxmlLoader;
+    }
+    public static FXMLLoader AddCastMember(){
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Admin/Pages/CreateCast.fxml"));
+        fxmlLoader.setController(new CreateCastController());
+        return fxmlLoader;
+    }
+    public static  FXMLLoader addEpisode(){
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Application.class.getResource("/Fxml/Account/Admin/Pages/AddEpisode.fxml"));
+        fxmlLoader.setController(new CreateEpisodeController());
         return fxmlLoader;
     }
 }
