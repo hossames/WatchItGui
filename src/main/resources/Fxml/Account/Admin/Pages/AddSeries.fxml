@@ -9,8 +9,8 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-
 
 <VBox alignment="CENTER" fillWidth="false" prefHeight="810.0" prefWidth="562.0" spacing="20.0" style="-fx-background-color: #252525;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
@@ -35,7 +35,10 @@
               <Button fx:id="AddCastMember" mnemonicParsing="false" onMouseClicked="#Add" prefHeight="31.0" prefWidth="176.0" styleClass="Add_Button" stylesheets="@../../../../Styling/Styler.css" text="Add CastMember" />
          </children>
       </HBox>
-      <CheckBox fx:id="onGoing" mnemonicParsing="false" onMouseClicked="#OnGoing" prefHeight="18.0" prefWidth="326.0" text="On Going" />
+      <CheckBox fx:id="onGoing" mnemonicParsing="false" onMouseClicked="#OnGoing" prefHeight="18.0" prefWidth="326.0" text="On Going" textFill="#6600ff">
+         <font>
+            <Font size="14.0" />
+         </font></CheckBox>
       <DatePicker fx:id="LastAirDate" onKeyTyped="#GoToNext" prefHeight="29.0" prefWidth="274.0" promptText="Last Air date" style="-fx-text-fill: black !important;" visible="false" />
         <Button fx:id="Add" mnemonicParsing="false" onMouseClicked="#Done" prefHeight="31.0" prefWidth="263.0" styleClass="Add_Button" stylesheets="@../../../../Styling/Styler.css" text="Add" />
    </children>
