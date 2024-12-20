@@ -7,6 +7,7 @@ import javafx.collections.FXCollections;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import src.AccountControl.Admin;
 import src.Cast.CastMember;
 import src.ContentControl.Movie;
 import src.DataBase.DataBase;
@@ -58,12 +59,12 @@ public class CreateMovieController {
                 Integer.parseInt(Budget.getText()),Integer.parseInt(Revenue.getText()),
                 Integer.parseInt(Duration.getText()),genres,castmembers,
                 Date.from(dateOfProduction.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant()));
-        DataBase.getInstance().moviesData.addData(movie);
+        ((Admin)DataBase.getInstance().CurrentUser).addMovie(movie);
         Model.getInstance().getViewFactory().Show(AdminView.AdminScene(AdminView.MoviesPage()));
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Create Cast");
+        alert.setTitle("Create movie");
         alert.setHeaderText(null);
-        alert.setContentText("Create Cast Successful");
+        alert.setContentText("Create movie Successful");
         alert.showAndWait();
     }
     public void GoToNext(KeyEvent keyEvent) {

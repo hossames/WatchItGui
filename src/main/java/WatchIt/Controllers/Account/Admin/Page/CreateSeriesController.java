@@ -7,6 +7,7 @@ import javafx.collections.FXCollections;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import src.AccountControl.Admin;
 import src.Cast.CastMember;
 import src.ContentControl.Series;
 import src.DataBase.DataBase;
@@ -63,7 +64,7 @@ public class CreateSeriesController {
                 Integer.parseInt(numberOfEpisodes.getText()),((onGoing.isSelected())?1:0),genres,castmembers,
                 Date.from(dateOfProduction.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant()),
                 Date.from(LastAirDate.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant()));
-        DataBase.getInstance().seriesData.addData(series);
+        ((Admin)DataBase.getInstance().CurrentUser).addSeries(series);
         Model.getInstance().getViewFactory().Show(AdminView.AdminScene(AdminView.SeriesPage()));
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Create series");

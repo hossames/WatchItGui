@@ -152,7 +152,7 @@ public class HeadComponentController {
                 return;
             }
         }
-        user.getWatchLater().add(dataObject.getName(2));
+        user.setWatchLater(dataObject.getName(2));
     }
     public void setFavorite(MouseEvent event) throws InterruptedException {
         FavoritesModel favoritesModel = new FavoritesModel(dataObject.getName(2), DataBase.getInstance().CurrentUser.getId(0).intValue(),0);

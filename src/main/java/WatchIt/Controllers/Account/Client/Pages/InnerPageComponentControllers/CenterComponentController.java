@@ -99,14 +99,13 @@ public class CenterComponentController {
             boolean valid = true;
             List<String> history = ((User)DataBase.getInstance().CurrentUser).getHistory();
             for(String his : history){
-                System.out.println(his);
                 if(content.getName(2).equals(his)) {
                     valid = false;
                     break;
                 }
             }
             if(valid){
-                ((User) DataBase.getInstance().CurrentUser).getHistory().add(content.getName(2));
+                ((User) DataBase.getInstance().CurrentUser).Watched(content.getName(2));
              }
             watched=true;
         }

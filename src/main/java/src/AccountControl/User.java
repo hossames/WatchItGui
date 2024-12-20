@@ -7,9 +7,8 @@ import java.util.Date;
 import java.util.List;
 
 public class User extends Account {
-    private List<String> FavoriteGenres,WatchLater,History;
-    protected Subscription subscriptionPlan;
-    public User() {}
+    private final List<String> FavoriteGenres,WatchLater,History;
+    private Subscription subscriptionPlan;
     public User(String userName,String firstName,String lastName,String email,String password,Subscription subscriptionPlan,List<String> FavoriteGenres,List<String> WatchLater,List<String> History,String FavoriteName){
         super(userName,firstName,lastName,email,password,FavoriteName);
         this.subscriptionPlan = subscriptionPlan;
@@ -44,9 +43,6 @@ public class User extends Account {
     }
     public List<String> getFavoriteGenres() {
         return FavoriteGenres;
-    }
-    public void addGenre(String Genre) {
-        FavoriteGenres.add(Genre);
     }
     //--------------------------------------DataBase Methods-----------------------------------------//
     @Override

@@ -1,7 +1,7 @@
 package src.DataBase;
+
 import javafx.scene.Node;
 import javafx.scene.image.Image;
-
 import java.util.Date;
 
 public class DataObject {
