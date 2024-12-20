@@ -91,7 +91,7 @@ public class HeadComponentController {
             });
             Views.setText(String.valueOf(content.Viewers));
         }else if(dataObject instanceof Episode episode){
-            Name.setText(episode.getName(2));
+            Name.setText(episode.getName(1));
             ReleaseDate.setText(DateFormatSymbols.getInstance().getMonths()[episode.getDate().getMonth()] + "/" + String.valueOf(1900 + episode.getDate().getYear()));
             Image.setImage(episode.getImage());
             Rate.setText(String.valueOf(episode.TotalRate()));
@@ -99,12 +99,20 @@ public class HeadComponentController {
             Series content = DataBase.getInstance().seriesData.getDataByString(episode.getSeriesName(),0).getFirst();
             Country.setText(content.country);
             Language.setText(content.language);
-            WatchRecord watchRecord = DataBase.watchRecordData.getDataByObject(new WatchRecord(-1F, content.contentTitle));
+            Views.setText(String.valueOf(episode.RateCounter));
+            content.genres.stream().forEach(gen -> {
+                try {
+                    Genre.getChildren().add(ClientView.GenreComponent(gen).load());
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            });
+            WatchRecord watchRecord = DataBase.watchRecordData.getDataByObject(new WatchRecord(-1F, episode.getName(2)));
+            System.out.println(watchRecord);
             if (watchRecord == null) {
                 episode.AddRate(-1);
             } else {
                 int cnt = 0;
-                System.out.println(watchRecord.Rating);
                 for (var star : Stars.getChildren()) {
                     if (cnt == watchRecord.Rating)
                         break;
@@ -138,10 +146,6 @@ public class HeadComponentController {
             }
         }
         ((Rateable)dataObject).EditRate(rate);
-        FavoritesModel favoritesModel = new FavoritesModel(dataObject.getName(2), DataBase.getInstance().CurrentUser.getId(0).intValue(),0);
-        if(DataBase.getInstance().Favorites.getDataByObject(favoritesModel)!=null){
-            Heart.setIcon(FontAwesomeIcon.HEART);
-        }
     }
 
     @FXML

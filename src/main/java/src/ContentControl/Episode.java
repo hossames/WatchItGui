@@ -20,7 +20,7 @@ public class Episode extends DataObject implements Rateable{
   private final String episodeTitle;
   private final int duration;
   private final Date releaseDate;
-  private long Rate_Sum=0,RateCounter=0;
+  public long Rate_Sum=0,RateCounter=0;
   Image poster;
   // Constructors
   public Episode(String SeriesName,String episodeTitle, int episodeNumber, int duration, Date releaseDate) {
@@ -50,7 +50,7 @@ public class Episode extends DataObject implements Rateable{
       poster = new Image(Application.class.getResourceAsStream("/Images/film.jpg"));
     }
     cnt = Math.max(cnt,Id+1);
-
+    InitRate();
   }
 
   // Getters & Setters
@@ -70,7 +70,8 @@ public class Episode extends DataObject implements Rateable{
   public Image getImage(){return poster;}
 
   public void InitRate(){
-    for(WatchRecord Record: DataBase.watchRecordData.getDataByString(getName(2),2)){
+    for(WatchRecord Record: DataBase.watchRecordData.getDataByString(getName(2),0)){
+      System.out.println(Record);
       Rate_Sum += Record.Rating;
       RateCounter++;
     }
@@ -83,15 +84,16 @@ public class Episode extends DataObject implements Rateable{
   }
 
   public void EditRate(float rate){
-    WatchRecord WatchRecordTemp = DataBase.watchRecordData.removeData(getName(2)+","+Long.valueOf((long)DataBase.getInstance().CurrentUser.getId(0)).toString(),2).get(0);
+    WatchRecord WatchRecordTemp = DataBase.watchRecordData.removeData(getName(2)+" "+ DataBase.getInstance().CurrentUser.getId(0).toString(),2).getFirst();
     Rate_Sum -= WatchRecordTemp.Rating;
-    WatchRecordTemp.Rating = (Float) rate;
+    WatchRecordTemp.Rating = (long) rate;
     Rate_Sum += rate;
     DataBase.watchRecordData.addData(WatchRecordTemp);
   }
 
   public long TotalRate(){
     try {
+      System.out.println(Rate_Sum);
       return (Rate_Sum/RateCounter);
     }catch (ArithmeticException e){
       return 0;
@@ -115,7 +117,7 @@ public class Episode extends DataObject implements Rateable{
 
   @Override
   public String getVideo(){
-    return "src/main/resources/Videos"+SeriesName+"/"+episodeNumber+".mp4";
+    return "src/main/resources/Videos/"+SeriesName+"/"+episodeNumber+".mp4";
   }
 
   @Override

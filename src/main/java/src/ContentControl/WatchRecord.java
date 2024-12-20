@@ -7,18 +7,18 @@ import java.text.DateFormat;
 import java.util.Date;
 
 public class WatchRecord extends DataObject {
-    public Float Rating;
+    public Long Rating;
     public Date DateOfWatching;
     public String ContentTitle;
     public Long UserId;
     public WatchRecord(long UserId, float Rating, String Content,Date DateOfWatching) {
-        this.Rating = (Float) Rating;
+        this.Rating = (long) Rating;
         this.DateOfWatching = DateOfWatching;
         this.ContentTitle = Content;
         this.UserId = (Long) UserId;
     }
     public WatchRecord(float Rating, String Content) {
-        this.Rating = (Float) Rating;
+        this.Rating = (long) Rating;
         this.DateOfWatching = new Date();
         this.ContentTitle = Content;
         this.UserId = DataBase.getInstance().CurrentUser.getId(0);

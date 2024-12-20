@@ -114,7 +114,7 @@
                   <Glow level="0.54" />
                </effect>
             </Label>
-            <Text fx:id="Language" fill="#3916ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Language " wrappingWidth="450.0" GridPane.columnIndex="1">
+            <Text fx:id="Language" fill="#3916ab" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Language " wrappingWidth="450.0" GridPane.columnIndex="1">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -125,7 +125,7 @@
                   <Glow level="0.8" />
                </effect>
             </Text>
-            <Text fx:id="Duration" fill="#3916ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration" wrappingWidth="450.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Text fx:id="Duration" fill="#3916ab" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Duration" wrappingWidth="450.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -136,7 +136,7 @@
                   <Glow level="0.8" />
                </effect>
             </Text>
-            <Text fx:id="Country" fill="#3916ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Country " wrappingWidth="450.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Text fx:id="Country" fill="#3916ab" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Country " wrappingWidth="450.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -147,7 +147,7 @@
                   <Glow level="0.8" />
                </effect>
             </Text>
-            <Text fx:id="ReleaseDate" fill="#3916ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Release Date " wrappingWidth="450.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Text fx:id="ReleaseDate" fill="#3916ab" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Release Date " wrappingWidth="450.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -158,7 +158,7 @@
                   <Glow level="0.8" />
                </effect>
             </Text>
-            <Text fx:id="Views" fill="#3916ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Views " wrappingWidth="450.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <Text fx:id="Views" fill="#3916ab" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Views " wrappingWidth="450.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -169,7 +169,7 @@
                   <Glow level="0.8" />
                </effect>
             </Text>
-            <Text fx:id="Rate" fill="#3916ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Rate" wrappingWidth="450.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+            <Text fx:id="Rate" fill="#3916ab" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Rate" wrappingWidth="450.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -180,10 +180,10 @@
                   <Glow level="0.8" />
                </effect>
             </Text>
-           <HBox fx:id="Genre" alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="657.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+           <HBox fx:id="Genre" alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="657.0" style="-fx-fill: white;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
          </children>
       </GridPane>
-      <Text fx:id="Name" fill="#3916ab" layoutX="272.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Content Name " wrappingWidth="760.3999633789062">
+      <Text fx:id="Name" fill="#3916ab" layoutX="272.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Content Name " wrappingWidth="760.3999633789062">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>

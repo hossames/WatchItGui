@@ -95,7 +95,7 @@ public class Content extends DataObject implements Rateable {
         if(WatchRecordTemp.Rating != -1){
             Rate_Sum -= WatchRecordTemp.Rating;
         }
-        WatchRecordTemp.Rating = (Float) rate;
+        WatchRecordTemp.Rating = (long) rate;
         Rate_Sum += rate;
         DataBase.watchRecordData.addData(WatchRecordTemp);
         System.out.println(WatchRecordTemp);

@@ -19,9 +19,6 @@ public class Favorite extends Searchable {
         Container.widthProperty().addListener((Observable,oldValue,newValue) -> {
             SetToGrid();
         });
-        List<String>Movies=new ArrayList<>();
-        List<String>Series=new ArrayList<>();
-        List<String>Cast= new ArrayList<>();
         List<String>Searched=new ArrayList<>();
         DataBase.getInstance().Favorites.getDateByNum(DataBase.getInstance().CurrentUser.getId(0),0)
                 .stream().forEach(item -> {Searched.add(item.Name);});
@@ -29,9 +26,10 @@ public class Favorite extends Searchable {
         favorites.add(new DataObjectController<>('\0', DataBase.getInstance().moviesData.getDataByString(Searched,2)));
         favorites.add(new DataObjectController<>('\0', DataBase.getInstance().seriesData.getDataByString(Searched,2)));
         favorites.add(new DataObjectController<>('\0', DataBase.getInstance().castMemberData.getDataByString(Searched,2)));
+        favorites.add(new DataObjectController<>('\0', DataBase.getInstance().episodesData.getDataByString(Searched,2)));
         dataObjectController = favorites.get(0);
         SetToGrid();
-        SearchType.getItems().addAll("movies","series","cast");
+        SearchType.getItems().addAll("movies","series","cast","episodes");
         SearchType.getSelectionModel().selectFirst();
         SearchType.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if(newValue.equalsIgnoreCase("series")){
@@ -39,8 +37,10 @@ public class Favorite extends Searchable {
                 dataObjectController = favorites.get(1);
             }else if(newValue.equalsIgnoreCase("movies")){
                 dataObjectController = favorites.get(0);
-            }else{
+            }else if(newValue.equalsIgnoreCase("cast")){
                 dataObjectController = favorites.get(2);
+            }else{
+                dataObjectController = favorites.get(3);
             }
             Search();
             SetToGrid();
