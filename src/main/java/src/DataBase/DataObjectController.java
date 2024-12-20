@@ -241,8 +241,13 @@ public class DataObjectController <T> {
             }
             DataBase.accountsData.removeData((Account) obj);
         }
-        else if (type == 'S' || type == 'M')
+        else if (type == 'S' || type == 'M') {
+            Content o = (Content)obj;
+            for(var cast : o.cast){
+                DataBase.getInstance().castMemberData.getDataByString(cast,2).getFirst().Contents.remove(o.contentTitle);
+            }
             DataBase.contentsData.removeData((Content) obj);
+        }
     }
 
     /**
