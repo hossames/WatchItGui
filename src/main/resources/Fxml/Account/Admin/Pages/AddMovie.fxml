@@ -34,7 +34,7 @@
       <HBox spacing="10.0">
          <children>
             <ComboBox fx:id="CastMembers" prefWidth="150.0" />
-            <Button fx:id="AddCastMember" mnemonicParsing="false" onMouseClicked="#Add" prefHeight="31.0" prefWidth="177.0" style="-fx-background-color: #6600ff;" text="Add CastMember">
+            <Button mnemonicParsing="false" onMouseClicked="#Add" prefHeight="31.0" prefWidth="177.0" style="-fx-background-color: #6600ff;" text="Add CastMember">
                <effect>
                   <DropShadow />
                </effect>
@@ -42,7 +42,7 @@
          </children>
       </HBox>
         <DatePicker fx:id="dateOfProduction" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="328.0" promptText="Date of production" style="-fx-text-fill: black !important;" />
-        <Button fx:id="Add" mnemonicParsing="false" onMouseClicked="#Done" prefHeight="31.0" prefWidth="328.0" style="-fx-background-color: #6600ff;" text="Add">
+        <Button mnemonicParsing="false" onMouseClicked="#Done" prefHeight="31.0" prefWidth="328.0" style="-fx-background-color: #6600ff;" text="Add">
          <effect>
             <DropShadow />
          </effect>
