@@ -13,3 +13,12 @@
 6,The Walking Algorithms,Arabic,Egypt,You’ve heard of zombies and the walking dead haven’t you? But have you ever heard of The Walking Algorithms? Meet Mangao a young programmer terrified of algorithms like BFS DFS and dynamic programming. Join him on his journey to take an algorithms course conquer the ghosts of algorithms and achieve victory!,200,10000,2,Horror,Adventure,3,Mostafa Mangao,Kareem Wisdom,Mahmoud Khater
 11/29/21, 12:00 AM
 150
+7,A Database Issue,Arabic,Egypt,Mangao has a database exam the next day after discussing the OOP project. The problem is he kept adding movies to the OOP project like this one and didn't study for the exam. Join his journey as he attempts to study ten database labs in less than a day!,40,50,2,Adventure,Thriller,6,Mostafa Mangao,Ibrahim Y,Ali Abhady42,Yusuf EL_OnePiecie,Hossam ELaraby,Ramadan No.1
+12/7/17, 12:00 AM
+110
+8,Freedom,Arabic,Egypt,The End is Near. All the signs have been shown and doomsday is approaching. It is time to free Palestine from the jews.,200,30000,1,Action,3,Mostafa Mangao,Ibrahim Y,Ali Abhady42
+1/1/25, 12:00 AM
+150
+9,Koshary or Pizza,Arabic,Egypt,Mangao is really hungry. He loves koshary the Egyptian dish as much as he loves pizza. Join him on a journey where he has to make the hardest decision: what will he eat tonight?,50,900,3,Thriller,Musical,Comedy,2,Mostafa Mangao,Ibrahim Y
+10/3/14, 12:00 AM
+90
