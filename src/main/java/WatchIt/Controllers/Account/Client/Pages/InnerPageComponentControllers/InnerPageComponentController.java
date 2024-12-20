@@ -36,10 +36,13 @@ public class InnerPageComponentController {
             } else if (content instanceof Series content){
                 vbox.getChildren().add(ClientView.HeadComponent(content).load());
                 vbox.getChildren().add(ClientView.DescriptionComponent(content.story).load());
-                List<Node> list;
+                List<Node> list,list1;
                 List<Episode> epo = DataBase.getInstance().episodesData.getDataByString(content.contentTitle,0);
+                list1 = DataObjectController.MakeNodeList(DataBase.getInstance().castMemberData.getDataByString(content.cast, 2));
+
                 list = DataObjectController.MakeNodeList(epo);
                 vbox.getChildren().add(ClientView.GridMake(list, "Episodes").load());
+                vbox.getChildren().add(ClientView.GridMake(list1, "Cast Members").load());
             }else{
                 vbox.getChildren().add(ClientView.HeadComponent(content).load());
                 vbox.getChildren().add(ClientView.MediaComponent(content).load());

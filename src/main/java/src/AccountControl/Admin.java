@@ -71,7 +71,7 @@ public class Admin extends Account {
         DataBase.getInstance().seriesData.addData(series);
     }
     public void addCast(CastMember castMember){
-        DataBase.getInstance().castMemberData.removeData(castMember);
+        DataBase.getInstance().castMemberData.addData(castMember);
     }
     public void addEpisode(Episode episode){
         DataBase.getInstance().episodesData.addData(episode);

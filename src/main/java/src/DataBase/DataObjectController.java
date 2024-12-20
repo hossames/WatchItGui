@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -77,7 +78,7 @@ public class DataObjectController <T> {
         try {
             FileOutputStream fos = new FileOutputStream(file);
             for (T item : data) {
-                fos.write(item.toString().getBytes());
+                fos.write(item.toString().getBytes(StandardCharsets.UTF_8));
             }
         }catch (FileNotFoundException e){
             System.out.println("File not found "+file.getName());

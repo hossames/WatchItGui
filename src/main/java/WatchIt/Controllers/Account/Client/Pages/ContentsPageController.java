@@ -54,10 +54,10 @@ public class ContentsPageController extends Searchable {
     String s;
 
     public void initialize() {
-        String[] languages = new String[]{"Any","English","France","Spanish","Arabic","Russian","Japanese","German","Mandarin Chinese","Hindi","Portuguese"};
+        String[] languages = new String[]{"Any","Arabic","English","France","Spanish","Arabic","Russian","Japanese","German","Mandarin Chinese","Hindi","Portuguese"};
         Language.getItems().addAll(languages);
         Language.getSelectionModel().selectFirst();
-        String[] countries = {"Any","United States", "India", "China", "France", "United Kingdom", "Japan", "Germany", "Spain", "Brazil", "Canada", "Russia"};
+        String[] countries = {"Any","Egypt","United States", "India", "China", "France", "United Kingdom", "Japan", "Germany", "Spain", "Brazil", "Canada", "Russia"};
         Country.getItems().addAll(countries);
         Country.getSelectionModel().selectFirst();
         Year.getItems().add("Any");

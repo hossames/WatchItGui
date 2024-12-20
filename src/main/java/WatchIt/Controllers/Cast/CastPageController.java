@@ -6,16 +6,22 @@ import javafx.scene.Node;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import src.Cast.CastMember;
 
+import java.awt.*;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.Date;
 import java.util.List;
 
 public class CastPageController {
     CastMember castMember;
     List<Node> nodeList;
+    Desktop desktop= Desktop.getDesktop();
     public CastPageController(CastMember castMember, List<Node> nodeList){
         this.castMember=castMember;
         this.nodeList= nodeList;
@@ -55,6 +61,13 @@ public class CastPageController {
         SetToGrid();
         Container.widthProperty().addListener((observable, oldValue, newValue) -> {
             SetToGrid();
+        });
+        socialMediaLink.addEventHandler(MouseEvent.MOUSE_CLICKED , (MouseEvent event)->{
+            try {
+                desktop.browse(new URI(socialMediaLink.getText()));
+            } catch (IOException | URISyntaxException e) {
+                System.out.println("link not available");
+            }
         });
     }
     public void SetToGrid(){
