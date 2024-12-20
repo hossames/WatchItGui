@@ -6,8 +6,6 @@ import src.AccountControl.*;
 import src.Cast.*;
 import src.Subscription.*;
 
-import java.util.*;
-
 /**
  * DataBase Administration Class that is built Using SingleTone Design Pattern
  */
@@ -37,7 +35,7 @@ public class DataBase {
     public DataObjectController<Movie> moviesData;
     public DataObjectController<Series> seriesData;
     public DataObjectController<Episode> episodesData;
-    public static DataObjectController<Content> contentsData = new DataObjectController<Content>('c');
+    public static DataObjectController<Content> contentsData = new DataObjectController<>('c');
 
     //Cast Data
     public DataObjectController<CastMember>castMemberData;
@@ -56,18 +54,18 @@ public class DataBase {
      */
     private DataBase() {
         // Loading Accounts
-        usersData = new DataObjectController<User>("./users.txt","nslw5SWw3oSWSiw2ndW",'U');
-        adminsData = new DataObjectController<Admin>("./admins.txt","nslw6SW",'A');
+        usersData = new DataObjectController<>(Models.USER.getFilePath(),Models.USER.getCode(),Models.USER.getType().charAt(0));
+        adminsData = new DataObjectController<>(Models.ADMIN.getFilePath(),Models.ADMIN.getCode(),Models.ADMIN.getType().charAt(0));
         // Loading Contents
-        moviesData = new DataObjectController<Movie>("./movies.txt","nslw4SWiioSoSndni",'M');
-        seriesData = new DataObjectController<Series>("./series.txt","nslw4SWiioSoSndnsiind",'S');
-        episodesData = new DataObjectController<Episode>("./episodes.txt","nslSSiind",'E');
+        moviesData = new DataObjectController<>(Models.MOVIE.getFilePath(),Models.MOVIE.getCode(),Models.MOVIE.getType().charAt(0));
+        seriesData = new DataObjectController<>(Models.SERIES.getFilePath(),Models.SERIES.getCode(),Models.SERIES.getType().charAt(0));
+        episodesData = new DataObjectController<>(Models.EPISODE.getFilePath(),Models.EPISODE.getCode(),Models.EPISODE.getType().charAt(0));
         // Loading Cast
-        castMemberData = new DataObjectController<CastMember>("./CastMembers.txt","nslw6SWoSnd",'C');
+        castMemberData = new DataObjectController<>(Models.CAST.getFilePath(),Models.CAST.getCode(),Models.CAST.getType().charAt(0));
         // Loading Credit Cards
-        creditData = new DataObjectController<CreditCard>("./creditCard.txt","nsw4SWnd",'R');
+        creditData = new DataObjectController<>(Models.CREDIT_CARD.getFilePath(),Models.CREDIT_CARD.getCode(),Models.CREDIT_CARD.getType().charAt(0));
         //Fav
-        Favorites = new DataObjectController<>("./Favorites.txt","nsSii",'F');
+        Favorites = new DataObjectController<>(Models.FAVORITES.getFilePath(),Models.FAVORITES.getCode(),Models.FAVORITES.getType().charAt(0));
     }
 
     /**
@@ -77,7 +75,7 @@ public class DataBase {
      */
     public static DataBase getInstance() {
         if(dataBase == null) {
-            watchRecordData = new DataObjectController<WatchRecord>("./watchRecord.txt","nslfSnd",'W');
+            watchRecordData = new DataObjectController<>(Models.WATCH_RECORDS.getFilePath(),Models.WATCH_RECORDS.getCode(),Models.WATCH_RECORDS.getType().charAt(0));
             dataBase = new DataBase();
             return dataBase;
         }

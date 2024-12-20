@@ -35,7 +35,6 @@ public class HLineController {
             if(!View.getChildren().isEmpty()&&(int)((AnchorPane)View.getChildren().getFirst()).getWidth()>0) {
                 Width = nodeList.size() - newValue.intValue() / ((int) ((AnchorPane) View.getChildren().getFirst()).getWidth()+20);
                 Width = 1 / Width;
-                System.out.println(Width);
             }
         });
 
@@ -46,8 +45,7 @@ public class HLineController {
         if(Container.getHvalue()+Width<0.99)
             Container.setHvalue(Container.getHvalue()+Width);
         else
-            Container.setHvalue(1);
-        System.out.println(Container.getHvalue());
+            Container.setHvalue(1);;
     }
 
     @FXML
