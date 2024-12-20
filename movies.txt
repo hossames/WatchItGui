@@ -22,3 +22,15 @@
 9,Koshary or Pizza,Arabic,Egypt,Mangao is really hungry. He loves koshary the Egyptian dish as much as he loves pizza. Join him on a journey where he has to make the hardest decision: what will he eat tonight?,50,900,3,Thriller,Musical,Comedy,2,Mostafa Mangao,Ibrahim Y
 10/3/14, 12:00 AM
 90
+10,The Fall of Pep,English,England,We all know the legendary football coach Pep Guardiola. After dominating the game Pep now faces a shocking downturn—he has won only 1 out of his last 11 matches! Facing the threat of being sacked and relentless mockery from rival Liverpool fans Pep embarks on a journey to restore his reputation and prove why he's one of the best.,30,70,2,Documentary,Drama,1,Ramadan No.1
+12/6/14, 12:00 AM
+180
+11,First Love,Arabic,United States,It has been 12 years since Mangao met her and he still can't move on. He's trapped in the memory of his first love unable to love anyone else. Even though he knows she wasn’t the right fit for him his emotions control him and the past refuses to let go.,20,254,2,Romance,Drama,2,Mostafa Mangao,Nami Neko
+12/2/12, 12:00 AM
+150
+12,Tiger,English,France,Join us in an exclusive look behind the scenes of the tiger's life—how they eat sleep hunt and dominate the wild. Experience the breathtaking documentary that won the Oscar for Best Documentary in 2024.,10,8,2,Documentary,Thriller,1,Hoss EL_Tiger
+12/14/24, 12:00 AM
+100
+13,Old Hobby,Arabic,Egypt,Mangao used to love movies and series. He’d watch them all night every night developing a sharp movie critic’s sense and rating every film. But now as a busy computer science student he barely has time to enjoy a single movie. Join Mangao in his journey to either revive this cherished hobby or leave it behind for good.,30,490,2,Animation,Musical,1,Mostafa Mangao
+7/9/22, 12:00 AM
+100

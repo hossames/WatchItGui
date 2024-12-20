@@ -1,6 +1,6 @@
 4,Luffy,Mogiwara,Male,Japanese,Mogi@Wara.insta,Actor,3,One Piece Red,One Piece,One Piece Red
 11/24/04, 12:00 AM
-5,Nami,Neko,Female,Japanese,Neko@insta,Actor,3,One Piece Red,One Piece,One Piece Red
+5,Nami,Neko,Female,Japanese,Neko@insta,Actor,4,One Piece Red,One Piece,One Piece Red,First Love
 11/20/03, 12:00 AM
 6,Zoro,Roronoa,Male,Japanese,Zoro@insta,Actor,3,One Piece Red,One Piece,One Piece Red
 8/11/04, 12:00 AM
@@ -28,13 +28,13 @@
 5/25/04, 12:00 AM
 18,Yusuf,Chinese,Male,Egyption,Chinese@insta,Actor,1,Once an ACMer
 8/11/04, 12:00 AM
-20,Ramadan,No.1,Male,Egyption,No.1@insta,Actor,3,Mentor Dreem,OOP,FCIS
+20,Ramadan,No.1,Male,Egyption,No.1@insta,Actor,4,Mentor Dreem,OOP,FCIS,The Fall of Pep
 8/24/05, 12:00 AM
 21,Hossam,ELaraby,Male,Egyption,arabic@insta,Actor,2,Mentor Dreem,OOP
 5/15/05, 12:00 AM
 22,Hess,ELtiger,Male,Egyption,tiger@insta,Actor,2,OOP,FCIS
 10/20/05, 12:00 AM
-23,Mostafa,Mangao,Male,Egyption,Manga@insta,Actor,3,OOP,It's Mango Time,Freedom
+23,Mostafa,Mangao,Male,Egyption,Manga@insta,Actor,5,OOP,It's Mango Time,Freedom,First Love,Old Hobby
 5/23/05, 12:00 AM
 24,Ibrahim,Y,Male,Egyption,Y@insta,Actor,3,Mentor Dreem,OOP,Freedom
 5/23/05, 12:00 AM
@@ -42,3 +42,7 @@
 5/19/04, 12:00 AM
 26,Yusuf,EL_OnePiecie,Male,Egyption,EL_OnePiecie@insta,Director,2,OOP,FCIS
 11/24/05, 12:00 AM
+27,Anas,EL_METRQ3,Male,Egypt,2@insta,Actor,0
+12/1/05, 12:00 AM
+28,Hoss,EL_Tiger,Male,Egypt,3@insta,Director,1,Tiger
+12/5/03, 12:00 AM
