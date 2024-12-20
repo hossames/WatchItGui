@@ -27,23 +27,14 @@ public class Subscription {
         endDate.setYear(startDate.getYear()+1);
     }
     //getters
-    public long getUserId() {
-        return userId;
-    }
     public String getPlan() {
         return plans[type];
-    }
-    public int getPrice() {
-        return prices[type];
     }
     public Date getStartDate() {
         return startDate;
     }
     public Date getEndDate() {
         return endDate;
-    }
-    public String getDescription() {
-        return descriptions[type];
     }
     public boolean isExpired() {
         return endDate.before(new Date());

@@ -9,7 +9,6 @@ import java.util.List;
 public class RecommendationEngine {
     private  List<String> favouriteGenres;
     private final Content[] content;
-    public Content[] trending;
 
     public RecommendationEngine() {
         this.favouriteGenres = ((User)DataBase.getInstance().CurrentUser).getFavoriteGenres();
