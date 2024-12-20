@@ -264,23 +264,6 @@ public class DataObjectController <T> {
         }
     }
 
-    /**
-     * Displays Array of module Type
-     * @param displayedData data you want Display
-     */
-    public void Display(T[] displayedData){
-        boolean ok = true;
-        for (T item : displayedData) {
-            DataObject DO = (DataObject)item;
-            if(ok) {
-                DO.DisplayHeadLine();
-                ok = false;
-            }
-            DO.DisplayLine();
-        }
-        if(ok)
-            System.out.println("There is no Data");
-    }
     public List<DataObject> ConvertListDataObject(){
         List<DataObject>list=new ArrayList<>();
         for(T item : data){

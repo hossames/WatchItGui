@@ -66,7 +66,11 @@ public class Account extends DataObject {
     public void setLastName(String lastName){
         this.lastName=lastName;
     }
+    public String getEmail(){
+        return this.email;
+    }
     //--------------------------------------DataBase Methods-----------------------------------------//
+
     @Override
     public boolean equals(Object obj) {
         if(obj instanceof Account a) {
@@ -74,6 +78,7 @@ public class Account extends DataObject {
         }
         return false;
     }
+
     @Override
     public String getName(int op){
         if(op==0)
@@ -86,19 +91,18 @@ public class Account extends DataObject {
             return firstName + " " + lastName;
         return email;
     }
-    @Override
-    public String getEmail(){
-        return this.email;
-    }
+
     @Override
     public Long getId(int op){
         return this.ID;
     }
+
     @Override
     public String toString(){
         return  ID.toString() + "," + userName + "," + firstName + "," + lastName + "," + email
                 + "," + password + "," + FavoriteName + System.lineSeparator();
     }
+
     @Override
     public Node getNode(){
         try{
