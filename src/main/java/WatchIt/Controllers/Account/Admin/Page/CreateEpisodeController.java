@@ -2,7 +2,6 @@ package WatchIt.Controllers.Account.Admin.Page;
 
 import WatchIt.Models.Model;
 import WatchIt.Views.AdminView;
-import WatchIt.Views.MainView;
 import javafx.collections.FXCollections;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
@@ -22,7 +21,7 @@ public class CreateEpisodeController {
     public TextField Duration;
     public TextField EpisodeNumber;
     public TextField EpisodeTitle;
-    public ChoiceBox<String> SeriesName;
+    public ComboBox<String> SeriesName;
     public DatePicker dateOfProduction;
     List<String> Converter(){
         List<String> list1 = new ArrayList<>();

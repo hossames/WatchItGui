@@ -2,7 +2,7 @@
 
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
@@ -23,7 +23,7 @@
       <TextArea fx:id="Story" onKeyTyped="#GoToNext" prefHeight="90.0" prefWidth="328.0" promptText="Story" />
       <HBox alignment="CENTER" prefHeight="31.0" prefWidth="378.0" spacing="10.0">
          <children>
-            <ChoiceBox fx:id="Genres" prefHeight="26.0" prefWidth="144.0" />
+            <ComboBox fx:id="Genres" prefWidth="150.0" />
             <Button fx:id="AddGenre" mnemonicParsing="false" onMouseClicked="#Add" prefHeight="31.0" prefWidth="176.0" style="-fx-background-color: #6600ff;" styleClass="Add_Button" text="Add Genre">
                <effect>
                   <DropShadow />
@@ -33,7 +33,7 @@
       </HBox>
       <HBox spacing="10.0">
          <children>
-            <ChoiceBox fx:id="CastMembers" prefHeight="26.0" prefWidth="144.0" />
+            <ComboBox fx:id="CastMembers" prefWidth="150.0" />
             <Button fx:id="AddCastMember" mnemonicParsing="false" onMouseClicked="#Add" prefHeight="31.0" prefWidth="177.0" style="-fx-background-color: #6600ff;" text="Add CastMember">
                <effect>
                   <DropShadow />

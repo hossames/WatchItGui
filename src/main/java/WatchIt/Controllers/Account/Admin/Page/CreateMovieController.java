@@ -19,11 +19,11 @@ import java.util.List;
 
 public class CreateMovieController {
     public Button AddGenre;
-    public ChoiceBox<String> CastMembers;
+    public ComboBox<String> CastMembers;
     public TextField ContentTitle,Duration;
     public TextField Country;
     public TextArea Story;
-    public ChoiceBox<String> Genres;
+    public ComboBox<String> Genres;
     public TextField Language;
     public TextField Budget;
     public TextField Revenue;
