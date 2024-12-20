@@ -45,15 +45,6 @@ public class Account extends DataObject {
         cnt = Math.max(cnt,id+1);
     }
     public String getFavoriteName(){ return this.FavoriteName;}
-    public String getUserName() {
-        return userName;
-    }
-    public String getFirstName() {
-        return firstName;
-    }
-    public String getLastName() {
-        return lastName;
-    }
     public String getPassword() {
         return password;
     }

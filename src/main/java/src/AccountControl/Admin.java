@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Admin extends Account {
-    public static long accNum = 20,Profit=20000;
     public Admin(String userName,String firstName,String lastName,String email,String password,String FavoriteName) {
         super(userName,firstName,lastName,email,password,FavoriteName);
     }
@@ -20,32 +19,6 @@ public class Admin extends Account {
     public Admin(Account account) {
         super(account);
     }
-    public void editUser(long userID , User user){
-        DataObjectController<User> data= DataBase.getInstance().usersData;
-        data.removeData(userID,0);
-        data.addData(user);
-    }
-    public void deleteUser(long userID){
-        DataObjectController<User>data=DataBase.getInstance().usersData;
-        data.removeData(userID,0);
-    }
-    public void addMovie(Movie movie){
-        DataObjectController<Movie> data = DataBase.getInstance().moviesData;
-        data.addData(movie);
-    }
-    public void addSeries(Series series){
-        DataObjectController<Series> data = DataBase.getInstance().seriesData;
-        data.addData(series);
-    }
-    public void deleteMovie(String movie){
-        DataObjectController<Movie> data = DataBase.getInstance().moviesData;
-        data.removeData(movie,0);
-    }
-    public void deleteSeries(String series){
-        DataObjectController<Series> data = DataBase.getInstance().seriesData;
-        data.removeData(series,0);
-    }
-    // episode is not done yet
     public static long calculateRevenue(){
         DataObjectController<User>data=DataBase.getInstance().usersData;
         long revenue = 0, numOfBasic = 0 , numOfStandard = 0, numOfPremium = 0;

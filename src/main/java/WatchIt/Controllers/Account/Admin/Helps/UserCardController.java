@@ -33,8 +33,8 @@ public class UserCardController {
 
     public void initialize() {
         Email.setText(account.getEmail());
-        FirstName.setText(account.getFirstName());
-        LastName.setText(account.getLastName());
+        FirstName.setText(account.getName(1));
+        LastName.setText(account.getName(2));
         Password.setText(account.getPassword());
         if(account instanceof Admin) {
             Rule.setText("Admin");
