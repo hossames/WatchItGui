@@ -46,10 +46,9 @@ public class Content extends DataObject implements Rateable {
         }catch (Exception e){
             poster = new Image(Application.class.getResourceAsStream("/Images/film.jpg"));
         }
-        DataBase.getInstance().castMemberData.getDataByString(cast,2).stream().forEach(item->{
-            item.joinContent(contentTitle);
-        });
-
+        for(var castMember : DataBase.getInstance().castMemberData.getDataByString(cast,2)) {
+            castMember.joinContent(contentTitle);
+        }
     }
     public Content(Long Id,String contentTitle,String language, String country,String Story,int budget, int revenue,List<String> genres,List<String>CastMembers,Date date){
         this.contentID = Id;
