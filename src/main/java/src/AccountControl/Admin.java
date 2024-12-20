@@ -1,5 +1,7 @@
 package src.AccountControl;
 
+import src.Cast.CastMember;
+import src.ContentControl.Episode;
 import src.DataBase.DataBase;
 import src.DataBase.DataObjectController;
 import src.Subscription.Subscription;
@@ -61,6 +63,37 @@ public class Admin extends Account {
         l.add(numOfStandard);
         l.add(numOfPremium);
         return l;
+    }
+    public void addMovie(Movie movie){
+        DataBase.getInstance().moviesData.addData(movie);
+    }
+    public void addSeries(Series series){
+        DataBase.getInstance().seriesData.addData(series);
+    }
+    public void addCast(CastMember castMember){
+        DataBase.getInstance().castMemberData.removeData(castMember);
+    }
+    public void addEpisode(Episode episode){
+        DataBase.getInstance().episodesData.addData(episode);
+    }
+    public void removeMovie(Movie movie){
+        DataBase.getInstance().moviesData.removeData(movie);
+    }
+    public void removeSeries(Series series){
+        DataBase.getInstance().seriesData.removeData(series);
+    }
+    public void removeEpisode(Episode episode){
+        DataBase.getInstance().episodesData.removeData(episode);
+    }
+    public void removeCast(CastMember cast){
+        DataBase.getInstance().castMemberData.removeData(cast);
+    }
+    public void removeAccount(Account account){
+        if(account instanceof Admin admin){
+            DataBase.getInstance().adminsData.removeData(admin);
+        }else if(account instanceof  User user) {
+            DataBase.getInstance().usersData.removeData(user);
+        }
     }
     //--------------------------------------DataBase Methods-----------------------------------------//
     @Override

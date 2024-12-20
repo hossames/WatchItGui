@@ -7,6 +7,7 @@ import javafx.collections.FXCollections;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import src.AccountControl.Admin;
 import src.ContentControl.Episode;
 import src.ContentControl.Series;
 import src.DataBase.DataBase;
@@ -38,12 +39,12 @@ public class CreateEpisodeController {
         Episode episode = new Episode(SeriesName.getSelectionModel().getSelectedItem(),EpisodeTitle.getText(),
                 Integer.parseInt(EpisodeNumber.getText()),Integer.parseInt(Duration.getText()),
                 Date.from(dateOfProduction.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant()));
-        DataBase.getInstance().episodesData.addData(episode);
+        ((Admin)DataBase.getInstance().CurrentUser).addEpisode(episode);
         Model.getInstance().getViewFactory().Show(AdminView.AdminScene(AdminView.EpisodePage()));
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Create Episode");
         alert.setHeaderText(null);
-        alert.setContentText("Create Episode. Successful");
+        alert.setContentText("Create Episode Successful");
         alert.showAndWait();
     }
     public void GoToNext(KeyEvent keyEvent) {

@@ -9,6 +9,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
+import src.AccountControl.Admin;
 import src.Cast.CastMember;
 import src.DataBase.DataBase;
 
@@ -39,7 +40,7 @@ public class CreateCastController {
 
     public void Add() {
         CastMember castMember = new CastMember(FirstName.getText(),LastName.getText(),Gender.getText(),Nationality.getText(),SocialMediaLink.getText(),WorkType.getText(), new ArrayList<>(),Date.from(dateOfBirth.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant()));
-        DataBase.getInstance().castMemberData.addData(castMember);
+        ((Admin)DataBase.getInstance().CurrentUser).addCast(castMember);
         Model.getInstance().getViewFactory().Show(AdminView.AdminScene(AdminView.CastPage()));
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Create Cast");

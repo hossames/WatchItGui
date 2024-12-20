@@ -26,8 +26,14 @@ public class User extends Account {
     public List<String> getWatchLater() {
         return WatchLater;
     }
+    public void setWatchLater(String WatchLater) {
+        this.WatchLater.add(WatchLater);
+    }
     public List<String> getHistory() {
         return History;
+    }
+    public void Watched(String Content) {
+        this.History.add(Content);
     }
     public Subscription getSubscriptionPlan() {
         return subscriptionPlan;

@@ -50,12 +50,7 @@ public class UserCardController {
         alert.setContentText("Are you sure you want to delete this user?");
         alert.showAndWait();
         if(alert.getResult().getText().equals("OK")){
-            if(Rule.getText().equals("Admin")){
-                DataBase.getInstance().adminsData.removeData((Admin)account);
-            }
-            else{
-                DataBase.getInstance().usersData.removeData((User)account);
-            }
+            ((Admin)DataBase.getInstance().CurrentUser).removeAccount(account);
             Model.getInstance().getViewFactory().Show(AdminView.AdminScene(AdminView.UsersPage()));
         }
     }
