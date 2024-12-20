@@ -1,5 +1,7 @@
 package WatchIt.Controllers.Account.Client.Pages.Settings;
 
+import WatchIt.Models.Model;
+import WatchIt.Views.ClientView;
 import WatchIt.Views.MainView;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -63,6 +65,8 @@ public class SettingsController {
             } else if (account instanceof User user) {
                 DataBase.getInstance().usersData.removeData(user);
             }
+            Model.getInstance().getViewFactory().Show(MainView.LoginScene());
+            DataBase.getInstance().CurrentUser = null;
         }
     }
 
