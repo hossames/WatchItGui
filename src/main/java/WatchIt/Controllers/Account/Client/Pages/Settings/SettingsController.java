@@ -38,9 +38,9 @@ public class SettingsController {
     private VBox Container;
 
     public void initialize() {
-        FirstName.setText(account.getFirstName());
-        LastName.setText(account.getLastName());
-        UserName.setText(account.getUserName());
+        FirstName.setText(account.getName(1));
+        LastName.setText(account.getName(2));
+        UserName.setText(account.getName(0));
         Email.setText(account.getEmail());
         if(account instanceof Admin) {
             Container.getChildren().remove(UpgradeButton);
