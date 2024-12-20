@@ -46,3 +46,6 @@
 17,Al-Andalos,Arabic,Iraq,Set in the golden age of Islamic civilization in Al-Andalus (modern-day Spain) the story follows Ibn Harun a brilliant yet humble scientist and polymath who dedicates his life to knowledge and discovery. The movie weaves a narrative that is equal parts personal and historical showcasing the profound beauty and intellectual vibrancy of Al-Andalus.,66,2000,1,Historical,3,Mostafa Mangao,Mahmoud Khater,Amany Panda
 12/4/15, 12:00 AM
 130
+18,the wild robot,english,USA,After a shipwreck. an intelligent robot called Roz is stranded on an uninhabited island. To survive the harsh environment. Roz bonds with the island's animals and cares for an orphaned baby goose.,78000000,125000000,2,Animation,Science Fiction,5,chris sanders,kelsey mann,pedro pascal,kit connor,stephanie hsu
+12/1/24, 12:00 AM
+102

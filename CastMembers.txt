@@ -52,3 +52,13 @@
 12/1/05, 12:00 AM
 31,Hoss,EL_Tiger,Male,Egypt,3@insta,Director,1,Tiger
 12/5/03, 12:00 AM
+32,chris,sanders,Male,American,https://www.instagram.com/chrissandersart/,Director,1,the wild robot
+6/30/66, 12:00 AM
+33,kelsey,mann,Female,American,https://en.wikipedia.org/wiki/Kelsey_Mann,Director,1,the wild robot
+2/29/68, 12:00 AM
+34,pedro,pascal,Female,Mexico,https://www.imdb.com/name/nm2143282/?ref_=ttfc_fc_cl_t1,Actor,1,the wild robot
+12/31/71, 12:00 AM
+35,kit,connor,Male,American,https://www.imdb.com/name/nm0050959/?ref_=ttfc_fc_cl_t2,Actor,1,the wild robot
+12/4/24, 12:00 AM
+36,stephanie,hsu,Female,American,https://en.wikipedia.org/wiki/Stephanie_Hsu,Actor,1,the wild robot
+10/31/76, 12:00 AM
