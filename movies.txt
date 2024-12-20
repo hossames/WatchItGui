@@ -37,9 +37,12 @@
 14,Once An ACMer,Arabic,Egypt,Once there was a strong ACMer but now he is misrable,100,99,4,Action,Adventure,Historical,War,7,Mahmoud Khater,Yahia Joonyou,Kareem Wisdom,Kareem Zombie,Amany Panda,Yusuf Chinese,Yusuf EL_OnePiecie
 4/20/23, 12:00 AM
 198
-15,Mentor Train,Arabic,Egypt,Kanoo hayeb2oo mentors bas fi HR,182000,193981,3,Comedy,War,Mystery,5,Yahia Joonyou,Ramadam No.1,Hoss ELaraby,Ibrahim Y,Ali Abhady42
+15,Mentor Train,Arabic,Egypt,A group of passionate and excited computer science students dream of becoming mentors in ACM the student activity responsible for problem-solving training. However the HR department has different plans and stands in the way of making their dream a reality.,182000,193981,3,Comedy,War,Mystery,5,Yahia Joonyou,Ramadam No.1,Hoss ELaraby,Ibrahim Y,Ali Abhady42
 8/19/20, 12:00 AM
 129
-16,OOP,Java,Intellij,A project,123,234,2,Action,Documentary,7,Ramadam No.1,Hoss ELaraby,Hess ELtiger,Mostafa Mangao,Ibrahim Y,Ali Abhady42,Yusuf EL_OnePiecie
-9/22/21, 12:00 AM
-98
+17,A New Future,Germany,German,In World War II a white Egyptian soldier joins the German army with a secret mission: to dismantle them from the inside and pave the way for a better future.,70,120,3,Historical,War,Mystery,3,Yusuf Chinese,Yusuf EL_OnePiecie,Ramadan No.1
+12/2/24, 12:00 AM
+130
+18,Al-Andalos,Arabic,Irag,During the golden age of the Islamic Empire when they ruled Spain and Portugal under the name of Al-Andalos a young scientist discovers groundbreaking sciences. Amidst the beauty of Islamic architecture and flourishing culture he makes history to help his country rise to greatness.,126,249,2,Historical,Adventure,4,Anas EL_METRQ3,Amany Panda,Mahmoud Khater,Ali Abhady42
+12/5/08, 12:00 AM
+140
