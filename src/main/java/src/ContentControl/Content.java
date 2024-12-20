@@ -41,12 +41,14 @@ public class Content extends DataObject implements Rateable {
         this.revenue = revenue;
         this.story = Story;
         Rate_Sum = 0;
+        System.out.println("--------------------------------");
         try {
             poster = new Image(Application.class.getResourceAsStream("/Images/" + contentTitle + ".jpg"));
         }catch (Exception e){
             poster = new Image(Application.class.getResourceAsStream("/Images/film.jpg"));
         }
         for(var castMember : DataBase.getInstance().castMemberData.getDataByString(cast,2)) {
+            System.out.println(castMember);
             castMember.joinContent(contentTitle);
         }
     }

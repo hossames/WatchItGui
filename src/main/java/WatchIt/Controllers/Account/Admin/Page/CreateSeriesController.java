@@ -21,11 +21,11 @@ import java.util.List;
 
 public class CreateSeriesController {
     public Button Add,AddGenre,AddCastMember;
-    public ChoiceBox<String> CastMembers;
+    public ComboBox<String> CastMembers;
     public TextField ContentTitle,numberOfEpisodes;
     public TextField Country;
     public TextArea Story;
-    public ChoiceBox<String> Genres;
+    public ComboBox<String> Genres;
     public TextField Language;
     public TextField Budget;
     public TextField Revenue;
