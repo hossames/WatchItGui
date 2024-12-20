@@ -13,3 +13,7 @@
 6,The Walking Algorithms,Arabic,Egypt,You’ve heard of zombies and the walking dead haven’t you? But have you ever heard of The Walking Algorithms? Meet Mangao a young programmer terrified of algorithms like BFS DFS and dynamic programming. Join him on his journey to take an algorithms course conquer the ghosts of algorithms and achieve victory!,200,10000,2,Horror,Adventure,3,Mostafa Mangao,Kareem Wisdom,Mahmoud Khater
 11/29/21, 12:00 AM
 150
+7,odksf,dlkf,dls,ldsf
+,100,100,1,War,1,Hossam ELaraby
+1/1/24, 12:00 AM
+10
