@@ -60,10 +60,13 @@ public class CreateMovieController {
                 Date.from(dateOfProduction.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant()));
         DataBase.getInstance().moviesData.addData(movie);
         Model.getInstance().getViewFactory().Show(AdminView.AdminScene(AdminView.MoviesPage()));
+        for(var castmember : DataBase.getInstance().castMemberData.getDataByString(castmembers,2)){
+            castmember.joinContent(ContentTitle.getText());
+        }
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Create Cast");
+        alert.setTitle("Create Movie");
         alert.setHeaderText(null);
-        alert.setContentText("Create Cast Successful");
+        alert.setContentText("Create Movie Successful");
         alert.showAndWait();
     }
     public void GoToNext(KeyEvent keyEvent) {

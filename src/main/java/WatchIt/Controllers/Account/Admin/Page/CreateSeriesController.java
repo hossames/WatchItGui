@@ -65,10 +65,13 @@ public class CreateSeriesController {
                 Date.from(LastAirDate.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant()));
         DataBase.getInstance().seriesData.addData(series);
         Model.getInstance().getViewFactory().Show(AdminView.AdminScene(AdminView.SeriesPage()));
+        for(var castmember : DataBase.getInstance().castMemberData.getDataByString(castmembers,2)){
+            castmember.joinContent(ContentTitle.getText());
+        }
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Create Cast");
+        alert.setTitle("Create series");
         alert.setHeaderText(null);
-        alert.setContentText("Create Cast Successful");
+        alert.setContentText("Create Series Successful");
         alert.showAndWait();
     }
     public void GoToNext(KeyEvent keyEvent) {
