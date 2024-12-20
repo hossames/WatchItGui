@@ -66,9 +66,9 @@ public class CreateSeriesController {
         DataBase.getInstance().seriesData.addData(series);
         Model.getInstance().getViewFactory().Show(AdminView.AdminScene(AdminView.SeriesPage()));
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Create Cast");
+        alert.setTitle("Create series");
         alert.setHeaderText(null);
-        alert.setContentText("Create Cast Successful");
+        alert.setContentText("Create Series Successful");
         alert.showAndWait();
     }
     public void GoToNext(KeyEvent keyEvent) {

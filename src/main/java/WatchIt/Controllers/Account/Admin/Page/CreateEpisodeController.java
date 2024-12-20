@@ -41,9 +41,9 @@ public class CreateEpisodeController {
         DataBase.getInstance().episodesData.addData(episode);
         Model.getInstance().getViewFactory().Show(AdminView.AdminScene(AdminView.EpisodePage()));
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Create Cast");
+        alert.setTitle("Create Episode");
         alert.setHeaderText(null);
-        alert.setContentText("Create Cast Successful");
+        alert.setContentText("Create Episode. Successful");
         alert.showAndWait();
     }
     public void GoToNext(KeyEvent keyEvent) {

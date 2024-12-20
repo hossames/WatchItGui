@@ -1,12 +1,45 @@
 1,One Piece Red,Japanese,Japan,Luffy 3ammak,10000,999999,4,Action,Adventure,Comedy,Animation,5,Luffy Mogiwara,Nami Neko,Zoro Roronoa,Sanji Cook,Oda Ichiro
 9/15/21, 12:00 AM
 148
-2,Once An ACMer,Arabic,Egypt,Once there was a strong ACMer but now he is misrable,100,99,4,Action,Adventure,Historical,War,7,Mahmoud Khater,Yahia Joonyou,Kareem Wisdom,Kareem Zombie,Amany Panda,Yusuf Chinese,Yusuf EL_OnePiecie
+2,It's Mango Time,Arabic,Egypt,Mangao is a smart problem solver. Every time he wants to solve problems on Codeforces; he says the magic words "It's mango time!" and starts solving. But now he can't say the words anymore for unknown reasons. Join him on the journey to discover why he can't use the magic words anymore and help him become the best competitive programmer in the world!,100,200,1,Science Fiction,1,Mostafa Mangao
+12/6/24, 12:00 AM
+120
+3,Empty Soul,Arabic,Egypt,A lonely college student who always feels empty inside and isolated. struggling with a constant sense that something is missing. He finds himself falling in love with every girl he sees yet he is unable to form a lasting connection or marry anyone.,20,1000,2,Romance,Drama,2,Mostafa Mangao,Ali Abhady42
+12/9/24, 12:00 AM
+120
+5,Grandnewbie,Arabic,Egypt,He’s only 8 points away—just 8—from finally turning green. Will this be his moment of glory? Or is he about to watch the curve nosedive yet again? It’s the story of a guy who started as a wide-eyed newbie dreaming of moving up the ranks. And then came that one div... you know the one that ruined everything. Classic.,5,50,2,Thriller,Drama,1,Ali Abhady42
+12/8/24, 12:00 AM
+90
+6,The Walking Algorithms,Arabic,Egypt,You’ve heard of zombies and the walking dead haven’t you? But have you ever heard of The Walking Algorithms? Meet Mangao a young programmer terrified of algorithms like BFS DFS and dynamic programming. Join him on his journey to take an algorithms course conquer the ghosts of algorithms and achieve victory!,200,10000,2,Horror,Adventure,3,Mostafa Mangao,Kareem Wisdom,Mahmoud Khater
+11/29/21, 12:00 AM
+150
+7,A Database Issue,Arabic,Egypt,Mangao has a database exam the next day after discussing the OOP project. The problem is he kept adding movies to the OOP project like this one and didn't study for the exam. Join his journey as he attempts to study ten database labs in less than a day!,40,50,2,Adventure,Thriller,6,Mostafa Mangao,Ibrahim Y,Ali Abhady42,Yusuf EL_OnePiecie,Hossam ELaraby,Ramadan No.1
+12/7/17, 12:00 AM
+110
+8,Freedom,Arabic,Egypt,The End is Near. All the signs have been shown and doomsday is approaching. It is time to free Palestine from the jews.,200,30000,1,Action,3,Mostafa Mangao,Ibrahim Y,Ali Abhady42
+1/1/25, 12:00 AM
+150
+9,Koshary or Pizza,Arabic,Egypt,Mangao is really hungry. He loves koshary the Egyptian dish as much as he loves pizza. Join him on a journey where he has to make the hardest decision: what will he eat tonight?,50,900,3,Thriller,Musical,Comedy,2,Mostafa Mangao,Ibrahim Y
+10/3/14, 12:00 AM
+90
+10,The Fall of Pep,English,England,We all know the legendary football coach Pep Guardiola. After dominating the game Pep now faces a shocking downturn—he has won only 1 out of his last 11 matches! Facing the threat of being sacked and relentless mockery from rival Liverpool fans Pep embarks on a journey to restore his reputation and prove why he's one of the best.,30,70,2,Documentary,Drama,1,Ramadan No.1
+12/6/14, 12:00 AM
+180
+11,First Love,Arabic,United States,It has been 12 years since Mangao met her and he still can't move on. He's trapped in the memory of his first love unable to love anyone else. Even though he knows she wasn’t the right fit for him his emotions control him and the past refuses to let go.,20,254,2,Romance,Drama,2,Mostafa Mangao,Nami Neko
+12/2/12, 12:00 AM
+150
+12,Tiger,English,France,Join us in an exclusive look behind the scenes of the tiger's life—how they eat sleep hunt and dominate the wild. Experience the breathtaking documentary that won the Oscar for Best Documentary in 2024.,10,8,2,Documentary,Thriller,1,Hoss EL_Tiger
+12/14/24, 12:00 AM
+100
+13,Old Hobby,Arabic,Egypt,Mangao used to love movies and series. He’d watch them all night every night developing a sharp movie critic’s sense and rating every film. But now as a busy computer science student he barely has time to enjoy a single movie. Join Mangao in his journey to either revive this cherished hobby or leave it behind for good.,30,490,2,Animation,Musical,1,Mostafa Mangao
+7/9/22, 12:00 AM
+100
+14,Once An ACMer,Arabic,Egypt,Once there was a strong ACMer but now he is misrable,100,99,4,Action,Adventure,Historical,War,7,Mahmoud Khater,Yahia Joonyou,Kareem Wisdom,Kareem Zombie,Amany Panda,Yusuf Chinese,Yusuf EL_OnePiecie
 4/20/23, 12:00 AM
 198
-3,Mentor Train,Arabic,Egypt,Kanoo hayeb2oo mentors bas fi HR,182000,193981,3,Comedy,War,Mystery,5,Yahia Joonyou,Ramadam No.1,Hoss ELaraby,Ibrahim Y,Ali Abhady42
+15,Mentor Train,Arabic,Egypt,Kanoo hayeb2oo mentors bas fi HR,182000,193981,3,Comedy,War,Mystery,5,Yahia Joonyou,Ramadam No.1,Hoss ELaraby,Ibrahim Y,Ali Abhady42
 8/19/20, 12:00 AM
 129
-4,OOP,Java,Intellij,A project,123,234,2,Action,Documentary,7,Ramadam No.1,Hoss ELaraby,Hess ELtiger,Mostafa Mangao,Ibrahim Y,Ali Abhady42,Yusuf EL_OnePiecie
+16,OOP,Java,Intellij,A project,123,234,2,Action,Documentary,7,Ramadam No.1,Hoss ELaraby,Hess ELtiger,Mostafa Mangao,Ibrahim Y,Ali Abhady42,Yusuf EL_OnePiecie
 9/22/21, 12:00 AM
 98

@@ -28,17 +28,21 @@
 5/25/04, 12:00 AM
 18,Yusuf,Chinese,Male,Egyption,Chinese@insta,Actor,2,Once an ACMer,Once An ACMer
 8/11/04, 12:00 AM
-20,Ramadam,No.1,Male,Egyption,No.1@insta,Actor,5,Mentor Dreem,OOP,FCIS,Mentor Train,OOP
+20,Ramadan,No.1,Male,Egyption,No.1@insta,Actor,4,Mentor Dreem,OOP,FCIS,The Fall of Pep
 8/24/05, 12:00 AM
-21,Hoss,ELaraby,Male,Egyption,arabic@insta,Actor,4,Mentor Dreem,OOP,Mentor Train,OOP
+21,Hossam,ELaraby,Male,Egyption,arabic@insta,Actor,2,Mentor Dreem,OOP
 5/15/05, 12:00 AM
 22,Hess,ELtiger,Male,Egyption,tiger@insta,Actor,3,OOP,FCIS,OOP
 10/20/05, 12:00 AM
-23,Mostafa,Mangao,Male,Egyption,Manga@insta,Actor,2,OOP,OOP
+23,Mostafa,Mangao,Male,Egyption,Manga@insta,Actor,5,OOP,It's Mango Time,Freedom,First Love,Old Hobby
 5/23/05, 12:00 AM
-24,Ibrahim,Y,Male,Egyption,Y@insta,Actor,4,Mentor Dreem,OOP,Mentor Train,OOP
+24,Ibrahim,Y,Male,Egyption,Y@insta,Actor,3,Mentor Dreem,OOP,Freedom
 5/23/05, 12:00 AM
-25,Ali,Abhady42,Male,Egyption,Abhady42@insta,Actor,4,Mentor Dreem,OOP,Mentor Train,OOP
+25,Ali,Abhady42,Male,Egyption,Abhady42@insta,Actor,4,Grandnewbie,Mentor Dreem,OOP,Freedom
 5/19/04, 12:00 AM
 26,Yusuf,EL_OnePiecie,Male,Egyption,EL_OnePiecie@insta,Director,4,OOP,FCIS,Once An ACMer,OOP
 11/24/05, 12:00 AM
+27,Anas,EL_METRQ3,Male,Egypt,2@insta,Actor,0
+12/1/05, 12:00 AM
+28,Hoss,EL_Tiger,Male,Egypt,3@insta,Director,1,Tiger
+12/5/03, 12:00 AM
