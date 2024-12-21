@@ -53,6 +53,17 @@ public class ContentsPageController extends Searchable {
 
     String s;
 
+    // pressed on search icon
+    public ContentsPageController(DataObjectController<? extends  DataObject> dataObjectController) {
+        this.dataObjectController = dataObjectController;
+    }
+
+    // pressed on any Genre
+    public ContentsPageController(DataObjectController<? extends  DataObject> dataObjectController,String s) {
+        this.dataObjectController = dataObjectController;
+        this.s = s;
+    }
+
     public void initialize() {
         String[] languages = new String[]{"Any","Arabic","English","France","Spanish","Arabic","Russian","Japanese","German","Mandarin Chinese","Hindi","Portuguese"};
         Language.getItems().addAll(languages);
@@ -61,7 +72,7 @@ public class ContentsPageController extends Searchable {
         Country.getItems().addAll(countries);
         Country.getSelectionModel().selectFirst();
         Year.getItems().add("Any");
-        for (int i = 1960 ; i<2025 ;i++){
+        for (int i = 1960; i<2025; i++){
             Year.getItems().add(String.valueOf(i));
         }
         Year.getSelectionModel().selectFirst();
@@ -89,6 +100,7 @@ public class ContentsPageController extends Searchable {
             ApplyFilters();
         }
     }
+
     public void genreFilterRequest(String s){
         Genre.getSelectionModel().select(s);
     }
@@ -154,11 +166,5 @@ public class ContentsPageController extends Searchable {
         }
         SetToGrid();
     }
-    public ContentsPageController(DataObjectController<? extends  DataObject> dataObjectController) {
-        this.dataObjectController = dataObjectController;
-    }
-    public ContentsPageController(DataObjectController<? extends  DataObject> dataObjectController,String s) {
-        this.dataObjectController = dataObjectController;
-        this.s = s;
-    }
+
 }
