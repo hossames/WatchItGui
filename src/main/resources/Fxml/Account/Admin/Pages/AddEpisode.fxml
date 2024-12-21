@@ -2,7 +2,7 @@
 
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -21,7 +21,7 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-              <ChoiceBox fx:id="SeriesName" prefHeight="26.0" prefWidth="144.0" />
+            <ComboBox fx:id="SeriesName" prefWidth="150.0" />
          </children>
       </HBox>
         <TextField fx:id="EpisodeTitle" onKeyTyped="#GoToNext" prefHeight="30.0" prefWidth="274.0" promptText="Episode Title" style="-fx-text-fill: black !important;" />

@@ -7,30 +7,30 @@ import javafx.scene.image.Image;
 import src.AccountControl.User;
 import src.DataBase.DataBase;
 import src.DataBase.DataObject;
-
-import java.io.IOException;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 public class Content extends DataObject implements Rateable {
-    public Long contentID;
-    public String contentTitle;
-    public String story;
-    public Date datePublished;
-    public static long cnt = (long)1;
-    public List<String> cast;
+    public final Long contentID;
+    public final String contentTitle;
+    public final String story;
+    public final Date datePublished;
+    public static long cnt = 1;
+    public final List<String> cast;
     public Image poster;
     public Node node;
-    public List<String>genres;
-    public String language;
-    public String country;
-    public int budget;
-    public int revenue;
-    public long RateCounter;
-    public long Rate_Sum,Viewers;
+    public final List<String>genres;
+    public final String language;
+    public final String country;
+    public final int budget;
+    public final int revenue;
+    private long RateCounter;
+    private long Rate_Sum;
+    public long Viewers;
     public Content(String contentTitle,String language, String country,String Story,int budget, int revenue,List<String> genres,List<String>CastMembers,Date date){
-        this.contentID = (Long) cnt++;
+        this.contentID =  cnt++;
         this.contentTitle = contentTitle;
         datePublished = date;
         this.cast = CastMembers;
@@ -42,9 +42,9 @@ public class Content extends DataObject implements Rateable {
         this.story = Story;
         Rate_Sum = 0;
         try {
-            poster = new Image(Application.class.getResourceAsStream("/Images/" + contentTitle + ".jpg"));
+            poster = new Image(Objects.requireNonNull(Application.class.getResourceAsStream("/Images/" + contentTitle + ".jpg")));
         }catch (Exception e){
-            poster = new Image(Application.class.getResourceAsStream("/Images/film.jpg"));
+            poster = new Image(Objects.requireNonNull(Application.class.getResourceAsStream("/Images/film.jpg")));
         }
         for(var castMember : DataBase.getInstance().castMemberData.getDataByString(cast,2)) {
             castMember.joinContent(contentTitle);
@@ -64,9 +64,9 @@ public class Content extends DataObject implements Rateable {
         this.revenue = revenue;
         Rate_Sum = 0;
         try {
-            poster = new Image(Application.class.getResourceAsStream("/Images/" + contentTitle + ".jpg"));
+            poster = new Image(Objects.requireNonNull(Application.class.getResourceAsStream("/Images/" + contentTitle + ".jpg")));
         }catch (Exception e){
-            poster = new Image(Application.class.getResourceAsStream("/Images/film.jpg"));
+            poster = new Image(Objects.requireNonNull(Application.class.getResourceAsStream("/Images/film.jpg")));
         }
         for(WatchRecord Record: DataBase.watchRecordData.getDataByString(contentTitle,0)) {
             if (Record.Rating != -1) {
@@ -80,7 +80,7 @@ public class Content extends DataObject implements Rateable {
     public void AddRate(float rate) {
         DataBase.watchRecordData.addData(new WatchRecord(DataBase.getInstance().CurrentUser.getId(0),rate, contentTitle, new Date()));
         if(rate!=-1) {
-            Rate_Sum += rate;
+            Rate_Sum += (long)rate;
             RateCounter++;
         }
     }
@@ -90,12 +90,12 @@ public class Content extends DataObject implements Rateable {
     }
 
     public void EditRate(float rate){
-        WatchRecord WatchRecordTemp = DataBase.watchRecordData.removeData(contentTitle+" "+Long.valueOf((long)DataBase.getInstance().CurrentUser.getId(0)).toString(),2).get(0);
+        WatchRecord WatchRecordTemp = DataBase.watchRecordData.removeData(contentTitle+" "+ DataBase.getInstance().CurrentUser.getId(0).toString(),2).getFirst();
         if(WatchRecordTemp.Rating != -1){
             Rate_Sum -= WatchRecordTemp.Rating;
         }
         WatchRecordTemp.Rating = (long) rate;
-        Rate_Sum += rate;
+        Rate_Sum += (long)rate;
         DataBase.watchRecordData.addData(WatchRecordTemp);
         System.out.println(WatchRecordTemp);
     }

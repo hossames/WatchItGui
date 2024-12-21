@@ -15,7 +15,7 @@ public class WatchRecord extends DataObject {
         this.Rating = (long) Rating;
         this.DateOfWatching = DateOfWatching;
         this.ContentTitle = Content;
-        this.UserId = (Long) UserId;
+        this.UserId =  UserId;
     }
     public WatchRecord(float Rating, String Content) {
         this.Rating = (long) Rating;

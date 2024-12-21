@@ -10,12 +10,13 @@ import src.DataBase.DataObject;
 
 import java.text.DateFormat;
 import java.util.Date;
+import java.util.Objects;
 
 public class Episode extends DataObject implements Rateable{
   // Variables
   private static Long cnt = (long)1;
-  private Long Id ;
-  private String SeriesName;
+  private final Long Id ;
+  private final String SeriesName;
   private final int episodeNumber;
   private final String episodeTitle;
   private final int duration;
@@ -30,9 +31,9 @@ public class Episode extends DataObject implements Rateable{
     this.releaseDate = releaseDate;
     this.SeriesName = SeriesName;
     try {
-      poster = new Image(Application.class.getResourceAsStream("/Images/" + SeriesName + ".jpg"));
+      poster = new Image(Objects.requireNonNull(Application.class.getResourceAsStream("/Images/" + SeriesName + ".jpg")));
     }catch (Exception e){
-      poster = new Image(Application.class.getResourceAsStream("/Images/film.jpg"));
+      poster = new Image(Objects.requireNonNull(Application.class.getResourceAsStream("/Images/film.jpg")));
     }
     Id = cnt++;
   }
@@ -45,9 +46,9 @@ public class Episode extends DataObject implements Rateable{
     this.SeriesName = SeriesName;
     this.Id = Id;
     try {
-      poster = new Image(Application.class.getResourceAsStream("/Images/" + SeriesName + ".jpg"));
+      poster = new Image(Objects.requireNonNull(Application.class.getResourceAsStream("/Images/" + SeriesName + ".jpg")));
     }catch (Exception e){
-      poster = new Image(Application.class.getResourceAsStream("/Images/film.jpg"));
+      poster = new Image(Objects.requireNonNull(Application.class.getResourceAsStream("/Images/film.jpg")));
     }
     cnt = Math.max(cnt,Id+1);
     InitRate();
@@ -55,23 +56,13 @@ public class Episode extends DataObject implements Rateable{
 
   // Getters & Setters
   public String getSeriesName() { return SeriesName; }
-  public int getEpisodeNumber(){
-    return this.episodeNumber;
-  }
-  public String getEpisodeTitle(){
-    return this.episodeTitle;
-  }
   public int getDuration(){
     return this.duration;
-  }
-  public Date getreleaseDate(){
-    return this.releaseDate;
   }
   public Image getImage(){return poster;}
 
   public void InitRate(){
     for(WatchRecord Record: DataBase.watchRecordData.getDataByString(getName(2),0)){
-      System.out.println(Record);
       Rate_Sum += Record.Rating;
       RateCounter++;
     }
@@ -80,20 +71,19 @@ public class Episode extends DataObject implements Rateable{
   public void AddRate(float rate) {
     DataBase.watchRecordData.addData(new WatchRecord(DataBase.getInstance().CurrentUser.getId(0),rate, getName(2), new Date()));
     RateCounter++;
-    Rate_Sum += rate;
+    Rate_Sum += (long)rate;
   }
 
   public void EditRate(float rate){
     WatchRecord WatchRecordTemp = DataBase.watchRecordData.removeData(getName(2)+" "+ DataBase.getInstance().CurrentUser.getId(0).toString(),2).getFirst();
     Rate_Sum -= WatchRecordTemp.Rating;
     WatchRecordTemp.Rating = (long) rate;
-    Rate_Sum += rate;
+    Rate_Sum += (long)rate;
     DataBase.watchRecordData.addData(WatchRecordTemp);
   }
 
   public long TotalRate(){
     try {
-      System.out.println(Rate_Sum);
       return (Rate_Sum/RateCounter);
     }catch (ArithmeticException e){
       return 0;
@@ -108,9 +98,8 @@ public class Episode extends DataObject implements Rateable{
   }
   @Override
   public boolean equals(Object o) {
-    if(o instanceof  Episode){
-      Episode ep = (Episode)o;
-      return ep.episodeTitle.equals(episodeTitle) && ep.episodeNumber == episodeNumber && ep.releaseDate.equals(releaseDate);
+    if(o instanceof Episode ep){
+        return ep.episodeTitle.equals(episodeTitle) && ep.episodeNumber == episodeNumber && ep.releaseDate.equals(releaseDate);
     }
     return false;
   }
