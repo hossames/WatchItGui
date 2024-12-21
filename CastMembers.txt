@@ -62,3 +62,13 @@
 12/4/24, 12:00 AM
 36,stephanie,hsu,Female,American,https://en.wikipedia.org/wiki/Stephanie_Hsu,Actor,1,the wild robot
 10/31/76, 12:00 AM
+37,Ghadah,Adel,Female,Egyptian,https://en.wikipedia.org/wiki/Ghada_Adel#Early_life,Actor,1,Hala Khasa
+12/25/74, 12:00 AM
+38,Taha,Desouki,Male,Egyption,https://ar.wikipedia.org/wiki/%D8%B7%D9%87_%D8%AF%D8%B3%D9%88%D9%82%D9%8A,Actor,1,Hala Khasa
+9/24/92, 12:00 AM
+39,Tarek ,El Ganainy,Male,Egyption,https://ar.wikipedia.org/wiki/%D8%B7%D8%A7%D8%B1%D9%82_%D8%A7%D9%84%D8%AC%D9%86%D8%A7%D9%8A%D9%86%D9%8A,Director,0
+1/12/76, 12:00 AM
+40,Abdel Aziz,Al Najjar,Male,Egyption,https://www.themoviedb.org/person/3562434-abdel-aziz-al-najjar,Director,1,Hala Khasa
+12/23/93, 12:00 AM
+41,Hassan,Abu Al-Rous,Male,Egyption,https://elcinema.com/en/person/2019849/,Actor,1,Hala Khasa
+12/24/88, 12:00 AM
