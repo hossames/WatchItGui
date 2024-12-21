@@ -32,7 +32,7 @@ public class CreateEpisodeController {
     }
 
     public void initialize(){
-        SeriesName.setItems(FXCollections.observableList(Converter()));
+        SeriesName.getItems().addAll(Converter());
     }
     public void Done(MouseEvent event) {
         Episode episode = new Episode(SeriesName.getSelectionModel().getSelectedItem(),EpisodeTitle.getText(),

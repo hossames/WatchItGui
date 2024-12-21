@@ -41,8 +41,8 @@ public class CreateSeriesController {
     }
 
     public void initialize(){
-        Genres.setItems(FXCollections.observableList(Arrays.stream(DataBase.getInstance().genres).toList()));
-        CastMembers.setItems(FXCollections.observableList(Converter()));
+        Genres.getItems().addAll(DataBase.getInstance().genres);
+        CastMembers.getItems().addAll(Converter());
         LastAirDate.setValue(LocalDate.now());
     }
     public void Add(MouseEvent event) {

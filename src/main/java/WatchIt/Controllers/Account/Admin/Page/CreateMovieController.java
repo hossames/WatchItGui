@@ -38,8 +38,8 @@ public class CreateMovieController {
     }
 
     public void initialize(){
-        Genres.setItems(FXCollections.observableList(Arrays.stream(DataBase.getInstance().genres).toList()));
-        CastMembers.setItems(FXCollections.observableList(Converter()));
+        Genres.getItems().addAll(DataBase.getInstance().genres);
+        CastMembers.getItems().addAll(Converter());
     }
     public void Add(MouseEvent event) {
         Button s = (Button)event.getSource();
