@@ -1,20 +1,20 @@
-4,Luffy,Mogiwara,Male,Japanese,Mogi@Wara.insta,Actor,4,One Piece Red,One Piece,One Piece Red,One Piece
+4,Luffy,Mogiwara,Male,Japanese,Mogi@Wara.insta,Actor,2,One Piece Red,One Piece
 11/24/04, 12:00 AM
-5,Nami,Neko,Female,Japanese,Neko@insta,Actor,4,One Piece Red,One Piece,One Piece Red,One Piece
+5,Nami,Neko,Female,Japanese,Neko@insta,Actor,2,One Piece Red,One Piece
 11/20/03, 12:00 AM
-6,Zoro,Roronoa,Male,Japanese,Zoro@insta,Actor,4,One Piece Red,One Piece,One Piece Red,One Piece
+6,Zoro,Roronoa,Male,Japanese,Zoro@insta,Actor,2,One Piece Red,One Piece
 8/11/04, 12:00 AM
-7,Sanji,Cook,Male,Japanese,Sanji@insta,Actor,4,One Piece Red,One Piece,One Piece Red,One Piece
+7,Sanji,Cook,Male,Japanese,Sanji@insta,Actor,2,One Piece Red,One Piece
 5/8/02, 12:00 AM
-8,Chopper,Tony Tony,Deer,Japanese,Tony@insta,Actor,3,One Piece Red,One Piece,One Piece
+8,Chopper,Tony Tony,Deer,Japanese,Tony@insta,Actor,2,One Piece Red,One Piece
 5/19/11, 12:00 AM
-9,Brook,Soul,Male,Japanese,Brook@insta,Actor,2,One Piece,One Piece
+9,Brook,Soul,Male,Japanese,Brook@insta,Actor,1,One Piece
 5/9/19, 12:00 AM
-10,Oda,Ichiro,Male,Japanese,oda@insta,Director,3,One Piece,One Piece Red,One Piece
+10,Oda,Ichiro,Male,Japanese,oda@insta,Director,2,One Piece,One Piece Red
 8/5/64, 12:00 AM
-11,Robin,Niko,Female,Japanese,Robb@insta,Actor,2,One Piece,One Piece
+11,Robin,Niko,Female,Japanese,Robb@insta,Actor,1,One Piece
 8/22/01, 12:00 AM
-12,Ussop,Captain,Male,Japanese,ussop@insta,Actor,2,One Piece,One Piece
+12,Ussop,Captain,Male,Japanese,ussop@insta,Actor,1,One Piece
 2/25/03, 12:00 AM
 13,Mahmoud,Khater,Male,Egyption,Khater@insta,Director,3,Once an ACMer,FCIS,Al-Andalos
 5/18/04, 12:00 AM
