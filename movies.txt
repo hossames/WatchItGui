@@ -49,3 +49,6 @@
 18,the wild robot,english,USA,After a shipwreck. an intelligent robot called Roz is stranded on an uninhabited island. To survive the harsh environment. Roz bonds with the island's animals and cares for an orphaned baby goose.,78000000,125000000,2,Animation,Science Fiction,5,chris sanders,kelsey mann,pedro pascal,kit connor,stephanie hsu
 12/1/24, 12:00 AM
 102
+20,YASA,Arabic,Egypt,The tale of a friends,0,999999,6,Action,Adventure,Comedy,Drama,Romance,Historical,4,Yusuf EL_OnePiecie,Ali Influancer,Abdo Abkarino,Saif SafSaf
+10/18/17, 12:00 AM
+143

@@ -1,20 +1,20 @@
-4,Luffy,Mogiwara,Male,Japanese,Mogi@Wara.insta,Actor,3,One Piece Red,One Piece,One Piece Red
+4,Luffy,Mogiwara,Male,Japanese,Mogi@Wara.insta,Actor,4,One Piece Red,One Piece,One Piece Red,One Piece
 11/24/04, 12:00 AM
-5,Nami,Neko,Female,Japanese,Neko@insta,Actor,3,One Piece Red,One Piece,One Piece Red
+5,Nami,Neko,Female,Japanese,Neko@insta,Actor,4,One Piece Red,One Piece,One Piece Red,One Piece
 11/20/03, 12:00 AM
-6,Zoro,Roronoa,Male,Japanese,Zoro@insta,Actor,3,One Piece Red,One Piece,One Piece Red
+6,Zoro,Roronoa,Male,Japanese,Zoro@insta,Actor,4,One Piece Red,One Piece,One Piece Red,One Piece
 8/11/04, 12:00 AM
-7,Sanji,Cook,Male,Japanese,Sanji@insta,Actor,3,One Piece Red,One Piece,One Piece Red
+7,Sanji,Cook,Male,Japanese,Sanji@insta,Actor,4,One Piece Red,One Piece,One Piece Red,One Piece
 5/8/02, 12:00 AM
-8,Chopper,Tony Tony,Deer,Japanese,Tony@insta,Actor,2,One Piece Red,One Piece
+8,Chopper,Tony Tony,Deer,Japanese,Tony@insta,Actor,3,One Piece Red,One Piece,One Piece
 5/19/11, 12:00 AM
-9,Brook,Soul,Male,Japanese,Brook@insta,Actor,1,One Piece
+9,Brook,Soul,Male,Japanese,Brook@insta,Actor,2,One Piece,One Piece
 5/9/19, 12:00 AM
-10,Oda,Ichiro,Male,Japanese,oda@insta,Director,2,One Piece,One Piece Red
+10,Oda,Ichiro,Male,Japanese,oda@insta,Director,3,One Piece,One Piece Red,One Piece
 8/5/64, 12:00 AM
-11,Robin,Niko,Female,Japanese,Robb@insta,Actor,1,One Piece
+11,Robin,Niko,Female,Japanese,Robb@insta,Actor,2,One Piece,One Piece
 8/22/01, 12:00 AM
-12,Ussop,Captain,Male,Japanese,ussop@insta,Actor,1,One Piece
+12,Ussop,Captain,Male,Japanese,ussop@insta,Actor,2,One Piece,One Piece
 2/25/03, 12:00 AM
 13,Mahmoud,Khater,Male,Egyption,Khater@insta,Director,3,Once an ACMer,FCIS,Al-Andalos
 5/18/04, 12:00 AM
@@ -40,7 +40,7 @@
 5/23/05, 12:00 AM
 25,Ali,Abhady42,Male,Egyption,Abhady42@insta,Actor,4,Grandnewbie,Mentor Dreem,OOP,Freedom
 5/19/04, 12:00 AM
-26,Yusuf,EL_OnePiecie,Male,Egyption,EL_OnePiecie@insta,Director,2,OOP,FCIS
+26,Yusuf,EL_OnePiecie,Male,Egyption,EL_OnePiecie@insta,Director,3,OOP,FCIS,YASA
 11/24/05, 12:00 AM
 27,Yahia,El-Fakharany,Male,Egyption,https://www.facebook.com/YehiaAlFakharany/,Actor,1,قصص الآيات في القرآن
 4/7/45, 12:00 AM
@@ -72,3 +72,9 @@
 12/23/93, 12:00 AM
 41,Hassan,Abu Al-Rous,Male,Egyption,https://elcinema.com/en/person/2019849/,Actor,1,Hala Khasa
 12/24/88, 12:00 AM
+42,Ali,Influancer,Male,Egyptoin,Ali@insta,Actor,1,YASA
+8/17/05, 12:00 AM
+43,Abdo,Abkarino,Male,Egyption,Abkarino@insta,Actor,1,YASA
+4/13/05, 12:00 AM
+44,Saif,SafSaf,Male,Egyption,SafSaf@insta,Actor,1,YASA
+2/6/06, 12:00 AM
