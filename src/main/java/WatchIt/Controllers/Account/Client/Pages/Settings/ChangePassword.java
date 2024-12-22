@@ -43,9 +43,9 @@ public class ChangePassword {
         }
         else{
             Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Password Matching Failed");
+            alert.setTitle("Old Password Error");
             alert.setHeaderText(null);
-            alert.setContentText("Passwords do not match");
+            alert.setContentText("Old Password is incorrect");
             alert.showAndWait();
         }
     }

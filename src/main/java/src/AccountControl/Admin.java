@@ -88,7 +88,7 @@ public class Admin extends Account {
     public void removeCast(CastMember cast){
         DataBase.getInstance().castMemberData.removeData(cast);
     }
-    public void removeAccount(Account account){
+    public static void removeAccount(Account account){
         if(account instanceof Admin admin){
             DataBase.getInstance().adminsData.removeData(admin);
         }else if(account instanceof  User user) {

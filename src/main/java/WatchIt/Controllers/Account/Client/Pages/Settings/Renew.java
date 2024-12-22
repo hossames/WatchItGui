@@ -21,8 +21,6 @@ public class Renew {
 
     public TextField ExpireYear;
 
-    public BorderPane SubscriptionPlanPane;
-
     public TextField HolderName;
 
     public ToggleGroup SubscripeType;

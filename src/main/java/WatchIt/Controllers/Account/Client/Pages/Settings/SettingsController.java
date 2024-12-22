@@ -19,23 +19,12 @@ public class SettingsController {
     public SettingsController(Account account) {
         this.account = account;
     }
-    @FXML
-    private Text Email;
-
-    @FXML
-    private Text FirstName;
-
-    @FXML
-    private Text LastName;
-
-    @FXML
-    private Text UserName;
-
-    @FXML
-    private Button UpgradeButton;
-
-    @FXML
-    private VBox Container;
+    public Text Email;
+    public Text FirstName;
+    public Text LastName;
+    public Text UserName;
+    public Button UpgradeButton;
+    public VBox Container;
 
     public void initialize() {
         FirstName.setText(account.getName(1));
@@ -60,11 +49,7 @@ public class SettingsController {
         alert.setContentText("Are you sure you want to delete this account?");
         alert.showAndWait();
         if(alert.getResult().getText().equals("OK")) {
-            if(account instanceof Admin admin) {
-                DataBase.getInstance().adminsData.removeData(admin);
-            } else if (account instanceof User user) {
-                DataBase.getInstance().usersData.removeData(user);
-            }
+            Admin.removeAccount(account);
             Model.getInstance().getViewFactory().Show(MainView.LoginScene());
             DataBase.getInstance().CurrentUser = null;
         }
