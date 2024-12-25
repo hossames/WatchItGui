@@ -52,3 +52,9 @@
 20,YASA,Arabic,Egypt,The tale of a friends,0,999999,6,Action,Adventure,Comedy,Drama,Romance,Historical,4,Yusuf EL_OnePiecie,Ali Influancer,Abdo Abkarino,Saif SafSaf
 10/18/17, 12:00 AM
 143
+22,Bloody,English,United States,A thirsty vampire is on the run so desperate for blood that he no longer hides his identity. He has decided to kill the first human he sees in the streets. But where have all the people gone? Why have they all disappeared? Join him in this bloody adventure through the eerie empty streets of London.,65,94,3,Horror,Mystery,Comedy,2,Ibrahim Y,Yusuf Chinese
+12/5/20, 12:00 AM
+120
+23,Underground Hotel,Arabic,Egypt,At first glance it seems like an ordinary hotel nestled in the heart of the city. Sure it has a few customers but so what? Mangao thought the same before stepping inside. What did he say after? No one knows—he vanished without a trace.The legend must be true: anyone who enters the hotel is transported to the underground world where demons reside. Can he escape? There's only one way—he must kill them all!,60,150,2,Horror,Action,3,Mostafa Mangao,Hess ELtiger,Ramadan No.1
+12/1/17, 12:00 AM
+125
