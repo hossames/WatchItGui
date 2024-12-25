@@ -2,3 +2,7 @@
 12/22/24, 7:18 AM
 1,5,Underground Hotel
 12/25/24, 5:18 PM
+1,-1,Viking
+12/25/24, 8:49 PM
+1,5,Bloody
+12/25/24, 8:51 PM

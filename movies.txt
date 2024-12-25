@@ -58,3 +58,9 @@
 23,Underground Hotel,Arabic,Egypt,At first glance it seems like an ordinary hotel nestled in the heart of the city. Sure it has a few customers but so what? Mangao thought the same before stepping inside. What did he say after? No one knows—he vanished without a trace.The legend must be true: anyone who enters the hotel is transported to the underground world where demons reside. Can he escape? There's only one way—he must kill them all!,60,150,2,Horror,Action,3,Mostafa Mangao,Hess ELtiger,Ramadan No.1
 12/1/17, 12:00 AM
 125
+24,Viking,English,Sweden,Ramadan is not just a Viking; he is the leader of the Viking army. In a fierce war against England he is determined to conquer and become its ruler. His swords are ready to be stained with blood his eyes blaze with anger and his fiery blade symbolizes his unrelenting thirst for power. Bloodthirsty and unstoppable Ramadan leads his forces to claim victory.,40,60,3,Action,Historical,War,1,Ramadan No.1
+10/9/18, 12:00 AM
+130
+25,Trace,Arabic,Egypt,A serial killer is on the loose striking fear into the night. His victims seem to have no connection leaving the police baffled. But detectives Ali and Ibrahim are determined to track him down. Using their sharp problem-solving skills they will uncover the clues and bring this elusive criminal to justice,40,160,2,Crime,Mystery,2,Ali Abhady42,Ibrahim Y
+12/6/19, 12:00 AM
+150

@@ -5,3 +5,5 @@ Ramadan No.1,1,1
 It's Mango Time,1,0
 قصص الآيات في القرآن,1,0
 قصص الآيات في القرآن 1,1,0
+First Love,1,0
+A Database Issue,1,0

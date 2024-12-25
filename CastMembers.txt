@@ -28,7 +28,7 @@
 5/25/04, 12:00 AM
 18,Yusuf,Chinese,Male,Egyption,Chinese@insta,Actor,2,Once an ACMer,Bloody
 8/11/04, 12:00 AM
-20,Ramadan,No.1,Male,Egyption,No.1@insta,Actor,4,Mentor Dreem,OOP,FCIS,Underground Hotel
+20,Ramadan,No.1,Male,Egyption,No.1@insta,Actor,5,Mentor Dreem,OOP,FCIS,Underground Hotel,Viking
 8/24/05, 12:00 AM
 21,Hossam,ELaraby,Male,Egyption,arabic@insta,Actor,2,Mentor Dreem,OOP
 5/15/05, 12:00 AM
@@ -36,9 +36,9 @@
 10/20/05, 12:00 AM
 23,Mostafa,Mangao,Male,Egyption,Manga@insta,Actor,5,OOP,It's Mango Time,Freedom,Al-Andalos,Underground Hotel
 5/23/05, 12:00 AM
-24,Ibrahim,Y,Male,Egyption,Y@insta,Actor,4,Mentor Dreem,OOP,Freedom,Bloody
+24,Ibrahim,Y,Male,Egyption,Y@insta,Actor,5,Mentor Dreem,OOP,Freedom,Bloody,Trace
 5/23/05, 12:00 AM
-25,Ali,Abhady42,Male,Egyption,Abhady42@insta,Actor,4,Grandnewbie,Mentor Dreem,OOP,Freedom
+25,Ali,Abhady42,Male,Egyption,Abhady42@insta,Actor,5,Grandnewbie,Mentor Dreem,OOP,Freedom,Trace
 5/19/04, 12:00 AM
 26,Yusuf,EL_OnePiecie,Male,Egyption,EL_OnePiecie@insta,Director,3,OOP,FCIS,YASA
 11/24/05, 12:00 AM
