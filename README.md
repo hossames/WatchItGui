@@ -9,7 +9,6 @@
 ### User Mode
 
 When a user signs up and creates an account, they are registered as a regular user. The key features include:
-![[Pasted image 20241225164405.png]]
 
 1. **Home Page**:
     
